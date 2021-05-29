@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{992CB11A-8936-4B3F-9330-FE5FE862CED2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nez_template</RootNamespace>
+    <AssemblyName>Nez-template</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineDebug>true</DefineDebug>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GameCore.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\lib\net452\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nez\Nez.Portable\Nez.csproj">
+      <Project>{9bdac689-c21f-4990-aa46-111d6a3fb0f7}</Project>
+      <Name>Nez</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Xna.Framework" />
+    <Import Include="Microsoft.Xna.Framework.Graphics" />
+    <Import Include="Microsoft.Xna.Framework.Input" />
+    <Import Include="Nez" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <Import Project="..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Dieses Projekt verweist auf mindestens ein NuGet-Paket, das auf diesem Computer fehlt. Verwenden Sie die Wiederherstellung von NuGet-Paketen, um die fehlenden Dateien herunterzuladen. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=322105". Die fehlende Datei ist "{0}".</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.DesktopGL.3.8.0.1641\build\MonoGame.Framework.DesktopGL.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
