@@ -46,7 +46,7 @@ namespace Nez
 
 		Entity _targetEntity;
 		Collider _targetCollider;
-		Vector2 _desiredPositionDelta;
+		public Vector2 DesiredPositionDelta;
 		CameraStyle _cameraStyle;
 		RectangleF _worldSpaceDeadzone;
 
@@ -95,7 +95,7 @@ namespace Nez
 			if (_targetEntity != null)
 				UpdateFollow();
 
-			Camera.Position = Vector2.Lerp(Camera.Position, Camera.Position + _desiredPositionDelta, FollowLerp);
+			Camera.Position = Vector2.Lerp(Camera.Position, Camera.Position + DesiredPositionDelta, FollowLerp);
 			Camera.Entity.Transform.RoundPosition();
 
 			if (MapLockEnabled)
@@ -139,7 +139,7 @@ namespace Nez
 
 		void UpdateFollow()
 		{
-			_desiredPositionDelta.X = _desiredPositionDelta.Y = 0;
+			DesiredPositionDelta.X = DesiredPositionDelta.Y = 0;
 
 			if (_cameraStyle == CameraStyle.LockOn)
 			{
@@ -148,15 +148,15 @@ namespace Nez
 
 				// x-axis
 				if (_worldSpaceDeadzone.X > targetX)
-					_desiredPositionDelta.X = targetX - _worldSpaceDeadzone.X;
+					DesiredPositionDelta.X = targetX - _worldSpaceDeadzone.X;
 				else if (_worldSpaceDeadzone.X < targetX)
-					_desiredPositionDelta.X = targetX - _worldSpaceDeadzone.X;
+					DesiredPositionDelta.X = targetX - _worldSpaceDeadzone.X;
 
 				// y-axis
 				if (_worldSpaceDeadzone.Y < targetY)
-					_desiredPositionDelta.Y = targetY - _worldSpaceDeadzone.Y;
+					DesiredPositionDelta.Y = targetY - _worldSpaceDeadzone.Y;
 				else if (_worldSpaceDeadzone.Y > targetY)
-					_desiredPositionDelta.Y = targetY - _worldSpaceDeadzone.Y;
+					DesiredPositionDelta.Y = targetY - _worldSpaceDeadzone.Y;
 			}
 			else
 			{
@@ -173,15 +173,15 @@ namespace Nez
 				{
 					// x-axis
 					if (_worldSpaceDeadzone.Left > targetBounds.Left)
-						_desiredPositionDelta.X = targetBounds.Left - _worldSpaceDeadzone.Left;
+						DesiredPositionDelta.X = targetBounds.Left - _worldSpaceDeadzone.Left;
 					else if (_worldSpaceDeadzone.Right < targetBounds.Right)
-						_desiredPositionDelta.X = targetBounds.Right - _worldSpaceDeadzone.Right;
+						DesiredPositionDelta.X = targetBounds.Right - _worldSpaceDeadzone.Right;
 
 					// y-axis
 					if (_worldSpaceDeadzone.Bottom < targetBounds.Bottom)
-						_desiredPositionDelta.Y = targetBounds.Bottom - _worldSpaceDeadzone.Bottom;
+						DesiredPositionDelta.Y = targetBounds.Bottom - _worldSpaceDeadzone.Bottom;
 					else if (_worldSpaceDeadzone.Top > targetBounds.Top)
-						_desiredPositionDelta.Y = targetBounds.Top - _worldSpaceDeadzone.Top;
+						DesiredPositionDelta.Y = targetBounds.Top - _worldSpaceDeadzone.Top;
 				}
 			}
 		}

@@ -462,6 +462,10 @@ namespace Nez
 			return true;
 		}
 
+		public Rectangle GetRectangle()
+		{
+			return new Rectangle(Convert.ToInt32(Left), Convert.ToInt32(Top), Convert.ToInt32(Width), Convert.ToInt32(Height));
+		}
 
 		public float? RayIntersects(Ray ray)
 		{
