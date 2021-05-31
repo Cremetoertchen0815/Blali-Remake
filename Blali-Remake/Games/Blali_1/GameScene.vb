@@ -22,7 +22,7 @@
             Dim saas As New ScreenSpaceCamera
             CamMover = Camera.AddComponent(New FollowCamera(PlayerComponent.Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 0.3, .MapLockEnabled = True, .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
             Camera.Position = New Vector2(CInt(Map.Properties("camX")) * Map.TileWidth, CInt(Map.Properties("camY")) * Map.TileHeight)
-            'Camera.Position = New Vector2(0, 0)
+
             'Create Camera Button
             BtnCamera = New VirtualJoystick(True, New VirtualJoystick.GamePadRightStick, New VirtualJoystick.KeyboardKeys(VirtualJoystick.OverlapBehavior.CancelOut, Keys.Left, Keys.Right, Keys.Up, Keys.Down))
         End Sub
