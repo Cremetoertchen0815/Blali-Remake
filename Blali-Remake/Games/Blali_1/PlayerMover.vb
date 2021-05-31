@@ -1,4 +1,5 @@
 ﻿Imports System
+Imports System.Collections.Generic
 Imports Nez.Tiled
 
 Namespace Games.Blali_1
@@ -6,17 +7,12 @@ Namespace Games.Blali_1
         Inherits Component
         Implements IUpdatable
 
+        'Controls
+        Private BtnMove As VirtualJoystick
+        Private BtnJump As VirtualButton
+        Private BtnBläh As VirtualButton
 
-        Dim BtnMove As VirtualJoystick
-        Dim BtnJump As VirtualButton
-        Dim BtnBläh As VirtualButton
-
-        'Spieler Flags
-        Dim Velocity As Vector2
-        Dim AccFlip As Boolean
-        Dim PlayerState As PlayerStatus = PlayerStatus.Idle
-        Dim JumpState As Boolean = False
-
+        'Constants
         Public Shared HorizontalTerminalVelocity As Single = 550 'Horizontal terminal velocity
         Public Shared AirAcceleration As Single = 0.35 'Acceleration speed in mid-air
         Public Shared AirDecceleration As Single = 0.35 'Decceleration speed in mid-air
@@ -24,8 +20,18 @@ Namespace Games.Blali_1
         Public Shared Decceleration As Single = 2.5 'Decceleration speed on the ground
         Public Shared Gravity As Single = 4800
         Public Shared SpringVelocity As Single = 2200
-        Public Shared BlähVelocity As Single = 150
+        Public Shared BlähVelocity As Single = 160
         Public Shared JumpHeight As Single = 1600
+
+        'Spieler Flags
+        Private Velocity As Vector2
+        Private AccFlip As Boolean
+        Private PlayerState As PlayerStatus = PlayerStatus.Idle
+        Private JumpState As Boolean = False
+        Private DeathPlain As Integer
+
+        'Objects
+        Private SpringCollider As New List(Of RectangleF)
 
         Public Map As TmxMap
         Private _mover As TiledMapMover
@@ -48,6 +54,13 @@ Namespace Games.Blali_1
             _boxCollider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 80, 160)))
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
             Entity.AddComponent(New PrototypeSpriteRenderer(80, 160)).LocalOffset = New Vector2(40, 80)
+
+            DeathPlain = CInt(Map.Properties("death_plain"))
+
+            'Load object data
+            For Each element In Map.GetObjectGroup("Objects").Objects
+                If element.Type = "spring" Then SpringCollider.Add(New RectangleF(element.X, element.Y, element.Width, element.Height))
+            Next
 
             BtnMove = New VirtualJoystick(True, New VirtualJoystick.GamePadLeftStick, New VirtualJoystick.KeyboardKeys(VirtualInput.OverlapBehavior.TakeNewer, Keys.A, Keys.D, Keys.W, Keys.S))
             BtnJump = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.A), New VirtualButton.KeyboardKey(Keys.Space)) With {.BufferTime = 0}
@@ -72,8 +85,8 @@ Namespace Games.Blali_1
             ElseIf BtnJump.IsPressed And NoDrop And _collisionState.Below Then 'Initiate the jump
                 'Start launching phase and initialize flags
                 JumpState = True
-                    PlayerState = PlayerStatus.Jumping
-                    Velocity.Y = -JumpHeight
+                PlayerState = PlayerStatus.Jumping
+                Velocity.Y = -JumpHeight
                 'DisableJumpA = True
             End If
 
@@ -110,23 +123,33 @@ Namespace Games.Blali_1
             'Move player
             _mover.Move(Velocity * Time.DeltaTime, _boxCollider, _collisionState)
 
+
             'Collide with spring
-            For Each element In Map.GetObjectGroup("Springs").Objects
+            For Each element In SpringCollider
                 Dim overlapX As Single
                 Dim overlapY As Single
 
-                If _boxCollider.Bounds.CollisionCheck(New RectangleF(element.X, element.Y, element.Width, element.Height), overlapX, overlapY) Then
-                    'If Math.Abs(overlapX) < -overlapY Then
-                    If (overlapX <> 0 Xor overlapY <> 0) And Velocity.Y > 0 Then Velocity.Y = -SpringVelocity
+                If _boxCollider.Bounds.CollisionCheck(element, overlapX, overlapY) AndAlso (overlapX <> 0 Xor overlapY <> 0) AndAlso Velocity.Y > 0 Then
+                    Velocity.Y = -SpringVelocity
+                    Exit For
                 End If
             Next
 
+
+            'Implement death plain
+            If _boxCollider.Bounds.Bottom > DeathPlain Then Die()
 
             'Renderer.FlipX = AccFlip
 
             If _collisionState.Below Then Velocity.Y = Math.Min(0, Velocity.Y)
             If _collisionState.Above Then Velocity.Y = Math.Max(0, Velocity.Y)
         End Sub
+
+        Public Sub Die()
+            Entity.LocalPosition = Vector2.Zero
+            Velocity = Vector2.Zero
+        End Sub
+
         Public Enum PlayerStatus
             Idle = 0 'Static
             Jumping = 1 'Animation(2 Frames, Oneshot)

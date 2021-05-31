@@ -24,7 +24,7 @@ namespace Nez.Tiled
 				if (layer is TmxLayer tmxLayer && tmxLayer.Visible)
 					RenderLayer(tmxLayer, batcher, position, scale, layerDepth, cameraClipBounds);
 				else if (layer is TmxImageLayer tmxImageLayer && tmxImageLayer.Visible)
-					RenderImageLayer(tmxImageLayer, batcher, position, scale, layerDepth);
+					RenderImageLayer(tmxImageLayer, batcher, position, scale, layerDepth, cameraClipBounds);
 				else if (layer is TmxGroup tmxGroup && tmxGroup.Visible)
 					RenderGroup(tmxGroup, batcher, position, scale, layerDepth);
 				else if (layer is TmxObjectGroup tmxObjGroup && tmxObjGroup.Visible)
@@ -40,7 +40,7 @@ namespace Nez.Tiled
 			if (layer is TmxLayer tmxLayer && tmxLayer.Visible)
 				RenderLayer(tmxLayer, batcher, position, scale, layerDepth, cameraClipBounds);
 			else if (layer is TmxImageLayer tmxImageLayer && tmxImageLayer.Visible)
-				RenderImageLayer(tmxImageLayer, batcher, position, scale, layerDepth);
+				RenderImageLayer(tmxImageLayer, batcher, position, scale, layerDepth, cameraClipBounds);
 			else if (layer is TmxGroup tmxGroup && tmxGroup.Visible)
 				RenderGroup(tmxGroup, batcher, position, scale, layerDepth);
 			else if (layer is TmxObjectGroup tmxObjGroup && tmxObjGroup.Visible)
@@ -266,7 +266,7 @@ namespace Nez.Tiled
 			}
 		}
 
-		public static void RenderImageLayer(TmxImageLayer layer, Batcher batcher, Vector2 position, Vector2 scale, float layerDepth)
+		public static void RenderImageLayer(TmxImageLayer layer, Batcher batcher, Vector2 position, Vector2 scale, float layerDepth, RectangleF cameraClipBounds)
 		{
 			if (!layer.Visible)
 				return;
@@ -274,7 +274,7 @@ namespace Nez.Tiled
 			var color = Color.White;
 			color.A = (byte)(layer.Opacity * 255);
 
-			var pos = position + new Vector2(layer.OffsetX, layer.OffsetY) * scale;
+			var pos =  cameraClipBounds.Location - (cameraClipBounds.Location - Screen.Center) * new Vector2(layer.ParallaxFactorX, layer.ParallaxFactorY) + position + new Vector2(layer.OffsetX, layer.OffsetY) * scale;
 			batcher.Draw(layer.Image.Texture, pos, null, color, 0, Vector2.Zero, scale, SpriteEffects.None, layerDepth);
 		}
 
@@ -295,7 +295,7 @@ namespace Nez.Tiled
 					RenderLayer(tmxLayer, batcher, position, scale, layerDepth);
 
 				if (layer is TmxImageLayer tmxImageLayer)
-					RenderImageLayer(tmxImageLayer, batcher, position, scale, layerDepth);
+					RenderImageLayer(tmxImageLayer, batcher, position, scale, layerDepth, new RectangleF());
 			}
 		}
 
