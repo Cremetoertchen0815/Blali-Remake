@@ -19,10 +19,10 @@ Namespace Games.Blali_1
         Public Shared AirDecceleration As Single = 0.35 'Decceleration speed in mid-air
         Public Shared Acceleration As Single = 0.7 'Acceleration speed on the ground
         Public Shared Decceleration As Single = 2.5 'Decceleration speed on the ground
-        Public Shared Gravity As Single = 4500
-        Public Shared SpringVelocity As Single = 2000
-        Public Shared BlähVelocity As Single = 160
-        Public Shared JumpHeight As Single = 1450
+        Public Shared Gravity As Single = 2500
+        Public Shared SpringVelocity As Single = 1350
+        Public Shared BlähVelocity As Single = 80
+        Public Shared JumpHeight As Single = 1000
 
         'Spieler Flags
         Private Velocity As Vector2
@@ -184,12 +184,16 @@ Namespace Games.Blali_1
         End Sub
 
         Public Sub Die()
+            If Not Enabled Then Return
+
+            Time.TimeScale = 0
             Enabled = False
-            Core.Schedule(1, Sub()
-                                 Enabled = True
-                                 Entity.LocalPosition = Spawn
-                                 Velocity = Vector2.Zero
-                             End Sub)
+            Core.Schedule(0.5, Sub()
+                                   Time.TimeScale = 1
+                                   Enabled = True
+                                   Entity.LocalPosition = Spawn
+                                   Velocity = Vector2.Zero
+                               End Sub)
         End Sub
 
         Public Enum PlayerStatus

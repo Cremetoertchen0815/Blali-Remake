@@ -22,6 +22,8 @@ Namespace Games.Blali_1
                 Select Case element.Type
                     Case "mob_spike"
                         CreateEntity(element.Name).AddComponent(New Spike(New Vector2(element.X, element.Y), Map) With {.Player = PlayerComponent})
+                    Case "mob_flight"
+                        CreateEntity(element.Name).AddComponent(New Fliegviech(New Vector2(element.X, element.Y), Map) With {.Player = PlayerComponent})
                 End Select
             Next
 
