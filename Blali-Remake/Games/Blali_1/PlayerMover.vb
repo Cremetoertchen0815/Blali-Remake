@@ -64,9 +64,9 @@ Namespace Games.Blali_1
             texBläh = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/spr_3"))
 
             'Add components
-            Collider = Entity.AddComponent(New BoxCollider(New Rectangle(10, 14, 60, 130)))
+            Collider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 60, 130)))
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
-            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(40, 80)})
+            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(30, 66)})
 
             DeathPlain = CInt(Map.Properties("death_plain"))
 
@@ -142,10 +142,12 @@ Namespace Games.Blali_1
                 Collider.Height = 100
             End If
 
-
-
             'Move player
             _mover.Move(Velocity * Time.DeltaTime, Collider, _collisionState)
+
+
+            'Limit player position to map
+            Entity.LocalPosition = New Vector2(Math.Min(Math.Max(Entity.LocalPosition.X, 0), Map.Width * 16 - 60), Math.Min(Math.Max(Entity.LocalPosition.Y, 0), Map.Height * 16 - 130))
 
 
             'Collide with spring
