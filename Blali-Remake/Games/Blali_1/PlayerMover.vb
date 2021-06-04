@@ -26,6 +26,7 @@ Namespace Games.Blali_1
 
         'Spieler Flags
         Private Velocity As Vector2
+        Private Spawn As Vector2
         Private AccFlip As Boolean
         Private PlayerState As PlayerStatus = PlayerStatus.Idle
         Private JumpState As Boolean = False
@@ -68,19 +69,29 @@ Namespace Games.Blali_1
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
             _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(30, 66)})
 
-            DeathPlain = CInt(Map.Properties("death_plain"))
+
 
             'Load object data
+            DeathPlain = CInt(Map.Properties("death_plain"))
             For Each element In Map.GetObjectGroup("Objects").Objects
                 If element.Type = "spring" Then SpringCollider.Add(New RectangleF(element.X, element.Y, element.Width, element.Height))
+                If element.Type = "pl_spawn" Then Spawn = New Vector2(element.X - 30, element.Y - 130)
             Next
+            Entity.LocalPosition = Spawn
 
             BtnMove = New VirtualJoystick(True, New VirtualJoystick.GamePadLeftStick, New VirtualJoystick.KeyboardKeys(VirtualInput.OverlapBehavior.TakeNewer, Keys.A, Keys.D, Keys.W, Keys.S))
             BtnJump = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.A), New VirtualButton.KeyboardKey(Keys.Space)) With {.BufferTime = 0}
             BtnBläh = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.X), New VirtualButton.KeyboardKey(Keys.LeftShift)) With {.BufferTime = 0}
         End Sub
 
-        Public Property Enable As Boolean = True Implements IUpdatable.Enabled
+        Private Property Enable As Boolean Implements IUpdatable.Enabled
+            Get
+                Return Enabled
+            End Get
+            Set(value As Boolean)
+                Enabled = value
+            End Set
+        End Property
         Private ReadOnly Property IUpdatable_UpdateOrder As Integer Implements IUpdatable.UpdateOrder
             Get
                 Return 0
@@ -173,8 +184,12 @@ Namespace Games.Blali_1
         End Sub
 
         Public Sub Die()
-            Entity.LocalPosition = Vector2.Zero
-            Velocity = Vector2.Zero
+            Enabled = False
+            Core.Schedule(1, Sub()
+                                 Enabled = True
+                                 Entity.LocalPosition = Spawn
+                                 Velocity = Vector2.Zero
+                             End Sub)
         End Sub
 
         Public Enum PlayerStatus
