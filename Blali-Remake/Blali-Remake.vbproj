@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="GameCore.vb" />
     <Compile Include="Games\Blali_1\GameScene.vb" />
+    <Compile Include="Games\Blali_1\Mobs\Spike.vb" />
     <Compile Include="Games\Blali_1\PlayerMover.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
@@ -66,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <Content Include="ToDo.txt" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="assets\Content.mgcb" />

@@ -12,6 +12,7 @@ Public Class GameCore
         Screen.SetSize(1920, 1080)
         Scene.SetDefaultDesignResolution(1920, 1080, Scene.SceneResolutionPolicy.BestFit)
         Window.AllowUserResizing = True
+        DebugRenderEnabled = True
 
         Scene = New GameScene
 

@@ -1,5 +1,6 @@
 ﻿Imports System
 Imports System.Collections.Generic
+Imports Nez.Textures
 Imports Nez.Tiled
 
 Namespace Games.Blali_1
@@ -13,15 +14,15 @@ Namespace Games.Blali_1
         Private BtnBläh As VirtualButton
 
         'Constants
-        Public Shared HorizontalTerminalVelocity As Single = 550 'Horizontal terminal velocity
+        Public Shared HorizontalTerminalVelocity As Single = 370 'Horizontal terminal velocity
         Public Shared AirAcceleration As Single = 0.35 'Acceleration speed in mid-air
         Public Shared AirDecceleration As Single = 0.35 'Decceleration speed in mid-air
         Public Shared Acceleration As Single = 0.7 'Acceleration speed on the ground
         Public Shared Decceleration As Single = 2.5 'Decceleration speed on the ground
-        Public Shared Gravity As Single = 4800
-        Public Shared SpringVelocity As Single = 2200
+        Public Shared Gravity As Single = 4500
+        Public Shared SpringVelocity As Single = 2000
         Public Shared BlähVelocity As Single = 160
-        Public Shared JumpHeight As Single = 1600
+        Public Shared JumpHeight As Single = 1450
 
         'Spieler Flags
         Private Velocity As Vector2
@@ -33,9 +34,16 @@ Namespace Games.Blali_1
         'Objects
         Private SpringCollider As New List(Of RectangleF)
 
+        'Textures
+        Private texIdle As Sprite
+        Private texJmp As Sprite
+        Private texBläh As Sprite
+
+        'Components
         Public Map As TmxMap
+        Private _spriteRenderer As Sprites.SpriteRenderer
         Private _mover As TiledMapMover
-        Private _boxCollider As BoxCollider
+        Public Collider As BoxCollider
         Private _collisionState As New TiledMapMover.CollisionState()
 
         Public Sub New(map As TmxMap)
@@ -50,10 +58,15 @@ Namespace Games.Blali_1
         Public Overrides Sub Initialize()
             MyBase.Initialize()
 
+            'Load textures
+            texIdle = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/spr_1"))
+            texJmp = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/spr_2"))
+            texBläh = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/spr_3"))
+
             'Add components
-            _boxCollider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 80, 160)))
+            Collider = Entity.AddComponent(New BoxCollider(New Rectangle(10, 14, 60, 130)))
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
-            Entity.AddComponent(New PrototypeSpriteRenderer(80, 160)).LocalOffset = New Vector2(40, 80)
+            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(40, 80)})
 
             DeathPlain = CInt(Map.Properties("death_plain"))
 
@@ -90,6 +103,10 @@ Namespace Games.Blali_1
                 'DisableJumpA = True
             End If
 
+            'Adapt sprite and collider to default value
+            Collider.Height = 130
+            _spriteRenderer.Sprite = If(JumpState, texJmp, texIdle)
+
             'Preparing Horizontal Controls
             Dim mp As Single = Time.DeltaTime * 6000
             Dim acc As Single = 0
@@ -118,10 +135,17 @@ Namespace Games.Blali_1
             Velocity.Y += Gravity * Time.DeltaTime
 
             'Blähing
-            If BtnBläh.IsDown Then Velocity.Y = BlähVelocity : PlayerState = PlayerStatus.Bläh
+            If BtnBläh.IsDown Then
+                Velocity.Y = BlähVelocity
+                PlayerState = PlayerStatus.Bläh
+                _spriteRenderer.Sprite = texBläh
+                Collider.Height = 100
+            End If
+
+
 
             'Move player
-            _mover.Move(Velocity * Time.DeltaTime, _boxCollider, _collisionState)
+            _mover.Move(Velocity * Time.DeltaTime, Collider, _collisionState)
 
 
             'Collide with spring
@@ -129,7 +153,7 @@ Namespace Games.Blali_1
                 Dim overlapX As Single
                 Dim overlapY As Single
 
-                If _boxCollider.Bounds.CollisionCheck(element, overlapX, overlapY) AndAlso (overlapX <> 0 Xor overlapY <> 0) AndAlso Velocity.Y > 0 Then
+                If Collider.Bounds.CollisionCheck(element, overlapX, overlapY) AndAlso (overlapX <> 0 Xor overlapY <> 0) AndAlso Velocity.Y > 0 Then
                     Velocity.Y = -SpringVelocity
                     Exit For
                 End If
@@ -137,9 +161,10 @@ Namespace Games.Blali_1
 
 
             'Implement death plain
-            If _boxCollider.Bounds.Bottom > DeathPlain Then Die()
+            If Collider.Bounds.Bottom > DeathPlain Then Die()
 
-            'Renderer.FlipX = AccFlip
+            'Flip sprite
+            _spriteRenderer.FlipX = AccFlip
 
             If _collisionState.Below Then Velocity.Y = Math.Min(0, Velocity.Y)
             If _collisionState.Above Then Velocity.Y = Math.Max(0, Velocity.Y)

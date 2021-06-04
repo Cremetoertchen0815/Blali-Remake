@@ -1,0 +1,4 @@
+﻿-Enemies
+-Coins
+-Naturo guy
+-Finish
