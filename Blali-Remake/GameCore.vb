@@ -1,4 +1,4 @@
-﻿Imports Nez_template.Games.Blali_1
+﻿Imports Blali.Games.Blali_1
 
 Public Class GameCore
     Inherits Core
@@ -11,10 +11,11 @@ Public Class GameCore
 
         Screen.SetSize(1920, 1080)
         Scene.SetDefaultDesignResolution(1920, 1080, Scene.SceneResolutionPolicy.BestFit)
+        Screen.SynchronizeWithVerticalRetrace = True
         Window.AllowUserResizing = True
-        DebugRenderEnabled = True
+        DebugRenderEnabled = False
 
-        Scene = New GameScene
+        Scene = New GameScene(0)
 
     End Sub
 End Class

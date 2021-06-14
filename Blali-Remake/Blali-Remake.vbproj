@@ -6,8 +6,8 @@
     <ProjectGuid>{992CB11A-8936-4B3F-9330-FE5FE862CED2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nez_template</RootNamespace>
-    <AssemblyName>Nez-template</AssemblyName>
+    <RootNamespace>Blali</RootNamespace>
+    <AssemblyName>Blali</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
@@ -50,10 +50,17 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="GameCore.vb" />
+    <Compile Include="Games\Blali_1\Collectibles\RedCoin.vb" />
+    <Compile Include="Games\Blali_1\Collectibles\YellowCoin.vb" />
     <Compile Include="Games\Blali_1\GameScene.vb" />
+    <Compile Include="Games\Blali_1\Mobs\Bodenviech.vb" />
     <Compile Include="Games\Blali_1\Mobs\Fliegviech.vb" />
+    <Compile Include="Games\Blali_1\GameObject.vb" />
     <Compile Include="Games\Blali_1\Mobs\Spike.vb" />
     <Compile Include="Games\Blali_1\PlayerMover.vb" />
     <Compile Include="Program.vb" />
@@ -76,6 +83,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.Xna.Framework" />

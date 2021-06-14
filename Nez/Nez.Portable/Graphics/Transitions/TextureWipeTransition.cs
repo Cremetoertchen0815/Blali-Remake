@@ -73,7 +73,7 @@ namespace Nez
 			_destinationRect = PreviousSceneRender.Bounds;
 
 			// load Effect and set defaults
-			_textureWipeEffect = Core.Content.LoadEffect("Content/nez/effects/transitions/TextureWipe.mgfxo");
+			_textureWipeEffect = Core.Content.LoadEffect("nez/effects/transitions/TextureWipe.mgfxo");
 			Opacity = 1f;
 			Color = Color.Black;
 			TransitionTexture = transitionTexture;

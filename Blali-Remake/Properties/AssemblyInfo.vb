@@ -5,13 +5,16 @@ Imports System.Runtime.InteropServices
 ' General Information about an assembly is controlled through the following 
 ' set of attributes. Change these attribute values to modify the information
 ' associated with an assembly.
-<Assembly: AssemblyTitle("MG-Nez")>
-<Assembly: AssemblyProduct("MG-Nez")>
+<Assembly: AssemblyTitle("Blali Remake")>
+<Assembly: AssemblyProduct("Blali Remake")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyCopyright("Copyright ©  2014")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyDescription("Blali Remake")>
+<Assembly: AssemblyCompany("Luminous Friends")>
+<Assembly: AssemblyCopyright("Copyright © Luminous Friends 2021")>
+<Assembly: AssemblyTrademark("iBlali")>
+<Assembly: AssemblyMetadata("Funny Number", "69")>
+<Assembly: AssemblyMetadata("Important Word", "Tach3")>
+<Assembly: AssemblyMetadata("Cringe", "OwO, what's this? *notices assembly metadata* Couwld you pweease stwop?")>
 <Assembly: AssemblyCulture("")>
 
 ' Setting ComVisible to false makes the types in this assembly not visible 

@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin game/Blali_1/bgm/0.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/0.wav
+
+#begin game/Blali_1/bgm/1.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/1.wav
+
 #begin game/Blali_1/bullet.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -97,6 +109,18 @@
 /processorParam:TextureFormat=Color
 /build:game/Blali_1/enemy_d.png
 
+#begin game/Blali_1/fire.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/fire.png
+
 #begin game/Blali_1/gun.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -108,6 +132,27 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:game/Blali_1/gun.png
+
+#begin game/Blali_1/sfx/win/classic_1.xsb
+/copy:game/Blali_1/sfx/win/classic_1.xsb
+
+#begin game/Blali_1/sfx/win/classic_1.xwb
+/copy:game/Blali_1/sfx/win/classic_1.xwb
+
+#begin game/Blali_1/sfx/win/sfx.xgs
+/copy:game/Blali_1/sfx/win/sfx.xgs
+
+#begin game/Blali_1/sky.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/sky.jpg
 
 #begin game/Blali_1/spr_1.png
 /importer:TextureImporter
