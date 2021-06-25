@@ -10,8 +10,7 @@ Namespace Games.Blali_1.Mobs
         Private bounds As Single()
         Private Const Weite As Integer = 200
 
-        Public Sub New(spawn As Vector2, map As TmxMap, player As PlayerMover)
-            Me.Player = player
+        Public Sub New(spawn As Vector2, map As TmxMap)
             Me.Spawn = spawn
             Me.Map = map
         End Sub

@@ -3,8 +3,7 @@
 Namespace Games.Blali_1.Collectibles
     Public Class RedCoin
         Inherits GameObject
-        Public Sub New(spawn As Vector2, player As PlayerMover)
-            Me.Player = player
+        Public Sub New(spawn As Vector2)
             Me.Spawn = spawn
         End Sub
 

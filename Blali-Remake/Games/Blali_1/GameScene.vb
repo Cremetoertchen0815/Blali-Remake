@@ -2,6 +2,7 @@
 Imports Microsoft.Xna.Framework.Media
 Imports Blali.Games.Blali_1.Collectibles
 Imports Blali.Games.Blali_1.Mobs
+Imports Blali.Games.Blali_1.Viks
 
 Namespace Games.Blali_1
     Public Class GameScene
@@ -9,7 +10,7 @@ Namespace Games.Blali_1
 
         Public Shared Score As Integer = 0
 
-        Public PlayerComponent As PlayerMover
+        Public PlayerComponent As IVik
         Public Map As Tiled.TmxMap
         Public MapRenderer As TiledMapRenderer
         Public Shared SFX As SoundBank
@@ -20,7 +21,6 @@ Namespace Games.Blali_1
             Current = lvl_ID
 
             MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
-            PlayerComponent = CreateEntity("player").AddComponent(New PlayerMover(Map))
 
             'Load BG
             Dim bgprp = Map.GetObjectGroup("BG").Properties
@@ -38,12 +38,18 @@ Namespace Games.Blali_1
             'Get mobs from level
             For Each element In Map.GetObjectGroup("Objects").Objects
                 Select Case element.Type
+                    Case "player"
+                        Select Case element.Properties("type")
+                            Case Else
+                                PlayerComponent = CreateEntity("player").AddComponent(New DefaultVik(Map))
+                        End Select
+                        GameObject.Player = PlayerComponent
                     Case "mob_spike"
-                        CreateEntity(element.Name).AddComponent(New Spike(New Vector2(element.X, element.Y), Map, PlayerComponent))
+                        CreateEntity(element.Name).AddComponent(New Spike(New Vector2(element.X, element.Y), Map))
                     Case "mob_flight"
-                        CreateEntity(element.Name).AddComponent(New Fliegviech(New Vector2(element.X, element.Y), Map, PlayerComponent))
+                        CreateEntity(element.Name).AddComponent(New Fliegviech(New Vector2(element.X, element.Y), Map))
                     Case "mob_floor"
-                        CreateEntity(element.Name).AddComponent(New Bodenviech(New Vector2(element.X, element.Y), Map, PlayerComponent))
+                        CreateEntity(element.Name).AddComponent(New Bodenviech(New Vector2(element.X, element.Y), Map))
                 End Select
             Next
 
@@ -51,9 +57,9 @@ Namespace Games.Blali_1
             For Each element In Map.GetObjectGroup("Collectibles").Objects
                 Select Case element.Type
                     Case "yellow_coin"
-                        CreateEntity("coin_yellow_" & element.Id).AddComponent(New YellowCoin(New Vector2(element.X, element.Y), PlayerComponent))
+                        CreateEntity("coin_yellow_" & element.Id).AddComponent(New YellowCoin(New Vector2(element.X, element.Y)))
                     Case "red_coin"
-                        CreateEntity("coin_red_" & element.Id).AddComponent(New RedCoin(New Vector2(element.X, element.Y), PlayerComponent))
+                        CreateEntity("coin_red_" & element.Id).AddComponent(New RedCoin(New Vector2(element.X, element.Y)))
                 End Select
             Next
 

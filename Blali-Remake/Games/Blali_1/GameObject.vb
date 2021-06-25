@@ -8,13 +8,13 @@ Namespace Games.Blali_1
 
         'Shared fields
         Public Shared ScoreIncrease As Action(Of Integer)
+        Friend Shared Player As IVik
 
         'Object fields
         Protected Ränder As Sprites.SpriteRenderer
         Protected Collider As BoxCollider
         Protected Map As TmxMap
         Protected Spawn As Vector2
-        Protected Player As PlayerMover
 
         Private Property IUpdatable_Enabled As Boolean Implements IUpdatable.Enabled
             Get

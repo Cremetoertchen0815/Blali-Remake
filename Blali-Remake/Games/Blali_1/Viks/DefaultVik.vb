@@ -3,10 +3,9 @@ Imports System.Collections.Generic
 Imports Nez.Textures
 Imports Nez.Tiled
 
-Namespace Games.Blali_1
-    Public Class PlayerMover
-        Inherits Component
-        Implements IUpdatable
+Namespace Games.Blali_1.Viks
+    Public Class DefaultVik
+        Inherits IVik
 
         'Controls
         Private BtnMove As VirtualJoystick
@@ -14,12 +13,12 @@ Namespace Games.Blali_1
         Private BtnBläh As VirtualButton
 
         'Constants
-        Public Shared HorizontalTerminalVelocity As Single = 250 'Horizontal terminal velocity
-        Public Shared VerticalTerminalVelocity As Single = 900 'Horizontal terminal velocity
-        Public Shared Gravity As Single = 1000
-        Public Shared SpringVelocity As Single = 800
-        Public Shared BlähVelocity As Single = 35
-        Public Shared JumpHeight As Single = 580
+        Private Const HorizontalTerminalVelocity As Single = 250 'Horizontal terminal velocity
+        Private Const VerticalTerminalVelocity As Single = 900 'Horizontal terminal velocity
+        Private Const Gravity As Single = 1000
+        Private Const SpringVelocity As Single = 800
+        Private Const BlähVelocity As Single = 35
+        Private Const JumpHeight As Single = 580
 
         'Spieler Flags
         Private Velocity As Vector2
@@ -27,8 +26,7 @@ Namespace Games.Blali_1
         Private AccFlip As Boolean
         Private PlayerState As PlayerStatus = PlayerStatus.Idle
         Private JumpState As Boolean = False
-        Private DeathPlain As Integer
-        Private LevelScore As Integer = 0
+        Protected DeathPlain As Integer
 
         'SFX flags
         Private blähSFXCounter As Single
@@ -36,7 +34,6 @@ Namespace Games.Blali_1
 
         'Objects
         Private SpringCollider As New List(Of RectangleF)
-        Private NextID As Integer
 
         'Textures
         Private texIdle As Sprite
@@ -44,8 +41,6 @@ Namespace Games.Blali_1
         Private texBläh As Sprite
 
         'Components
-        Public Map As TmxMap
-        Public Collider As BoxCollider
         Private FinishCollider As RectangleF
         Private _spriteRenderer As Sprites.SpriteRenderer
         Private _mover As TiledMapMover
@@ -80,7 +75,7 @@ Namespace Games.Blali_1
             DeathPlain = CInt(Map.Properties("death_plain"))
             For Each element In Map.GetObjectGroup("Objects").Objects
                 If element.Type = "spring" Then SpringCollider.Add(New RectangleF(element.X, element.Y, element.Width, element.Height))
-                If element.Type = "pl_spawn" Then Spawn = New Vector2(element.X - 30, element.Y - 130)
+                If element.Type = "player" Then Spawn = New Vector2(element.X - 30, element.Y - 130)
                 If element.Type = "finish" Then FinishCollider = New RectangleF(element.X, element.Y, element.Width, element.Height) : NextID = CInt(element.Properties("followup_ID"))
             Next
             Entity.LocalPosition = Spawn
@@ -99,21 +94,7 @@ Namespace Games.Blali_1
                 PlayedStart = True
             End If
         End Sub
-
-        Private Property Enable As Boolean Implements IUpdatable.Enabled
-            Get
-                Return Enabled
-            End Get
-            Set(value As Boolean)
-                Enabled = value
-            End Set
-        End Property
-        Private ReadOnly Property IUpdatable_UpdateOrder As Integer Implements IUpdatable.UpdateOrder
-            Get
-                Return 0
-            End Get
-        End Property
-        Public Sub Update() Implements IUpdatable.Update
+        Public Overrides Sub Update()
 
             '1st Jumping
             Dim NoDrop As Boolean = BtnMove.Value.Y >= -0.8
@@ -151,8 +132,8 @@ Namespace Games.Blali_1
                 If blähSFXCounter > 50 Then GameScene.SFX.PlayCue("blaeh") : blähSFXCounter = 0
             End If
 
-                'Move player
-                _mover.Move(Velocity * Time.DeltaTime, Collider, _collisionState)
+            'Move player
+            _mover.Move(Velocity * Time.DeltaTime, Collider, _collisionState)
 
 
             'Clamp player position to map
@@ -185,36 +166,6 @@ Namespace Games.Blali_1
 
             If _collisionState.Below Then Velocity.Y = Math.Min(0, Velocity.Y)
             If _collisionState.Above Then Velocity.Y = Math.Max(0, Velocity.Y)
-        End Sub
-
-        Public Sub Die()
-            If Not Enabled Then Return
-
-            Time.TimeScale = 0
-            Enabled = False
-            LevelScore = 0
-            GameScene.SFX.PlayCue("death")
-
-            Dim newsc As New GameScene(GameScene.Current)
-            Core.Schedule(0.5, Sub()
-                                   Core.Scene = newsc
-                                   Time.TimeScale = 1
-                               End Sub)
-        End Sub
-
-        Public Sub FinishStage()
-            If Not Enabled Then Return
-
-            Time.TimeScale = 0
-            GameScene.Score += LevelScore
-            Enabled = False
-            GameScene.SFX.PlayCue("finish")
-
-            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New TransformTransition(TransformTransition.TransformTransitionType.SlideRight) With {.OnScreenObscured = Sub()
-                                                                                                                                                                             Core.Scene = New GameScene(NextID)
-                                                                                                                                                                             Time.TimeScale = 1
-                                                                                                                                                                         End Sub, .TransitionEaseType = Tweens.EaseType.Linear, .Duration = 2}))
-
         End Sub
 
         Public Enum PlayerStatus

@@ -58,11 +58,12 @@
     <Compile Include="Games\Blali_1\Collectibles\RedCoin.vb" />
     <Compile Include="Games\Blali_1\Collectibles\YellowCoin.vb" />
     <Compile Include="Games\Blali_1\GameScene.vb" />
+    <Compile Include="Games\Blali_1\IVik.vb" />
     <Compile Include="Games\Blali_1\Mobs\Bodenviech.vb" />
     <Compile Include="Games\Blali_1\Mobs\Fliegviech.vb" />
     <Compile Include="Games\Blali_1\GameObject.vb" />
     <Compile Include="Games\Blali_1\Mobs\Spike.vb" />
-    <Compile Include="Games\Blali_1\PlayerMover.vb" />
+    <Compile Include="Games\Blali_1\Viks\DefaultVik.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>

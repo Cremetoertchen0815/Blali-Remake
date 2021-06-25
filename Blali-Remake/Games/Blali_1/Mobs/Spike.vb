@@ -5,8 +5,7 @@ Namespace Games.Blali_1.Mobs
     Public Class Spike
         Inherits GameObject
 
-        Public Sub New(spawn As Vector2, map As TmxMap, player As PlayerMover)
-            Me.Player = player
+        Public Sub New(spawn As Vector2, map As TmxMap)
             Me.Spawn = spawn
             Me.Map = map
         End Sub
