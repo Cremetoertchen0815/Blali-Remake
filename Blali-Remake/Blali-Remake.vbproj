@@ -63,6 +63,7 @@
     <Compile Include="Games\Blali_1\Mobs\Fliegviech.vb" />
     <Compile Include="Games\Blali_1\GameObject.vb" />
     <Compile Include="Games\Blali_1\Mobs\Spike.vb" />
+    <Compile Include="Games\Blali_1\Viks\BallVik.vb" />
     <Compile Include="Games\Blali_1\Viks\DefaultVik.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />

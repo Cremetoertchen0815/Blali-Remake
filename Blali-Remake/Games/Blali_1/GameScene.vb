@@ -40,6 +40,8 @@ Namespace Games.Blali_1
                 Select Case element.Type
                     Case "player"
                         Select Case element.Properties("type")
+                            Case "ball"
+                                PlayerComponent = CreateEntity("player").AddComponent(New BallVik(Map))
                             Case Else
                                 PlayerComponent = CreateEntity("player").AddComponent(New DefaultVik(Map))
                         End Select
@@ -62,12 +64,6 @@ Namespace Games.Blali_1
                         CreateEntity("coin_red_" & element.Id).AddComponent(New RedCoin(New Vector2(element.X, element.Y)))
                 End Select
             Next
-
-            'Create camera
-            Dim saas = Camera.AddComponent(New FollowCamera(PlayerComponent.Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 0.3, .MapLockEnabled = True, .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
-            saas.FocusOffset = New Vector2(270, 100)
-            Camera.Position = New Vector2(CInt(Map.Properties("camX")) * Map.TileWidth, CInt(Map.Properties("camY")) * Map.TileHeight)
-            Camera.Zoom = 0.2
         End Sub
 
         Public Overrides Sub Initialize()

@@ -8,7 +8,7 @@ Namespace Games.Blali_1.Viks
         Inherits IVik
 
         'Controls
-        Private BtnMove As VirtualJoystick
+        Private BtnMove As VirtualAxis
         Private BtnJump As VirtualButton
         Private BtnBläh As VirtualButton
 
@@ -53,6 +53,7 @@ Namespace Games.Blali_1.Viks
         Public Overrides Sub OnRemovedFromEntity()
             BtnMove.Deregister()
             BtnJump.Deregister()
+            BtnBläh.Deregister()
         End Sub
 
         Public Overrides Sub Initialize()
@@ -82,9 +83,16 @@ Namespace Games.Blali_1.Viks
             GameObject.ScoreIncrease = Sub(x) LevelScore += x
 
             'Map controls
-            BtnMove = New VirtualJoystick(True, New VirtualJoystick.GamePadLeftStick, New VirtualJoystick.KeyboardKeys(VirtualInput.OverlapBehavior.TakeNewer, Keys.A, Keys.D, Keys.W, Keys.S))
+            BtnMove = New VirtualAxis(New VirtualAxis.GamePadLeftStickX, New VirtualAxis.KeyboardKeys(VirtualInput.OverlapBehavior.TakeNewer, Keys.A, Keys.D), New VirtualAxis.GamePadDpadLeftRight)
             BtnJump = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.A), New VirtualButton.KeyboardKey(Keys.Space)) With {.BufferTime = 0}
             BtnBläh = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.X), New VirtualButton.KeyboardKey(Keys.LeftShift)) With {.BufferTime = 0}
+
+            'Set up camera
+            Dim camera As Camera = Entity.Scene.Camera
+            Dim saas = camera.AddComponent(New FollowCamera(Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 0.3, .MapLockEnabled = True, .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
+            saas.FocusOffset = New Vector2(270, 100)
+            camera.Position = New Vector2(CInt(Map.Properties("camX")) * Map.TileWidth, CInt(Map.Properties("camY")) * Map.TileHeight)
+            camera.Zoom = 0.2
         End Sub
 
         Public Overrides Sub OnAddedToEntity()
@@ -97,14 +105,11 @@ Namespace Games.Blali_1.Viks
         Public Overrides Sub Update()
 
             '1st Jumping
-            Dim NoDrop As Boolean = BtnMove.Value.Y >= -0.8
-            Dim movvec As Single = BtnMove.Value.X
-
             If JumpState And _collisionState.Below Then
                 'Stop jump
                 JumpState = False
                 GameScene.SFX.PlayCue("land")
-            ElseIf BtnJump.IsPressed And NoDrop And _collisionState.Below Then 'Initiate the jump
+            ElseIf BtnJump.IsPressed And _collisionState.Below Then 'Initiate the jump
                 'Start launching phase and initialize flags
                 JumpState = True
                 PlayerState = PlayerStatus.Jumping
@@ -118,7 +123,7 @@ Namespace Games.Blali_1.Viks
 
             'Preparing Horizontal Controls
             Dim mp As Single = Time.DeltaTime * 6000
-            Velocity.X = BtnMove.Value.X * HorizontalTerminalVelocity
+            Velocity.X = BtnMove.Value * HorizontalTerminalVelocity
 
             Velocity.Y += Gravity * Time.DeltaTime
 

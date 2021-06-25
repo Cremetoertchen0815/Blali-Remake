@@ -15,7 +15,7 @@ Public Class GameCore
         Window.AllowUserResizing = True
         DebugRenderEnabled = False
 
-        Scene = New GameScene(0)
+        Scene = New GameScene(2)
 
     End Sub
 End Class
