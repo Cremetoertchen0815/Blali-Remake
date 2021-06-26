@@ -5,7 +5,7 @@ Namespace Games.Blali_1
         Inherits Component
         Implements IUpdatable
 
-
+        'Properties(IUpdatable implementation)
         Private Property Enable As Boolean Implements IUpdatable.Enabled
             Get
                 Return Enabled
@@ -20,10 +20,13 @@ Namespace Games.Blali_1
             End Get
         End Property
         Public MustOverride Sub Update() Implements IUpdatable.Update
+        Friend MustOverride Function CheckBulletCollision(co As Collider) As Boolean
 
-
+        'Fields
+        Public Shared PlayerStartSFX As Boolean = False
         Public Map As TmxMap
         Public Collider As BoxCollider
+        Public BulletCount As Integer = 0
         Protected LevelScore As Integer = 0
         Protected NextID As Integer
 

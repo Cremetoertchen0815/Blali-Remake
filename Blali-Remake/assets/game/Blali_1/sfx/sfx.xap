@@ -16,8 +16,8 @@ Global Settings
     Header File = sfx.h;
     Exclude Category Names = 0;
     Exclude Variable Names = 0;
-    Last Modified Low = 1158970074;
-    Last Modified High = 30890741;
+    Last Modified Low = 30890741;
+    Last Modified High = 1158970074;
 
     Category
     {
@@ -237,19 +237,15 @@ Wave Bank
     Windows Bank Path Edited = 0;
     Seek Tables = 1;
     Compression Preset Name = SFX;
-    Xbox Bank Last Modified Low = 0;
-    Xbox Bank Last Modified High = 0;
-    PC Bank Last Modified Low = 1159120044;
-    PC Bank Last Modified High = 30890741;
-    Bank Last Revised Low = 1113513234;
-    Bank Last Revised High = 30890741;
+    Bank Last Revised Low = 1938469032;
+    Bank Last Revised High = 30894735;
 
     Wave
     {
         Name = death;
-        File = ..\..\..\..\..\..\..\death.wav;
-        Build Settings Last Modified Low = 1113483162;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\death.wav;
+        Build Settings Last Modified Low = 1477490792;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -293,9 +289,9 @@ Wave Bank
     Wave
     {
         Name = spring;
-        File = ..\..\..\..\..\..\..\spring.wav;
-        Build Settings Last Modified Low = 1113492143;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\spring.wav;
+        Build Settings Last Modified Low = 1069460729;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -316,9 +312,9 @@ Wave Bank
     Wave
     {
         Name = stomp;
-        File = ..\..\..\..\..\..\..\stomp.wav;
-        Build Settings Last Modified Low = 1113492143;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\stomp.wav;
+        Build Settings Last Modified Low = 1131126851;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -339,9 +335,9 @@ Wave Bank
     Wave
     {
         Name = red_coin;
-        File = ..\..\..\..\..\..\..\red_coin.wav;
-        Build Settings Last Modified Low = 1113502152;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\red_coin.wav;
+        Build Settings Last Modified Low = 1444121229;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -385,9 +381,9 @@ Wave Bank
     Wave
     {
         Name = yellow_coin;
-        File = ..\..\..\..\..\..\..\yellow_coin.wav;
-        Build Settings Last Modified Low = 1113502152;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\yellow_coin.wav;
+        Build Settings Last Modified Low = 1103384791;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -408,9 +404,9 @@ Wave Bank
     Wave
     {
         Name = land;
-        File = ..\..\..\..\..\..\..\land.wav;
-        Build Settings Last Modified Low = 1113513234;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\land.wav;
+        Build Settings Last Modified Low = 1522085629;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -431,9 +427,9 @@ Wave Bank
     Wave
     {
         Name = bläh;
-        File = ..\..\..\..\..\..\..\bläh.wav;
-        Build Settings Last Modified Low = 1113513234;
-        Build Settings Last Modified High = 30890741;
+        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\bläh.wav;
+        Build Settings Last Modified Low = 1144049491;
+        Build Settings Last Modified High = 30894735;
 
         Cache
         {
@@ -450,6 +446,98 @@ Wave Bank
             Last Modified High = 30890735;
         }
     }
+
+    Wave
+    {
+        Name = msg;
+        File = ..\..\..\sounds\msg.wav;
+        Build Settings Last Modified Low = 1170430604;
+        Build Settings Last Modified High = 30894735;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 98256;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 3144212663;
+            Last Modified High = 30894733;
+        }
+    }
+
+    Wave
+    {
+        Name = shot;
+        File = ..\..\..\sounds\shot.wav;
+        Build Settings Last Modified Low = 1170450597;
+        Build Settings Last Modified High = 30894735;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 81852;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 655716740;
+            Last Modified High = 30894733;
+        }
+    }
+
+    Wave
+    {
+        Name = canon;
+        File = ..\..\..\sounds\canon.wav;
+        Build Settings Last Modified Low = 1202261745;
+        Build Settings Last Modified High = 30894735;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 393196;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 2224877629;
+            Last Modified High = 30894734;
+        }
+    }
+
+    Wave
+    {
+        Name = hit;
+        File = ..\..\..\sounds\hit.wav;
+        Build Settings Last Modified Low = 1202291706;
+        Build Settings Last Modified High = 30894735;
+
+        Cache
+        {
+            Format Tag = 0;
+            Channels = 2;
+            Sampling Rate = 44100;
+            Bits Per Sample = 1;
+            Play Region Offset = 44;
+            Play Region Length = 108488;
+            Loop Region Offset = 0;
+            Loop Region Length = 0;
+            File Type = 1;
+            Last Modified Low = 1120968947;
+            Last Modified High = 30894733;
+        }
+    }
 }
 
 Sound Bank
@@ -459,8 +547,6 @@ Sound Bank
     Windows File = Win\classic_1.xsb;
     Xbox Bank Path Edited = 0;
     Windows Bank Path Edited = 0;
-    Header Last Modified High = 0;
-    Header Last Modified Low = 0;
 
     Sound
     {
@@ -885,6 +971,194 @@ Sound Bank
         }
     }
 
+    Sound
+    {
+        Name = hit;
+        Volume = -1200;
+        Pitch = 0;
+        Priority = 0;
+
+        Category Entry
+        {
+            Name = Default;
+        }
+
+        Track
+        {
+            Volume = 0;
+            Use Filter = 0;
+
+            Play Wave Event
+            {
+                Break Loop = 0;
+                Use Speaker Position = 0;
+                Use Center Speaker = 1;
+                New Speaker Position On Loop = 1;
+                Speaker Position Angle = 0.000000;
+                Speaker Position Arc = 0.000000;
+
+                Event Header
+                {
+                    Timestamp = 0;
+                    Relative = 0;
+                    Random Recurrence = 0;
+                    Random Offset = 0;
+                }
+
+                Wave Entry
+                {
+                    Bank Name = classic_1;
+                    Bank Index = 0;
+                    Entry Name = hit;
+                    Entry Index = 12;
+                    Weight = 255;
+                    Weight Min = 0;
+                }
+            }
+        }
+    }
+
+    Sound
+    {
+        Name = canon;
+        Volume = -1200;
+        Pitch = 0;
+        Priority = 0;
+
+        Category Entry
+        {
+            Name = Default;
+        }
+
+        Track
+        {
+            Volume = 0;
+            Use Filter = 0;
+
+            Play Wave Event
+            {
+                Break Loop = 0;
+                Use Speaker Position = 0;
+                Use Center Speaker = 1;
+                New Speaker Position On Loop = 1;
+                Speaker Position Angle = 0.000000;
+                Speaker Position Arc = 0.000000;
+
+                Event Header
+                {
+                    Timestamp = 0;
+                    Relative = 0;
+                    Random Recurrence = 0;
+                    Random Offset = 0;
+                }
+
+                Wave Entry
+                {
+                    Bank Name = classic_1;
+                    Bank Index = 0;
+                    Entry Name = canon;
+                    Entry Index = 11;
+                    Weight = 255;
+                    Weight Min = 0;
+                }
+            }
+        }
+    }
+
+    Sound
+    {
+        Name = shot;
+        Volume = -1200;
+        Pitch = 0;
+        Priority = 0;
+
+        Category Entry
+        {
+            Name = Default;
+        }
+
+        Track
+        {
+            Volume = 0;
+            Use Filter = 0;
+
+            Play Wave Event
+            {
+                Break Loop = 0;
+                Use Speaker Position = 0;
+                Use Center Speaker = 1;
+                New Speaker Position On Loop = 1;
+                Speaker Position Angle = 0.000000;
+                Speaker Position Arc = 0.000000;
+
+                Event Header
+                {
+                    Timestamp = 0;
+                    Relative = 0;
+                    Random Recurrence = 0;
+                    Random Offset = 0;
+                }
+
+                Wave Entry
+                {
+                    Bank Name = classic_1;
+                    Bank Index = 0;
+                    Entry Name = shot;
+                    Entry Index = 10;
+                    Weight = 255;
+                    Weight Min = 0;
+                }
+            }
+        }
+    }
+
+    Sound
+    {
+        Name = msg;
+        Volume = -1200;
+        Pitch = 0;
+        Priority = 0;
+
+        Category Entry
+        {
+            Name = Default;
+        }
+
+        Track
+        {
+            Volume = 0;
+            Use Filter = 0;
+
+            Play Wave Event
+            {
+                Break Loop = 0;
+                Use Speaker Position = 0;
+                Use Center Speaker = 1;
+                New Speaker Position On Loop = 1;
+                Speaker Position Angle = 0.000000;
+                Speaker Position Arc = 0.000000;
+
+                Event Header
+                {
+                    Timestamp = 0;
+                    Relative = 0;
+                    Random Recurrence = 0;
+                    Random Offset = 0;
+                }
+
+                Wave Entry
+                {
+                    Bank Name = classic_1;
+                    Bank Index = 0;
+                    Entry Name = msg;
+                    Entry Index = 9;
+                    Weight = 255;
+                    Weight Min = 0;
+                }
+            }
+        }
+    }
+
     Cue
     {
         Name = death;
@@ -1112,6 +1386,112 @@ Sound Bank
         {
             Name = bläh;
             Index = 0;
+            Weight Min = 0;
+            Weight Max = 255;
+        }
+    }
+
+    Cue
+    {
+        Name = msg;
+
+        Variation
+        {
+            Variation Type = 3;
+            Variation Table Type = 1;
+            New Variation on Loop = 0;
+        }
+
+        Sound Entry
+        {
+            Name = msg;
+            Index = 12;
+            Weight Min = 0;
+            Weight Max = 255;
+        }
+
+        Instance Limit
+        {
+            Max Instances = 1;
+            Behavior = 0;
+
+            Crossfade
+            {
+                Fade In = 0;
+                Fade Out = 0;
+                Crossfade Type = 0;
+            }
+        }
+    }
+
+    Cue
+    {
+        Name = hit;
+
+        Variation
+        {
+            Variation Type = 3;
+            Variation Table Type = 1;
+            New Variation on Loop = 0;
+        }
+
+        Sound Entry
+        {
+            Name = hit;
+            Index = 9;
+            Weight Min = 0;
+            Weight Max = 255;
+        }
+    }
+
+    Cue
+    {
+        Name = canon;
+
+        Variation
+        {
+            Variation Type = 3;
+            Variation Table Type = 1;
+            New Variation on Loop = 0;
+        }
+
+        Sound Entry
+        {
+            Name = canon;
+            Index = 10;
+            Weight Min = 0;
+            Weight Max = 255;
+        }
+
+        Instance Limit
+        {
+            Max Instances = 1;
+            Behavior = 0;
+
+            Crossfade
+            {
+                Fade In = 0;
+                Fade Out = 0;
+                Crossfade Type = 0;
+            }
+        }
+    }
+
+    Cue
+    {
+        Name = shot;
+
+        Variation
+        {
+            Variation Type = 3;
+            Variation Table Type = 1;
+            New Variation on Loop = 0;
+        }
+
+        Sound Entry
+        {
+            Name = shot;
+            Index = 11;
             Weight Min = 0;
             Weight Max = 255;
         }

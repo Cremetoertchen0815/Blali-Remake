@@ -13,6 +13,18 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin game/Blali_1/ball.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/ball.png
+
 #begin game/Blali_1/bgm/0.wav
 /importer:WavImporter
 /processor:SongProcessor
@@ -24,6 +36,18 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:game/Blali_1/bgm/1.wav
+
+#begin game/Blali_1/bgm/3.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/3.wav
+
+#begin game/Blali_1/bgm/4.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/4.wav
 
 #begin game/Blali_1/bullet.png
 /importer:TextureImporter
@@ -132,6 +156,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:game/Blali_1/gun.png
+
+#begin game/Blali_1/hud/msgbox_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/hud/msgbox_down.png
+
+#begin game/Blali_1/hud/msgbox_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/hud/msgbox_hover.png
+
+#begin game/Blali_1/hud/msgbox_idle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/hud/msgbox_idle.png
 
 #begin game/Blali_1/sfx/win/classic_1.xsb
 /copy:game/Blali_1/sfx/win/classic_1.xsb

@@ -12,15 +12,12 @@ Namespace Games.Blali_1.Viks
         Private BtnMoveY As VirtualIntegerAxis
 
         'Constants
-        Private Const MovingVelocity As Single = 250 'Horizontal terminal velocity
+        Private Const MovingVelocity As Single = 200 'Horizontal terminal velocity
 
         'Spieler Flags
         Private Velocity As Vector2
         Private Spawn As Vector2
         Protected DeathPlain As Integer
-
-        'SFX flags
-        Private Shared PlayedStart As Boolean = False
 
         'Textures
         Private texIdle As Sprite
@@ -44,13 +41,13 @@ Namespace Games.Blali_1.Viks
 
 
             'Load textures
-            texIdle = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/spr_1"))
+            texIdle = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/ball"))
 
             'Add components
-            Entity.Scale = New Vector2(0.9)
-            Collider = Entity.AddComponent(New BoxCollider(New Rectangle(3, 0, 54, 130)))
+            Entity.Scale = New Vector2(1.8)
+            Collider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 8, 8)))
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
-            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(30, 66) * Entity.Scale})
+            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(4) * Entity.Scale})
 
 
             'Load object data
@@ -74,15 +71,12 @@ Namespace Games.Blali_1.Viks
 
         Public Overrides Sub OnAddedToEntity()
             'Play start sound
-            If Not PlayedStart Then
+            If Not PlayerStartSFX Then
                 GameScene.SFX.PlayCue("start")
-                PlayedStart = True
+                PlayerStartSFX = True
             End If
         End Sub
         Public Overrides Sub Update()
-
-            'Adapt sprite and collider to default value
-            Collider.Height = 130
 
             'Move player
             If BtnMoveX.Value <> 0 Then Velocity = New Vector2(BtnMoveX.Value * MovingVelocity, 0)
@@ -102,6 +96,10 @@ Namespace Games.Blali_1.Viks
 
             If (_collisionState.Left Or _collisionState.Right And Velocity.X <> 0) Or (_collisionState.Above Or _collisionState.Below And Velocity.Y <> 0) Then Velocity = Vector2.Zero
         End Sub
+
+        Friend Overrides Function CheckBulletCollision(co As Collider) As Boolean
+            Return False
+        End Function
 
         Public Enum PlayerStatus
             Idle = 0 'Static

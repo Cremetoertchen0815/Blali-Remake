@@ -32,6 +32,10 @@ Namespace Games.Blali_1.Mobs
             'Flip direction
             If lol.Left Or lol.Right Then Velocity *= -1
 
+            'Interact with bullets
+            If Player.CheckBulletCollision(Collider) Then Entity.Destroy() : GameScene.SFX.PlayCue("hit")
+
+            'Interact with player
             If Player.Collider.CollidesWith(Collider, Nothing) Then Player.Die()
         End Sub
     End Class

@@ -1,8 +1,8 @@
 ﻿Imports Microsoft.Xna.Framework.Audio
 Imports Microsoft.Xna.Framework.Media
-Imports Blali.Games.Blali_1.Collectibles
 Imports Blali.Games.Blali_1.Mobs
 Imports Blali.Games.Blali_1.Viks
+Imports Blali.Games.Blali_1.Objects
 
 Namespace Games.Blali_1
     Public Class GameScene
@@ -46,6 +46,8 @@ Namespace Games.Blali_1
                                 PlayerComponent = CreateEntity("player").AddComponent(New DefaultVik(Map))
                         End Select
                         GameObject.Player = PlayerComponent
+                    Case "gun"
+                        CreateEntity("gun").AddComponent(New Gun(New Vector2(element.X, element.Y)))
                     Case "mob_spike"
                         CreateEntity(element.Name).AddComponent(New Spike(New Vector2(element.X, element.Y), Map))
                     Case "mob_flight"

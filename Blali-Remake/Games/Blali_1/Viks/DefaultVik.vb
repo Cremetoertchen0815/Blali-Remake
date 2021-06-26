@@ -1,5 +1,6 @@
 ﻿Imports System
 Imports System.Collections.Generic
+Imports Blali.Games.Blali_1.Objects
 Imports Nez.Textures
 Imports Nez.Tiled
 
@@ -11,6 +12,7 @@ Namespace Games.Blali_1.Viks
         Private BtnMove As VirtualAxis
         Private BtnJump As VirtualButton
         Private BtnBläh As VirtualButton
+        Private BtnShüt As VirtualButton
 
         'Constants
         Private Const HorizontalTerminalVelocity As Single = 250 'Horizontal terminal velocity
@@ -30,9 +32,10 @@ Namespace Games.Blali_1.Viks
 
         'SFX flags
         Private blähSFXCounter As Single
-        Private Shared PlayedStart As Boolean = False
 
         'Objects
+        Private Bullets As New List(Of Bullet)
+        Private BulletTracker As Integer = 0
         Private SpringCollider As New List(Of RectangleF)
 
         'Textures
@@ -54,6 +57,7 @@ Namespace Games.Blali_1.Viks
             BtnMove.Deregister()
             BtnJump.Deregister()
             BtnBläh.Deregister()
+            BtnShüt.Deregister()
         End Sub
 
         Public Overrides Sub Initialize()
@@ -85,7 +89,8 @@ Namespace Games.Blali_1.Viks
             'Map controls
             BtnMove = New VirtualAxis(New VirtualAxis.GamePadLeftStickX, New VirtualAxis.KeyboardKeys(VirtualInput.OverlapBehavior.TakeNewer, Keys.A, Keys.D), New VirtualAxis.GamePadDpadLeftRight)
             BtnJump = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.A), New VirtualButton.KeyboardKey(Keys.Space)) With {.BufferTime = 0}
-            BtnBläh = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.X), New VirtualButton.KeyboardKey(Keys.LeftShift)) With {.BufferTime = 0}
+            BtnBläh = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.B), New VirtualButton.KeyboardKey(Keys.LeftShift)) With {.BufferTime = 0}
+            BtnShüt = New VirtualButton(500, New VirtualButton.MouseLeftButton, New VirtualButton.GamePadButton(0, Buttons.X)) With {.BufferTime = 0}
 
             'Set up camera
             Dim camera As Camera = Entity.Scene.Camera
@@ -97,9 +102,9 @@ Namespace Games.Blali_1.Viks
 
         Public Overrides Sub OnAddedToEntity()
             'Play start sound
-            If Not PlayedStart Then
+            If Not PlayerStartSFX Then
                 GameScene.SFX.PlayCue("start")
-                PlayedStart = True
+                PlayerStartSFX = True
             End If
         End Sub
         Public Overrides Sub Update()
@@ -137,6 +142,15 @@ Namespace Games.Blali_1.Viks
                 If blähSFXCounter > 50 Then GameScene.SFX.PlayCue("blaeh") : blähSFXCounter = 0
             End If
 
+            'Aww Shüt
+            If BtnShüt.IsPressed And BulletCount > 0 Then
+                Entity.Scene.CreateEntity("bullet_" & BulletTracker.ToString).AddComponent(New Bullet(Entity.LocalPosition + New Vector2(27, 30), If(AccFlip, -1, 1), Bullets))
+                GameScene.SFX.PlayCue("shot")
+                BulletTracker += 1
+                BulletCount -= 1
+            End If
+
+
             'Move player
             _mover.Move(Velocity * Time.DeltaTime, Collider, _collisionState)
 
@@ -173,9 +187,19 @@ Namespace Games.Blali_1.Viks
             If _collisionState.Above Then Velocity.Y = Math.Max(0, Velocity.Y)
         End Sub
 
+        Friend Overrides Function CheckBulletCollision(co As Collider) As Boolean
+            For Each bullet In Bullets
+                If bullet.Collider.CollidesWith(co, Nothing) AndAlso bullet.Entity IsNot Nothing Then
+                    bullet.Entity.Destroy()
+                    Return True
+                End If
+            Next
+            Return False
+        End Function
+
         Public Enum PlayerStatus
             Idle = 0 'Static
-            Jumping = 1 'Animation(2 Frames, Oneshot)
+            Jumping = 1
             Bläh = 2
         End Enum
     End Class

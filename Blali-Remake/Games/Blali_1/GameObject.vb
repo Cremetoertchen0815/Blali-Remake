@@ -11,8 +11,8 @@ Namespace Games.Blali_1
         Friend Shared Player As IVik
 
         'Object fields
+        Friend Collider As BoxCollider
         Protected Ränder As Sprites.SpriteRenderer
-        Protected Collider As BoxCollider
         Protected Map As TmxMap
         Protected Spawn As Vector2
 

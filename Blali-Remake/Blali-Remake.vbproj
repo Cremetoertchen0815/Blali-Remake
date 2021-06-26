@@ -55,9 +55,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GameCore.vb" />
-    <Compile Include="Games\Blali_1\Collectibles\RedCoin.vb" />
-    <Compile Include="Games\Blali_1\Collectibles\YellowCoin.vb" />
+    <Compile Include="Games\Blali_1\Objects\Bullet.vb" />
+    <Compile Include="Games\Blali_1\Objects\RedCoin.vb" />
+    <Compile Include="Games\Blali_1\Objects\YellowCoin.vb" />
     <Compile Include="Games\Blali_1\GameScene.vb" />
+    <Compile Include="Games\Blali_1\Gun.vb" />
     <Compile Include="Games\Blali_1\IVik.vb" />
     <Compile Include="Games\Blali_1\Mobs\Bodenviech.vb" />
     <Compile Include="Games\Blali_1\Mobs\Fliegviech.vb" />
@@ -93,9 +95,7 @@
     <Import Include="Microsoft.Xna.Framework.Input" />
     <Import Include="Nez" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Nez\Nez.Portable\Nez.csproj">
       <Project>{85d05093-9f59-4633-b5ec-145e318d90a7}</Project>

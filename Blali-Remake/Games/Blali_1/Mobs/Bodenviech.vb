@@ -42,6 +42,10 @@ Namespace Games.Blali_1.Mobs
             'Flip texture
             Ränder.FlipX = Velocity.X > 0
 
+            'Interact with bullets
+            If Player.CheckBulletCollision(Collider) Then Entity.Destroy() : GameScene.SFX.PlayCue("hit")
+
+            'Interact with player
             Dim col As New CollisionResult
             If Player.Collider.CollidesWith(Collider, col) Then
                 If System.Math.Abs(col.MinimumTranslationVector.X) < System.Math.Abs(col.MinimumTranslationVector.Y) And col.MinimumTranslationVector.Y > 0 Then
