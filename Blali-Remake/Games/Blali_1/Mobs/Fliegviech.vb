@@ -23,7 +23,7 @@ Namespace Games.Blali_1.Mobs
             Ränder = Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/enemy_b"))))
             Ränder.LocalOffset = Collider.Bounds.Size / 2
 
-            Velocity = New Vector2(220, 0)
+            Velocity = New Vector2(240, 0)
             Entity.LocalPosition = New Vector2(Spawn.X - 60.0F / 2, Spawn.Y - 55)
             bounds = {Entity.LocalPosition.X - Weite, Entity.LocalPosition.X + Weite}
         End Sub

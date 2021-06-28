@@ -20,7 +20,7 @@ Namespace Games.Blali_1.Mobs
             Mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
             Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/enemy_a")))).LocalOffset = Collider.Bounds.Center - Entity.LocalPosition
 
-            Velocity = New Vector2(130, 0)
+            Velocity = New Vector2(120, 0)
             Entity.LocalPosition = New Vector2(Spawn.X - 140.0F / 2, Spawn.Y - 150)
         End Sub
 

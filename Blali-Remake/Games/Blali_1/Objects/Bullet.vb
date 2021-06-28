@@ -29,10 +29,10 @@ Namespace Games.Blali_1.Objects
         End Sub
 
         Public Overrides Sub Update()
-            Entity.LocalPosition = Entity.LocalPosition + New Vector2(dir * 8, 0)
+            Entity.LocalPosition = Entity.LocalPosition + New Vector2(dir * 480, 0) * Time.DeltaTime
             Lifetime += Time.DeltaTime
 
-            If False Or Lifetime > 2 Then
+            If Lifetime > 2 Then
                 BulletList.Remove(Me)
                 Entity.Destroy()
             End If

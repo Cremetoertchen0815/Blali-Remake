@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="GameCore.vb" />
     <Compile Include="Games\Blali_1\Objects\Bullet.vb" />
+    <Compile Include="Games\Blali_1\Objects\Canon.vb" />
     <Compile Include="Games\Blali_1\Objects\RedCoin.vb" />
     <Compile Include="Games\Blali_1\Objects\YellowCoin.vb" />
     <Compile Include="Games\Blali_1\GameScene.vb" />
@@ -86,6 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\0.tmx" />
+    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\1.tmx" />
+    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\2.tmx" />
+    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\3.tmx" />
+    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\4.tmx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
   </ItemGroup>

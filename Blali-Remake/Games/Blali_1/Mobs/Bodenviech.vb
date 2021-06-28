@@ -8,7 +8,7 @@ Namespace Games.Blali_1.Mobs
         Private Mover As TiledMapMover
         Private Velocity As Vector2
         Private bounds As Single()
-        Private Const Weite As Integer = 200
+        Private Const Weite As Integer = 180
 
         Public Sub New(spawn As Vector2, map As TmxMap)
             Me.Spawn = spawn
@@ -24,7 +24,7 @@ Namespace Games.Blali_1.Mobs
             Ränder.LocalOffset = Collider.Bounds.Size / 2 * 1.5
             Entity.LocalScale = New Vector2(1.5F)
 
-            Velocity = New Vector2(250, 0)
+            Velocity = New Vector2(270, 0)
             Entity.LocalPosition = New Vector2(Spawn.X - 35.0F / 2, Spawn.Y - 40)
             bounds = {Entity.LocalPosition.X - Weite, Entity.LocalPosition.X + Weite}
         End Sub

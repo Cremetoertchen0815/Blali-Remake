@@ -3,6 +3,9 @@
 Namespace Games.Blali_1.Objects
     Public Class YellowCoin
         Inherits GameObject
+
+        Public Shared CollectedCount As Integer
+
         Public Sub New(spawn As Vector2)
             Me.Spawn = spawn
         End Sub
@@ -19,6 +22,7 @@ Namespace Games.Blali_1.Objects
             If Player.Collider.CollidesWith(Collider, Nothing) Then
                 Entity.Destroy()
                 ScoreIncrease(1)
+                CollectedCount += 1
                 GameScene.SFX.PlayCue("yellow_coin")
             End If
         End Sub

@@ -193,6 +193,18 @@
 /processorParam:TextureFormat=Color
 /build:game/Blali_1/hud/msgbox_idle.png
 
+#begin game/Blali_1/portal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/portal.png
+
 #begin game/Blali_1/sfx/win/classic_1.xsb
 /copy:game/Blali_1/sfx/win/classic_1.xsb
 

@@ -1,5 +1,6 @@
 ﻿Imports System
 Imports System.Collections.Generic
+Imports Blali.Games.Blali_1.Objects
 Imports Nez.Textures
 Imports Nez.Tiled
 
@@ -12,9 +13,10 @@ Namespace Games.Blali_1.Viks
         Private BtnMoveY As VirtualIntegerAxis
 
         'Constants
-        Private Const MovingVelocity As Single = 200 'Horizontal terminal velocity
+        Private Const MovingVelocity As Single = 350 'Horizontal terminal velocity
 
-        'Spieler Flags
+        'Flags
+        Private CoinCondition As Integer
         Private Velocity As Vector2
         Private Spawn As Vector2
         Protected DeathPlain As Integer
@@ -39,7 +41,6 @@ Namespace Games.Blali_1.Viks
         Public Overrides Sub Initialize()
             MyBase.Initialize()
 
-
             'Load textures
             texIdle = New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/ball"))
 
@@ -54,7 +55,7 @@ Namespace Games.Blali_1.Viks
             DeathPlain = CInt(Map.Properties("death_plain"))
             For Each element In Map.GetObjectGroup("Objects").Objects
                 If element.Type = "player" Then Spawn = New Vector2(element.X - 30, element.Y - 130)
-                If element.Type = "finish" Then NextID = CInt(element.Properties("followup_ID"))
+                If element.Type = "finish" Then NextID = CInt(element.Properties("followup_ID")) : CoinCondition = CInt(element.Properties("coin_condition"))
             Next
             Entity.LocalPosition = Spawn
             GameObject.ScoreIncrease = Sub(x) LevelScore += x
@@ -66,7 +67,7 @@ Namespace Games.Blali_1.Viks
             'Set up camera
             Dim camera As Camera = Entity.Scene.Camera
             camera.Position = New Vector2(CInt(Map.Properties("camX")) * Map.TileWidth, CInt(Map.Properties("camY")) * Map.TileHeight)
-            camera.Zoom = 0
+            camera.Zoom = 0.1
         End Sub
 
         Public Overrides Sub OnAddedToEntity()
@@ -90,8 +91,8 @@ Namespace Games.Blali_1.Viks
             'Implement death plain
             If Collider.Bounds.Bottom > DeathPlain Then Die()
 
-            ''Implement finishing the stage
-            'If Collider.Bounds.CollisionCheck(FinishCollider, 0, 0) Then FinishStage()
+            'Implement finishing the stage
+            If YellowCoin.CollectedCount >= CoinCondition Then FinishStage()
 
 
             If (_collisionState.Left Or _collisionState.Right And Velocity.X <> 0) Or (_collisionState.Above Or _collisionState.Below And Velocity.Y <> 0) Then Velocity = Vector2.Zero

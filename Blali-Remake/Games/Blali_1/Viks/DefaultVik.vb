@@ -18,7 +18,7 @@ Namespace Games.Blali_1.Viks
         Private Const HorizontalTerminalVelocity As Single = 250 'Horizontal terminal velocity
         Private Const VerticalTerminalVelocity As Single = 900 'Horizontal terminal velocity
         Private Const Gravity As Single = 1000
-        Private Const SpringVelocity As Single = 800
+        Private Const SpringVelocity As Single = 828
         Private Const BlähVelocity As Single = 35
         Private Const JumpHeight As Single = 580
 
@@ -166,7 +166,7 @@ Namespace Games.Blali_1.Viks
                 Dim overlapX As Single
                 Dim overlapY As Single
 
-                If Collider.Bounds.CollisionCheck(element, overlapX, overlapY) AndAlso (overlapX <> 0 Xor overlapY <> 0) AndAlso Velocity.Y > 0 Then
+                If Collider.Bounds.CollisionCheck(element, overlapX, overlapY) AndAlso (overlapX <> 0 Xor overlapY <> 0) Then
                     Velocity.Y = -SpringVelocity
                     GameScene.SFX.PlayCue("spring")
                     Exit For

@@ -20,6 +20,7 @@ Namespace Games.Blali_1
             Map = Content.LoadTiledMap("levels\Blali_1\" & lvl_ID.ToString & ".tmx")
             Current = lvl_ID
 
+            'Load map renderer
             MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
 
             'Load BG
@@ -47,7 +48,9 @@ Namespace Games.Blali_1
                         End Select
                         GameObject.Player = PlayerComponent
                     Case "gun"
-                        CreateEntity("gun").AddComponent(New Gun(New Vector2(element.X, element.Y)))
+                        CreateEntity("gun_" & element.Id).AddComponent(New Gun(New Vector2(element.X, element.Y)))
+                    Case "canon"
+                        CreateEntity("canon_" & element.Id).AddComponent(New Canon(New Vector2(element.X, element.Y), Map))
                     Case "mob_spike"
                         CreateEntity(element.Name).AddComponent(New Spike(New Vector2(element.X, element.Y), Map))
                     Case "mob_flight"
@@ -66,18 +69,16 @@ Namespace Games.Blali_1
                         CreateEntity("coin_red_" & element.Id).AddComponent(New RedCoin(New Vector2(element.X, element.Y)))
                 End Select
             Next
+
+            'Init misc things
+            YellowCoin.CollectedCount = 0
+            ClearColor = Color.Transparent
         End Sub
 
         Public Overrides Sub Initialize()
             MyBase.Initialize()
 
             AddRenderer(New DefaultRenderer)
-        End Sub
-
-        Public Overrides Sub Update()
-            MyBase.Update()
-
-            'Move camera
         End Sub
     End Class
 End Namespace
