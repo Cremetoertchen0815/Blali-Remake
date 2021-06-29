@@ -34,7 +34,7 @@ Namespace Games.Blali_1
 
             'Play music
             MediaPlayer.Play(Content.Load(Of Song)("game/Blali_1/bgm/" & lvl_ID))
-            MediaPlayer.Volume = 0.2
+            MediaPlayer.Volume = 0.15
 
             'Get mobs from level
             For Each element In Map.GetObjectGroup("Objects").Objects
@@ -44,7 +44,7 @@ Namespace Games.Blali_1
                             Case "ball"
                                 PlayerComponent = CreateEntity("player").AddComponent(New BallVik(Map))
                             Case Else
-                                PlayerComponent = CreateEntity("player").AddComponent(New DefaultVik(Map))
+                                PlayerComponent = CreateEntity("player").AddComponent(New VollVik(Map))
                         End Select
                         GameObject.Player = PlayerComponent
                     Case "gun"

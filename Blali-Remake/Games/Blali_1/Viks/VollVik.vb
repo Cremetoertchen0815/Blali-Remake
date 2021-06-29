@@ -5,7 +5,7 @@ Imports Nez.Textures
 Imports Nez.Tiled
 
 Namespace Games.Blali_1.Viks
-    Public Class DefaultVik
+    Public Class VollVik
         Inherits IVik
 
         'Controls
@@ -74,6 +74,7 @@ Namespace Games.Blali_1.Viks
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(3, 0, 54, 130)))
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
             _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(30, 66) * Entity.Scale})
+            _spriteRenderer.SetRenderLayer(-1)
 
 
             'Load object data
@@ -94,7 +95,7 @@ Namespace Games.Blali_1.Viks
 
             'Set up camera
             Dim camera As Camera = Entity.Scene.Camera
-            Dim saas = camera.AddComponent(New FollowCamera(Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 0.3, .MapLockEnabled = True, .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
+            Dim saas = camera.AddComponent(New FollowCamera(Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 1, .MapLockEnabled = True, .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
             saas.FocusOffset = New Vector2(270, 100)
             camera.Position = New Vector2(CInt(Map.Properties("camX")) * Map.TileWidth, CInt(Map.Properties("camY")) * Map.TileHeight)
             camera.Zoom = 0.2
