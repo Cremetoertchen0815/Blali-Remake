@@ -38,11 +38,11 @@ Namespace Games.Blali_1
             LevelScore = 0
             GameScene.SFX.PlayCue("death")
 
-            Dim newsc As New GameScene(GameScene.Current)
-            Core.Schedule(0.5, Sub()
-                                   Core.Scene = newsc
-                                   Time.TimeScale = 1
-                               End Sub)
+            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New CrossFadeTransition(Function() New GameScene(GameScene.Current)) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeDuration = 0}))
+            'Core.Schedule(0.5, Sub()
+            '                       Core.Scene = newsc
+            '                       Time.TimeScale = 1
+            '                   End Sub)
         End Sub
 
         Public Sub FinishStage()
@@ -53,10 +53,7 @@ Namespace Games.Blali_1
             Enabled = False
             GameScene.SFX.PlayCue("finish")
 
-            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New TransformTransition(TransformTransition.TransformTransitionType.SlideRight) With {.OnScreenObscured = Sub()
-                                                                                                                                                                             Core.Scene = New GameScene(NextID)
-                                                                                                                                                                             Time.TimeScale = 1
-                                                                                                                                                                         End Sub, .TransitionEaseType = Tweens.EaseType.Linear, .Duration = 2}))
+            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New TransformTransition(Function() New GameScene(NextID), TransformTransition.TransformTransitionType.SlideRight) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .TransitionEaseType = Tweens.EaseType.Linear, .Duration = 2}))
 
         End Sub
     End Class
