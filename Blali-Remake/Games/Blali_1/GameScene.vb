@@ -45,8 +45,11 @@ Namespace Games.Blali_1
                                 PlayerComponent = CreateEntity("player").AddComponent(New BallVik(Map))
                             Case Else
                                 PlayerComponent = CreateEntity("player").AddComponent(New VollVik(Map))
+
                         End Select
                         GameObject.Player = PlayerComponent
+                    Case "jeff"
+                        CreateEntity("jeff").AddComponent(New MynameisJeff(New Vector2(element.X, element.Y), Map))
                     Case "gun"
                         CreateEntity("gun_" & element.Id).AddComponent(New Gun(New Vector2(element.X, element.Y)))
                     Case "canon"

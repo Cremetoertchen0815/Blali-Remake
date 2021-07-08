@@ -6,12 +6,13 @@ Namespace Games.Blali_1.Objects
     Public Class Bullet
         Inherits GameObject
 
-        Private dir As Integer
+        Private dir As Vector2
         Private Lifetime As Single
         Private pos As Vector2
         Private BulletList As List(Of Bullet)
+        Friend Suicidesquad As Boolean = False
 
-        Public Sub New(location As Vector2, xSpeed As Integer, adder As List(Of Bullet))
+        Public Sub New(location As Vector2, xSpeed As Vector2, adder As List(Of Bullet))
             pos = location
             dir = xSpeed
             BulletList = adder
@@ -29,10 +30,10 @@ Namespace Games.Blali_1.Objects
         End Sub
 
         Public Overrides Sub Update()
-            Entity.LocalPosition = Entity.LocalPosition + New Vector2(dir * 480, 0) * Time.DeltaTime
+            Entity.LocalPosition = Entity.LocalPosition + dir * 480 * Time.DeltaTime
             Lifetime += Time.DeltaTime
 
-            If Lifetime > 2 Then
+            If Lifetime > 5 Or Suicidesquad Then
                 BulletList.Remove(Me)
                 Entity.Destroy()
             End If

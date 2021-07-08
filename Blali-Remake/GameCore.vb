@@ -13,9 +13,9 @@ Public Class GameCore
         Scene.SetDefaultDesignResolution(1920, 1080, Scene.SceneResolutionPolicy.BestFit)
         Screen.SynchronizeWithVerticalRetrace = True
         Window.AllowUserResizing = True
-        DebugRenderEnabled = False
+        DebugRenderEnabled = True
 
-        Scene = New GameScene(4)
+        Scene = New GameScene(5)
 
     End Sub
 End Class

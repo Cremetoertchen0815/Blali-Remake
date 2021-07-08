@@ -145,7 +145,7 @@ Namespace Games.Blali_1.Viks
 
             'Aww Shüt
             If BtnShüt.IsPressed And BulletCount > 0 Then
-                Entity.Scene.CreateEntity("bullet_" & BulletTracker.ToString).AddComponent(New Bullet(Entity.LocalPosition + New Vector2(27, 30), If(AccFlip, -1, 1), Bullets))
+                Entity.Scene.CreateEntity("bullet_" & BulletTracker.ToString).AddComponent(New Bullet(Entity.LocalPosition + New Vector2(27, 30), If(AccFlip, -1, 1) * Vector2.UnitX, Bullets))
                 GameScene.SFX.PlayCue("shot")
                 BulletTracker += 1
                 BulletCount -= 1
