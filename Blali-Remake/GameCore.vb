@@ -1,4 +1,4 @@
-﻿Imports Blali.Games.Blali_1
+﻿Imports Blali.Intros
 
 Public Class GameCore
     Inherits Core
@@ -13,9 +13,9 @@ Public Class GameCore
         Scene.SetDefaultDesignResolution(1920, 1080, Scene.SceneResolutionPolicy.BestFit)
         Screen.SynchronizeWithVerticalRetrace = True
         Window.AllowUserResizing = True
-        DebugRenderEnabled = True
+        DebugRenderEnabled = False
 
-        Scene = New GameScene(5)
+        Scene = New BFN()
 
     End Sub
 End Class

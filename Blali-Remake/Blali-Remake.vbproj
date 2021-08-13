@@ -69,6 +69,10 @@
     <Compile Include="Games\Blali_1\Mobs\Spike.vb" />
     <Compile Include="Games\Blali_1\Viks\BallVik.vb" />
     <Compile Include="Games\Blali_1\Viks\VollVik.vb" />
+    <Compile Include="Intros\BFN.vb" />
+    <Compile Include="Intros\LF.vb" />
+    <Compile Include="Intros\MonoNez.vb" />
+    <Compile Include="Menu\MainMenu.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
   </ItemGroup>
