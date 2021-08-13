@@ -13,10 +13,10 @@ Public Class GameCore
         Scene.SetDefaultDesignResolution(1920, 1080, Scene.SceneResolutionPolicy.BestFit)
         Screen.SynchronizeWithVerticalRetrace = True
         Window.AllowUserResizing = True
-        DebugRenderEnabled = False
+        DebugRenderEnabled = True
 
         'Scene = New BFN()
-        Scene = New Games.Blali_1.GameScene(4)
+        Scene = New Games.Blali_1.GameScene(5)
 
     End Sub
 End Class

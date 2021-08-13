@@ -65,7 +65,7 @@ Namespace Games.Blali_1.Objects
             If Player.CheckBulletCollision(Collider) Then Entity.Destroy() : GameScene.SFX.PlayCue("hit")
 
             'Kill player if touching bullet
-            If BulletCollider.CollidesWith(Player.Collider, Nothing) Then Player.Die()
+            If BulletCollider.Enabled AndAlso BulletCollider.CollidesWith(Player.Collider, Nothing) Then Player.Die()
         End Sub
 
         Private Sub Reset()
