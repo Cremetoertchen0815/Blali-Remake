@@ -7,6 +7,7 @@ Namespace Games.Blali_1.Objects
     Public Class Canon
         Inherits GameObject
 
+        Private inst As Cue = GameScene.SFX.GetCue("canon")
         Private BulletCollider As BoxCollider
         Private BulletRenderer As SpriteRenderer
         Private dir As Vector2
@@ -39,11 +40,11 @@ Namespace Games.Blali_1.Objects
             End If
 
             'Spawn bullet
-            If Lifetime > 0.66 And Not Shot Then
+            If Lifetime > 0.6 And Not Shot Then
                 Shot = True
                 BulletCollider.Enabled = True
                 BulletRenderer.Enabled = True
-                GameScene.SFX.PlayCue("canon")
+                If Not inst.IsPlaying Then inst.Play()
                 dir = Vector2.Normalize(Player.Entity.LocalPosition - Spawn)
                 Lifetime = 0
             End If

@@ -15,7 +15,8 @@ Public Class GameCore
         Window.AllowUserResizing = True
         DebugRenderEnabled = False
 
-        Scene = New BFN()
+        'Scene = New BFN()
+        Scene = New Games.Blali_1.GameScene(4)
 
     End Sub
 End Class

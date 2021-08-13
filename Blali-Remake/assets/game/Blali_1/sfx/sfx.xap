@@ -237,15 +237,21 @@ Wave Bank
     Windows Bank Path Edited = 0;
     Seek Tables = 1;
     Compression Preset Name = SFX;
-    Bank Last Revised Low = 1938469032;
-    Bank Last Revised High = 30894735;
+    Xbox Bank Last Modified Low = 0;
+    Xbox Bank Last Modified High = 0;
+    PC Bank Last Modified Low = 0;
+    PC Bank Last Modified High = 0;
+    Header Last Modified Low = 0;
+    Header Last Modified High = 0;
+    Bank Last Revised Low = 1638031756;
+    Bank Last Revised High = 30904413;
 
     Wave
     {
         Name = death;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\death.wav;
-        Build Settings Last Modified Low = 1477490792;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\death.wav;
+        Build Settings Last Modified Low = 1535652894;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -266,9 +272,9 @@ Wave Bank
     Wave
     {
         Name = start;
-        File = ..\..\..\..\..\..\..\start.wav;
-        Build Settings Last Modified Low = 1113492143;
-        Build Settings Last Modified High = 30890741;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\start.wav;
+        Build Settings Last Modified Low = 1548234253;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -289,9 +295,9 @@ Wave Bank
     Wave
     {
         Name = spring;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\spring.wav;
-        Build Settings Last Modified Low = 1069460729;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\spring.wav;
+        Build Settings Last Modified Low = 1564139426;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -312,9 +318,9 @@ Wave Bank
     Wave
     {
         Name = stomp;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\stomp.wav;
-        Build Settings Last Modified Low = 1131126851;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\stomp.wav;
+        Build Settings Last Modified Low = 1380472577;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -335,9 +341,9 @@ Wave Bank
     Wave
     {
         Name = red_coin;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\red_coin.wav;
-        Build Settings Last Modified Low = 1444121229;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\red_coin.wav;
+        Build Settings Last Modified Low = 1579543788;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -358,9 +364,9 @@ Wave Bank
     Wave
     {
         Name = finish;
-        File = ..\..\..\..\..\..\..\finish.wav;
-        Build Settings Last Modified Low = 1113502152;
-        Build Settings Last Modified High = 30890741;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\finish.wav;
+        Build Settings Last Modified Low = 1407912652;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -381,9 +387,9 @@ Wave Bank
     Wave
     {
         Name = yellow_coin;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\yellow_coin.wav;
-        Build Settings Last Modified Low = 1103384791;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\yellow_coin.wav;
+        Build Settings Last Modified Low = 1609145169;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -404,9 +410,9 @@ Wave Bank
     Wave
     {
         Name = land;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\land.wav;
-        Build Settings Last Modified Low = 1522085629;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\land.wav;
+        Build Settings Last Modified Low = 1623661270;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -427,9 +433,9 @@ Wave Bank
     Wave
     {
         Name = bläh;
-        File = C:\Users\Creme\Desktop\LF\Blali-Remake\Blali-Remake\assets\sounds\bläh.wav;
-        Build Settings Last Modified Low = 1144049491;
-        Build Settings Last Modified High = 30894735;
+        File = E:\LF\Blali-Remake\Blali-Remake\assets\sounds\bläh.wav;
+        Build Settings Last Modified Low = 1638031756;
+        Build Settings Last Modified High = 30904413;
 
         Cache
         {
@@ -547,6 +553,8 @@ Sound Bank
     Windows File = Win\classic_1.xsb;
     Xbox Bank Path Edited = 0;
     Windows Bank Path Edited = 0;
+    Header Last Modified High = 0;
+    Header Last Modified Low = 0;
 
     Sound
     {
