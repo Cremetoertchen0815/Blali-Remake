@@ -1,4 +1,5 @@
-﻿Imports Nez.Sprites
+﻿Imports Microsoft.Xna.Framework.Audio
+Imports Nez.Sprites
 Imports Nez.Textures
 Imports Nez.Tiled
 
@@ -33,8 +34,8 @@ Namespace Games.Blali_1.Objects
 
             'Move bullet
             If Shot Then
-                BulletCollider.LocalOffset = BulletCollider.LocalOffset + dir * 218 * Time.DeltaTime
-                BulletRenderer.LocalOffset = BulletRenderer.LocalOffset + dir * 218 * Time.DeltaTime
+                BulletCollider.LocalOffset = BulletCollider.LocalOffset + dir * 225 * Time.DeltaTime
+                BulletRenderer.LocalOffset = BulletRenderer.LocalOffset + dir * 225 * Time.DeltaTime
             End If
 
             'Spawn bullet
@@ -42,12 +43,13 @@ Namespace Games.Blali_1.Objects
                 Shot = True
                 BulletCollider.Enabled = True
                 BulletRenderer.Enabled = True
+                GameScene.SFX.PlayCue("canon")
                 dir = Vector2.Normalize(Player.Entity.LocalPosition - Spawn)
                 Lifetime = 0
             End If
 
             'Kill bullet
-            If Lifetime > 2.33 And Shot Then
+            If Lifetime > 2.44 And Shot Then
                 Shot = False
                 Reset()
                 Lifetime = 0
