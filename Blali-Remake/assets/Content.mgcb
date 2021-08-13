@@ -277,6 +277,12 @@
 #begin game/Blali_1/tileset.png
 /copy:game/Blali_1/tileset.png
 
+#begin intro/bfm/bfm.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:intro/bfm/bfm.wav
+
 #begin intro/bfm/bfm_bg.png
 /importer:TextureImporter
 /processor:TextureProcessor

@@ -16,7 +16,7 @@ Namespace Intros
             CreateEntity("sep").AddComponent(New Seperator)
 
             'Transition to new scene
-            Core.Schedule(1.5, Sub() Core.StartSceneTransition(New FadeTransition(Function() New MainMenu) With {.FadeInDuration = 1, .FadeOutDuration = 0.7, .FadeToColor = Color.Black, .FadeEaseType = Tweens.EaseType.QuadInOut}))
+            Core.Schedule(1.5, Sub() Core.StartSceneTransition(New FadeTransition(Function() New Games.Blali_1.GameScene(0)) With {.FadeInDuration = 1, .FadeOutDuration = 0.7, .FadeToColor = Color.Black, .FadeEaseType = Tweens.EaseType.QuadInOut}))
         End Sub
 
         Private Class Seperator

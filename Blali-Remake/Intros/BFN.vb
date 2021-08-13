@@ -1,4 +1,6 @@
-﻿Namespace Intros
+﻿Imports Microsoft.Xna.Framework.Audio
+
+Namespace Intros
     Public Class BFN
         Inherits Scene
 
@@ -18,6 +20,7 @@
             Dim cover = CreateEntity("white_blend").SetPosition(New Vector2(1920 / 2, 1080 / 2)).AddComponent(New PrototypeSpriteRenderer(1920, 1080)).SetColor(Color.Transparent)
             Dim fr = CreateEntity("txt").SetPosition(New Vector2(1920 / 2, 1080 / 2)).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("intro/bfm/bfm_fnt"))).SetColor(Color.Transparent)
             Dim cpy = CreateEntity("copyright").AddComponent(New CopyrightLabel).SetColor(Color.Transparent)
+            Dim snd = Content.Load(Of SoundEffect)("intro/bfm/bfm")
 
             'Animate intro
             bg.Entity.TweenScaleTo(4, 6).SetEaseType(Tweens.EaseType.CubicInOut).Start()
@@ -27,6 +30,7 @@
             Core.Schedule(1, Sub() cover.TweenColorTo(Color.White * 0.8, 2).SetEaseType(Tweens.EaseType.CubicInOut).SetLoops(Tweens.LoopType.PingPong, 1).Start())
             Core.Schedule(5, Sub() bg.TweenColorTo(Color.Transparent, 4).SetEaseType(Tweens.EaseType.CubicInOut).Start())
             Core.Schedule(5, Sub() cpy.TweenColorTo(Color.White, 2.5).SetEaseType(Tweens.EaseType.CubicInOut).Start())
+            Core.Schedule(3, Sub() snd.Play())
 
         End Sub
 
