@@ -30,7 +30,7 @@ Namespace Intros
             Core.Schedule(1, Sub() cover.TweenColorTo(Color.White * 0.8, 2).SetEaseType(Tweens.EaseType.CubicInOut).SetLoops(Tweens.LoopType.PingPong, 1).Start())
             Core.Schedule(5, Sub() bg.TweenColorTo(Color.Transparent, 4).SetEaseType(Tweens.EaseType.CubicInOut).Start())
             Core.Schedule(5, Sub() cpy.TweenColorTo(Color.White, 2.5).SetEaseType(Tweens.EaseType.CubicInOut).Start())
-            Core.Schedule(3, Sub() snd.Play())
+            'Core.Schedule(3, Sub() snd.Play())
 
         End Sub
 
