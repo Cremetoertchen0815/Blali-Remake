@@ -273,7 +273,7 @@
   </object>
   <object id="218" type="finish" x="1424" y="464.5" width="111.5" height="64">
    <properties>
-    <property name="followup_ID" type="int" value="0"/>
+    <property name="followup_ID" type="int" value="-1"/>
    </properties>
   </object>
   <object id="219" type="spring" x="1456" y="784" width="48" height="48"/>

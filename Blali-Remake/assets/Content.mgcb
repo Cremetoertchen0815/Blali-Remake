@@ -43,11 +43,23 @@
 /processorParam:Quality=Best
 /build:game/Blali_1/bgm/3.wav
 
-#begin game/Blali_1/bgm/4.wav
+#begin game/Blali_1/bgm/4.WAV
 /importer:WavImporter
 /processor:SongProcessor
 /processorParam:Quality=Best
-/build:game/Blali_1/bgm/4.wav
+/build:game/Blali_1/bgm/4.WAV
+
+#begin game/Blali_1/bgm/5.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/5.mp3
+
+#begin game/Blali_1/bgm/6.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/6.mp3
 
 #begin game/Blali_1/bullet.png
 /importer:TextureImporter
