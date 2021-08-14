@@ -1,2 +1,19 @@
-﻿-Build level 4
--Implement canons
+﻿-Disable shooting while blähing
+-Add dialogue boxes(old school style)
+-Add menu
+-Tweak existing levels
+-Optimize for controller
+-Start working on 2021 edition(name not final)
+-Implement DirectInput as control option(copy over from Beacon)
+-Publish demo on GitHub with download & YouTube with link
+
+
+Options for 2021 edition(discuss with team):
+-Hints
+-New Lighting with deferred lighting, normal maps, etc.
+-New Soundtrack(properlöy looping)
+-New sound effects
+-Refined controls(new moves like stomp, time freeze)
+-New dialogue boxes à la Beacon(copy and paste code???)
+-HUD(with score)
+-Checkpoints
