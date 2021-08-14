@@ -103,7 +103,7 @@ namespace Nez
 			var elapsed = 0f;
 			while (elapsed < Duration)
 			{
-				elapsed += Time.DeltaTime;
+				elapsed += Time.AltDeltaTime;
 				_destinationRect = Lerps.Ease(TransitionEaseType, ref _textureBounds, ref _finalRenderRect, elapsed,
 					Duration);
 

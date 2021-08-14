@@ -623,6 +623,7 @@
   </object>
   <object id="2" name="finish" type="finish" x="2745.15" y="2992.06" width="64" height="66">
    <properties>
+    <property name="UseCrossFade" type="int" value="1"/>
     <property name="followup_ID" type="int" value="6"/>
    </properties>
   </object>
@@ -664,7 +665,7 @@
   <object id="191" type="mob_flight" x="1103" y="1906">
    <point/>
   </object>
-  <object id="192" type="mob_flight" x="958" y="1596">
+  <object id="192" type="mob_flight" x="958" y="1450.55">
    <point/>
   </object>
   <object id="193" type="mob_flight" x="955.667" y="974">

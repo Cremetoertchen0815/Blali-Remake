@@ -11,7 +11,7 @@ Namespace Games.Blali_1.Objects
         Private BulletCollider As BoxCollider
         Private BulletRenderer As SpriteRenderer
         Private dir As Vector2
-        Private Lifetime As Single
+        Private Lifetime As Single = -0.2
         Private Shot As Boolean = False
 
         Public Sub New(spawn As Vector2, map As TmxMap)
@@ -35,12 +35,12 @@ Namespace Games.Blali_1.Objects
 
             'Move bullet
             If Shot Then
-                BulletCollider.LocalOffset = BulletCollider.LocalOffset + dir * 225 * Time.DeltaTime
-                BulletRenderer.LocalOffset = BulletRenderer.LocalOffset + dir * 225 * Time.DeltaTime
+                BulletCollider.LocalOffset = BulletCollider.LocalOffset + dir * 240 * Time.DeltaTime
+                BulletRenderer.LocalOffset = BulletRenderer.LocalOffset + dir * 240 * Time.DeltaTime
             End If
 
             'Spawn bullet
-            If Lifetime > 0.6 And Not Shot Then
+            If Lifetime > 0.5 And Not Shot Then
                 Shot = True
                 BulletCollider.Enabled = True
                 BulletRenderer.Enabled = True
@@ -50,7 +50,7 @@ Namespace Games.Blali_1.Objects
             End If
 
             'Kill bullet
-            If Lifetime > 2.44 And Shot Then
+            If Lifetime > 2.64 And Shot Then
                 Shot = False
                 Reset()
                 Lifetime = 0

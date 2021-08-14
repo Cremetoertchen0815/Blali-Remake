@@ -33,7 +33,7 @@ Namespace Games.Blali_1.Objects
             Entity.LocalPosition = Entity.LocalPosition + dir * 480 * Time.DeltaTime
             Lifetime += Time.DeltaTime
 
-            If Lifetime > 5 Or Suicidesquad Then
+            If Lifetime > 4 Or Suicidesquad Then
                 BulletList.Remove(Me)
                 Entity.Destroy()
             End If

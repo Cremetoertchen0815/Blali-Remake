@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.1" orientation="orthogonal" renderorder="right-up" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="119">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-up" width="100" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="5" nextobjectid="119">
  <properties>
   <property name="camX" type="int" value="-18"/>
   <property name="camY" type="int" value="-4"/>
@@ -112,7 +112,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="2" name="BG" visible="0">
+ <objectgroup id="2" name="BG">
   <properties>
    <property name="posX" type="int" value="0"/>
    <property name="posY" type="int" value="0"/>
@@ -129,6 +129,7 @@
   </object>
   <object id="2" name="finish" type="finish" x="210.667" y="-188" width="156" height="110.667">
    <properties>
+    <property name="UseCrossFade" type="int" value="1"/>
     <property name="coin_condition" type="int" value="112"/>
     <property name="followup_ID" type="int" value="4"/>
    </properties>

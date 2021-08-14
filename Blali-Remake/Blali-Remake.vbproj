@@ -73,8 +73,10 @@
     <Compile Include="Intros\LF.vb" />
     <Compile Include="Intros\MonoNez.vb" />
     <Compile Include="Menu\MainMenu.vb" />
+    <Compile Include="Menu\ThanksForPlaeScreen.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="RenderableLabel.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, processorArchitecture=MSIL">

@@ -45,10 +45,10 @@ Namespace Games.Blali_1.Mobs
 
             'Bullet spawn timer
             Destinyboard += Time.DeltaTime
-            If Destinyboard >= 0.4 Then
+            If Destinyboard >= 0.38 Then
                 Velocity *= -1
                 Destinyboard = 0
-                Entity.Scene.CreateEntity("Bullet_jeff_" & PengPeng.Count.ToString).AddComponent(New Bullet(Entity.LocalPosition, Vector2.Normalize(Player.Entity.LocalPosition - Entity.LocalPosition) / 2.5, PengPeng))
+                Entity.Scene.CreateEntity("Bullet_jeff_" & PengPeng.Count.ToString).AddComponent(New Bullet(Entity.LocalPosition, Vector2.Normalize(Player.Entity.LocalPosition - Entity.LocalPosition) / 2, PengPeng))
             End If
 
             For Each element In PengPeng

@@ -32,10 +32,6 @@ Namespace Games.Blali_1
             Dim wave_bank As New WaveBank(xact_prj, "assets\game\Blali_1\sfx\win\classic_1.xwb")
             SFX = New SoundBank(xact_prj, "assets\game\Blali_1\sfx\win\classic_1.xsb")
 
-            'Play music
-            MediaPlayer.Play(Content.Load(Of Song)("game/Blali_1/bgm/" & lvl_ID))
-            MediaPlayer.Volume = 0.15
-
             'Get mobs from level
             For Each element In Map.GetObjectGroup("Objects").Objects
                 Select Case element.Type
@@ -62,6 +58,11 @@ Namespace Games.Blali_1
                         CreateEntity(element.Name).AddComponent(New Bodenviech(New Vector2(element.X, element.Y), Map))
                 End Select
             Next
+
+            'Play music
+            Dim song As Song = If(PlayerComponent.NextID < 0, Core.Content.Load(Of Song)("game/Blali_1/bgm/" & lvl_ID), Content.Load(Of Song)("game/Blali_1/bgm/" & lvl_ID))
+            MediaPlayer.Play(song)
+            MediaPlayer.Volume = 0.4
 
             'Get collectibles
             For Each element In Map.GetObjectGroup("Collectibles").Objects

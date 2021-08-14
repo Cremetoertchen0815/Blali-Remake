@@ -45,7 +45,7 @@ namespace Nez
 			var elapsed = 0f;
 			while (elapsed < FadeDuration)
 			{
-				elapsed += Time.DeltaTime;
+				elapsed += Time.AltDeltaTime;
 				_color = Lerps.Ease(FadeEaseType, ref _fromColor, ref _toColor, elapsed, FadeDuration);
 
 				yield return null;

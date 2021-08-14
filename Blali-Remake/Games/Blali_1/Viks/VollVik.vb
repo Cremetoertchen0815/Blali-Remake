@@ -82,7 +82,11 @@ Namespace Games.Blali_1.Viks
             For Each element In Map.GetObjectGroup("Objects").Objects
                 If element.Type = "spring" Then SpringCollider.Add(New RectangleF(element.X, element.Y, element.Width, element.Height))
                 If element.Type = "player" Then Spawn = New Vector2(element.X - 30, element.Y - 130)
-                If element.Type = "finish" Then FinishCollider = New RectangleF(element.X, element.Y, element.Width, element.Height) : NextID = CInt(element.Properties("followup_ID"))
+                If element.Type = "finish" Then
+                    FinishCollider = New RectangleF(element.X, element.Y, element.Width, element.Height)
+                    NextID = CInt(element.Properties("followup_ID"))
+                    If element.Properties.ContainsKey("UseCrossFade") Then UseCrossFade = True
+                End If
             Next
             Entity.LocalPosition = Spawn
             GameObject.ScoreIncrease = Sub(x) LevelScore += x

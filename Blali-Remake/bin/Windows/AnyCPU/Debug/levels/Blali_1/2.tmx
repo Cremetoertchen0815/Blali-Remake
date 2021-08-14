@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.7.0" orientation="orthogonal" renderorder="right-up" width="126" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="34">
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-up" width="126" height="100" tilewidth="16" tileheight="16" infinite="0" nextlayerid="6" nextobjectid="34">
  <properties>
   <property name="camX" type="int" value="0"/>
   <property name="camY" type="int" value="0"/>
