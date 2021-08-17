@@ -3,6 +3,7 @@
 -Add menu
 -Tweak existing levels
 -Optimize for controller
+-Add controls menu for custom controls
 -Start working on 2021 edition(name not final)
 -Implement DirectInput as control option(copy over from Beacon)
 -Publish demo on GitHub with download & YouTube with link

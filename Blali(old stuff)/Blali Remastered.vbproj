@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9BCE8A7-F271-4D02-BD8A-15567C9E400D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Emmond</RootNamespace>
+    <AssemblyName>Beacon</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DefineDebug>true</DefineDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'sas|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\sas\</OutputPath>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Constants.vb" />
+    <Compile Include="Debug\CutsceneEditor.vb" />
+    <Compile Include="Debug\CutWindow.Designer.vb">
+      <DependentUpon>CutWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Debug\CutWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debug\LvlEditor.vb" />
+    <Compile Include="Debug\LvlEditorStages\ILvlEditorStage.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageH.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageA.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageB.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageC.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageD.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageE.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageF.vb" />
+    <Compile Include="Debug\LvlEditorStages\StageG.vb" />
+    <Compile Include="Debug\Yeet\Pie.vb" />
+    <Compile Include="Emmond.vb" />
+    <Compile Include="Framework\Camera\Camera.vb" />
+    <Compile Include="Framework\Camera\CameraCalculator.vb" />
+    <Compile Include="Framework\Camera\CameraShaker.vb" />
+    <Compile Include="Framework\Content\EmmondContentPipelineReader.vb" />
+    <Compile Include="Framework\Content\PipelineClasses.vb" />
+    <Compile Include="Framework\Cutscenes\TypeA\CamKeyframe.vb" />
+    <Compile Include="Framework\Cutscenes\TypeA\CutsceneTypeA.vb" />
+    <Compile Include="Framework\Cutscenes\TypeA\Editors\TriEditor.Designer.vb">
+      <DependentUpon>TriEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Cutscenes\TypeA\Editors\TriEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Framework\Cutscenes\TypeA\Editors\VertexEditor.Designer.vb">
+      <DependentUpon>VertexEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Cutscenes\TypeA\Editors\VertexEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Framework\Cutscenes\TypeA\Field.vb" />
+    <Compile Include="Framework\Cutscenes\TypeA\Frame.vb" />
+    <Compile Include="Framework\Data\SettingsManager.vb" />
+    <Compile Include="Framework\Entities\Bullet.vb" />
+    <Compile Include="Framework\Entities\GunSimple.vb" />
+    <Compile Include="Framework\Entities\Shot.vb" />
+    <Compile Include="Framework\Graphics\PostProcessing\GaussianBlur.vb" />
+    <Compile Include="Framework\Graphics\Particles\Emitters\RainEmitter.vb" />
+    <Compile Include="Framework\Graphics\PostProcessing\HeatDistortion.vb" />
+    <Compile Include="Framework\Level\Background\BackgroundComponent.vb" />
+    <Compile Include="Framework\Level\Background\Components\Clouds.vb" />
+    <Compile Include="Framework\Level\LevelHeader.vb" />
+    <Compile Include="Framework\Level\ObjectManager\Objects\AnimeTyp.vb" />
+    <Compile Include="Framework\Level\ObjectManager\Objects\Gun.vb" />
+    <Compile Include="Framework\Level\ObjectManager\Objects\RedCoin.vb" />
+    <Compile Include="Framework\Level\ObjectManager\Objects\Spring.vb" />
+    <Compile Include="Framework\Level\ObjectManager\Objects\SublevelDoor.vb" />
+    <Compile Include="Framework\Level\ObjectManager\Objects\YellowCoin.vb" />
+    <Compile Include="Framework\Misc\TestState.vb" />
+    <Compile Include="Framework\Modding\ModIdentifier.vb" />
+    <Compile Include="Framework\Modding\ModManager.vb" />
+    <Compile Include="Framework\Physics\Line.vb" />
+    <Compile Include="Framework\Physics\PreciseVector2.vb" />
+    <Compile Include="Framework\Physics\Raycast2D.vb" />
+    <Compile Include="Framework\Physics\Segment.vb" />
+    <Compile Include="Framework\Graphics\FXData.vb" />
+    <Compile Include="Framework\Graphics\PostProcessing\BloomFilter.vb" />
+    <Compile Include="Framework\Graphics\MapRenderer.vb" />
+    <Compile Include="Framework\Graphics\QuadRenderer.vb" />
+    <Compile Include="Framework\Graphics\Animation\AnimatedSpriteSheet.vb" />
+    <Compile Include="Framework\Graphics\Cluster.vb" />
+    <Compile Include="Framework\Graphics\Animation\Keyframe.vb" />
+    <Compile Include="Framework\Graphics\LineGraph.vb" />
+    <Compile Include="Framework\Input\Enums.vb" />
+    <Compile Include="Framework\Input\HintGenerator.vb" />
+    <Compile Include="Framework\Input\InputStates.vb" />
+    <Compile Include="Framework\Graphics\Particles\Emitters\SnowEmitter.vb" />
+    <Compile Include="Framework\Graphics\Particles\Emitter.vb" />
+    <Compile Include="Framework\Graphics\Particles\Emitters\SprinklerEmitter.vb" />
+    <Compile Include="Framework\Graphics\Particles\Particle.vb" />
+    <Compile Include="Framework\Graphics\Primitives2D.vb" />
+    <Compile Include="Framework\Graphics\TextureAtlas.vb" />
+    <Compile Include="Framework\Input\InputManager.vb" />
+    <Compile Include="Framework\Level\Background\BackgroundManager.vb" />
+    <Compile Include="Framework\Level\Background\BGs\BackgroundStatic.vb" />
+    <Compile Include="Framework\Level\Background\BGs\BackgroundFlex.vb" />
+    <Compile Include="Framework\Level\Background\IBackground.vb" />
+    <Compile Include="Framework\Level\Enums.vb" />
+    <Compile Include="Framework\Level\Level.vb" />
+    <Compile Include="Framework\Level\LevelParser.vb" />
+    <Compile Include="Framework\Level\ObjectManager\LevelObject.vb" />
+    <Compile Include="Framework\Level\ObjectManager\ObjectManager.vb" />
+    <Compile Include="Framework\Level\Tile.vb" />
+    <Compile Include="Framework\Level\TileGroup.vb" />
+    <Compile Include="Framework\Level\TileSet.vb" />
+    <Compile Include="Framework\Level\Trigger.vb" />
+    <Compile Include="Framework\Misc\ErrorLogger.vb" />
+    <Compile Include="Framework\Misc\FrameCounter.vb" />
+    <Compile Include="Framework\Level\MSFXcontainer.vb" />
+    <Compile Include="Framework\Tweening\ITransition.vb" />
+    <Compile Include="Framework\Misc\Localisation.vb" />
+    <Compile Include="Framework\Misc\Pool.vb" />
+    <Compile Include="Framework\Misc\StaticFunctions.vb" />
+    <Compile Include="Framework\Entities\AABB.vb" />
+    <Compile Include="Framework\Entities\Entity.vb" />
+    <Compile Include="Framework\SceneManager\Scene.vb" />
+    <Compile Include="Framework\SceneManager\SceneConfig.vb" />
+    <Compile Include="Framework\SceneManager\SceneManager.vb" />
+    <Compile Include="Framework\SceneManager\SceneSwitch.vb" />
+    <Compile Include="Framework\Tweening\IManagedType.vb" />
+    <Compile Include="Framework\Tweening\ITransitionType.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Color.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Double.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Int.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Single.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_String.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Vector2.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Vector3.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_CamKeyframe.vb" />
+    <Compile Include="Framework\Tweening\ManagedTypes\ManagedType_Vector4.vb" />
+    <Compile Include="Framework\Tweening\ShaderTransition.vb" />
+    <Compile Include="Framework\Tweening\Transition.vb" />
+    <Compile Include="Framework\Tweening\TransitionChain.vb" />
+    <Compile Include="Framework\Tweening\TransitionElement.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_Swing.vb" />
+    <Compile Include="Framework\Tweening\TweenManager.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_Acceleration.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_Bounce.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_CriticalDamping.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_Deceleration.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_EaseInEaseOut.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_Flash.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_Linear.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_ThrowAndCatch.vb" />
+    <Compile Include="Framework\Tweening\TransitionTypes\TransitionType_UserDefined.vb" />
+    <Compile Include="GlobalSuppressions.vb" />
+    <Compile Include="IG\BufferedCheckpoint.vb" />
+    <Compile Include="IG\Cutscenes\BFM.vb" />
+    <Compile Include="IG\Cutscenes\Intro.vb" />
+    <Compile Include="IG\Entities\Blali.vb" />
+    <Compile Include="IG\Entities\BlenemyA.vb" />
+    <Compile Include="IG\Entities\BlenemyB.vb" />
+    <Compile Include="IG\Entities\BlenemyC.vb" />
+    <Compile Include="IG\Entities\Navi.vb" />
+    <Compile Include="IG\Entities\Portal.vb" />
+    <Compile Include="IG\Rank.vb" />
+    <Compile Include="StandardAssets.vb" />
+    <Compile Include="UI\General\CutscenePlayer.vb" />
+    <Compile Include="UI\General\ErrorHandler.vb" />
+    <Compile Include="UI\General\GeneralHandler.vb" />
+    <Compile Include="UI\General\LoadingScreen.vb" />
+    <Compile Include="UI\Ingame\PauseMenu.vb" />
+    <Compile Include="UI\Menu\ControllerMenu.vb" />
+    <Compile Include="UI\Menu\MainMenu.vb" />
+    <Compile Include="UI\Menu\PlayRoom.vb" />
+    <Compile Include="IG\LevelClass.vb" />
+    <Compile Include="IG\Levels\LvL00.vb" />
+    <Compile Include="IG\Player.vb" />
+    <Compile Include="Framework\Entities\EntityAttributes.vb" />
+    <Compile Include="IG\PlayerStatus.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="Properties\AssemblyInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Penumbra, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\MonoGame.Penumbra.WindowsDX.1.4.3\lib\net45\MonoGame.Penumbra.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\SharpDX.4.0.1\lib\net45\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\SharpDX.Direct3D9.4.0.1\lib\net45\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\SharpDX.DirectInput.4.0.1\lib\net45\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DXGI, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\SharpDX.DXGI.4.0.1\lib\net45\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Mathematics, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\SharpDX.Mathematics.4.0.1\lib\net45\SharpDX.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b4dcf0f35e5521f1, processorArchitecture=MSIL">
+      <HintPath>..\Beacon\packages\SharpDX.MediaFoundation.4.0.1\lib\net45\SharpDX.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1.ico" />
+    <Content Include="Changelog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Hopes n Dreams\Controlls.txt" />
+    <Content Include="Hopes n Dreams\Credits and Thanks.txt" />
+    <Content Include="Hopes n Dreams\Ideas.txt" />
+    <Content Include="Hopes n Dreams\Layers.txt" />
+    <Content Include="Hopes n Dreams\List Numbers.txt" />
+    <Content Include="Hopes n Dreams\ToDo.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Emmond.Constants" />
+    <Import Include="Emmond.Framework.Misc" />
+    <Import Include="Emmond.StandardAssets" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Debug\CutWindow.resx">
+      <DependentUpon>CutWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\Cutscenes\TypeA\Editors\TriEditor.resx">
+      <DependentUpon>TriEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\Cutscenes\TypeA\Editors\VertexEditor.resx">
+      <DependentUpon>VertexEditor.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

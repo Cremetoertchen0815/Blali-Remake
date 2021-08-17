@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<lvldata verH="1" verB="1" type="Trigger" key="" alt="False" com="Built for: Version preAlpha v0.0.5.7">
+<obj id="0" type="CameraLock">
+<property name="location" valueX="916" valueY="52"/>
+<property name="length" value="20"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+<property name="vecarg" valueX="15720" valueY="1400"/>
+</obj>
+<obj id="1" type="UserDefined">
+<property name="location" valueX="926" valueY="52"/>
+<property name="length" value="40"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="2" type="ScrollLock">
+<property name="location" valueX="770" valueY="20"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OnceTotal"/>
+</obj>
+<obj id="3" type="UserDefined">
+<property name="location" valueX="932" valueY="52"/>
+<property name="length" value="40"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="4" type="UserDefined">
+<property name="location" valueX="941" valueY="52"/>
+<property name="length" value="30"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OnceTotal"/>
+</obj>
+<obj id="5" type="UserDefined">
+<property name="location" valueX="1006" valueY="20"/>
+<property name="length" value="16"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="6" type="UserDefined">
+<property name="location" valueX="989" valueY="52"/>
+<property name="length" value="8"/>
+<property name="orientation" value="Horizontal"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="7" type="UserDefined">
+<property name="location" valueX="1165" valueY="12"/>
+<property name="length" value="22"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="8" type="UserDefined">
+<property name="location" valueX="1127" valueY="20"/>
+<property name="length" value="14"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="9" type="ScrollRelease">
+<property name="location" valueX="1045" valueY="20"/>
+<property name="length" value="16"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="10" type="UserDefined">
+<property name="location" valueX="1461" valueY="24"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="11" type="UserDefined">
+<property name="location" valueX="1465" valueY="24"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="12" type="ScrollLock">
+<property name="location" valueX="1452" valueY="24"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="13" type="CameraLock">
+<property name="location" valueX="1455" valueY="24"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+<property name="vecarg" valueX="24320" valueY="470"/>
+</obj>
+<obj id="14" type="FinishLine">
+<property name="location" valueX="1540" valueY="24"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+<property name="vecarg" valueX="0" valueY="0"/>
+</obj>
+<obj id="15" type="PlayerBarrier">
+<property name="location" valueX="693" valueY="63"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="16" type="Checkpoint">
+<property name="location" valueX="655" valueY="20"/>
+<property name="length" value="15"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+<property name="vecarg" valueX="9940" valueY="90"/>
+</obj>
+<obj id="17" type="UserDefined">
+<property name="location" valueX="38" valueY="12"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OnceTotal"/>
+</obj>
+<obj id="18" type="UserDefined">
+<property name="location" valueX="429" valueY="56"/>
+<property name="length" value="50"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+<obj id="19" type="UserDefined">
+<property name="location" valueX="533" valueY="54"/>
+<property name="length" value="40"/>
+<property name="orientation" value="Vertical"/>
+<property name="ExecType" value="OncePerTouch"/>
+</obj>
+</lvldata>

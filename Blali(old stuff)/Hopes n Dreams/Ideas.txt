@@ -1,0 +1,33 @@
+﻿------------PROJECT EMMOND------------
+-Plattformer/puzzle game/shoot-em-up
+-antagonists: clowns
+
+Main gimmicks:
+-character get weaker from level to level
+
+Capabilities:
+-double jump
+-climbable ledges
+-moving plattforms
+-switches
+-guns with endless ammunition(bullets), rapid fire
+
+-toggelable horizontal barriers
+
+-"Comic-Style" Cutscenes(no dialogue, still frames with music)
+-Funky electro music
+
+-lvl1: City(disappearing behind walls)[vert]
+-lvl2: Skyline[hor]
+-Miniboss
+-lvl3: Oscar's cavern[vert]
+-lvl4: Forest(climbing trees)[hor]
+-lvl5: Wasteland[hor]
+-lvl6: Circus[vert]
+-Final Boss(Raden)
+
+-Backpack is only saved when finishing a level
+-No shop
+-5 inventory slots
+-Optional pathways are blocked in trial mode, until you replayed the entire story with the corresponding path
+-You can only play from the first "act"

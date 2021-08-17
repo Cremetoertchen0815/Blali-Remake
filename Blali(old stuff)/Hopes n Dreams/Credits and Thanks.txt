@@ -1,0 +1,44 @@
+﻿MonoGame:
+(MIT License)
+https://github.com/MonoGame/MonoGame
+
+JSON.NET:
+(MIT License)
+https://www.newtonsoft.com/json
+
+.Net Transitions:
+(MIT License)
+https://github.com/UweKeim/dot-net-transitions
+
+MonoGame.Extended:
+(MIT License)
+https://github.com/craftworkgames/MonoGame.Extended
+
+INI LIB (
+'Date: 08\23\2010 - Ludvik Jerabek - Initial Release
+'Version: 1.0
+'Comment: Allow INI Manipulation in .NET
+'License: CPOL)
+License: https://www.codeproject.com/info/cpol10.aspx
+
+Lighting engine:
+Copyright (c) 2016 Jaanus Varus/discosultan
+(MIT License)
+https://github.com/Discosultan/penumbra
+
+Physics engine:
+(No license)
+https://gamedevelopment.tutsplus.com/tutorials/basic-2d-platformer-physics-part-1--cms-25799
+
+Bloom/Blur:
+(No license)
+Version 1.1, 16. Dez. 2016
+2016 TheKosmonaut
+https://github.com/Kosmonaut3d/BloomFilter-for-Monogame-and-XNA
+
+Primitive Drawign:
+https://github.com/jaquadro/LilyPath
+
+Nez(Shaders):
+(MIT License)
+https://github.com/prime31/Nez/blob/master/LICENSE

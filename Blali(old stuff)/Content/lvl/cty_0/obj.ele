@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<lvldata verH="1" verB="1" type="Objects" key="" alt="False" com="Built for: Version preAlpha v0.0.5.7">
+<obj x="15197" y="213" group="item" ID="1" type="0"/>
+<obj x="8128" y="737" group="entity" ID="1" type="5"/>
+<obj x="8376" y="739" group="entity" ID="2" type="5"/>
+<obj x="8601" y="962" group="entity" ID="3" type="5"/>
+<obj x="11410" y="742" group="entity" ID="4" type="5"/>
+<obj x="16417" y="1294" group="entity" ID="5" type="5"/>
+</lvldata>

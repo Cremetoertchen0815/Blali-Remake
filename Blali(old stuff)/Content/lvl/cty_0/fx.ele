@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<lvldata verH="1" verB="1" type="FX" key="" alt="False" com="Built for: Version preAlpha v0.0.5.7">
+<fx active="False" r="160" g="160" b="160" a="255">
+<hulls>
+</hulls>
+<src>
+<obj type="PointLight" CastsShadows="True" Radius="20" Intensity="1" ScaleX="600" ScaleY="600" PositionX="320" PositionY="792" OriginX="0,5" OriginY="0,5" ShadowType="Illuminated" r="255" g="200" b="164" a="255"/>
+<obj type="PointLight" CastsShadows="True" Radius="20" Intensity="1" ScaleX="134,9999" ScaleY="221" PositionX="1899" PositionY="886" OriginX="0,5" OriginY="0,5" ShadowType="Solid" r="255" g="255" b="255" a="255"/>
+<obj type="PointLight" CastsShadows="True" Radius="20" Intensity="1" ScaleX="106" ScaleY="171" PositionX="3020" PositionY="886" OriginX="0,5" OriginY="0,5" ShadowType="Solid" r="255" g="255" b="255" a="255"/>
+</src>
+<bloom activate="False" preset="Wide" threshold="0,2000002" strength="0,6000004"/>
+</fx>
+</lvldata>
