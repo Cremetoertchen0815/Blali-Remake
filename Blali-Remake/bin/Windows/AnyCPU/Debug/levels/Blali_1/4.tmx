@@ -4,6 +4,8 @@
   <property name="camX" type="int" value="0"/>
   <property name="camY" type="int" value="79"/>
   <property name="death_plain" type="int" value="1540"/>
+  <property name="end_msg" value="Hier kommt...   JEFF!!!"/>
+  <property name="start_msg" value="Vorsicht... dich erwartet Schreckliches. Hier sind riesige Plasmakugeln, die dich abschießen wollen. Versuche den Kugeln geschickt auszuweichen. Merke: Die Kugeln haben eine bestimmt Reichweite, deshalb lauf vor ihnen weg, wenn es nötig ist."/>
  </properties>
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="961" columns="31">
   <image source="../../assets/game/Blali_1/tileset.png" width="500" height="500"/>

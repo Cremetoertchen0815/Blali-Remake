@@ -4,6 +4,7 @@
   <property name="camX" type="int" value="-18"/>
   <property name="camY" type="int" value="-4"/>
   <property name="death_plain" type="int" value="5000"/>
+  <property name="end_msg" value="Weiter gehts!"/>
  </properties>
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="961" columns="31">
   <image source="../../assets/game/Blali_1/tileset.png" width="500" height="500"/>

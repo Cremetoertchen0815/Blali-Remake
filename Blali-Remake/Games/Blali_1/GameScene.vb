@@ -13,11 +13,15 @@ Namespace Games.Blali_1
         Public PlayerComponent As IVik
         Public Map As Tiled.TmxMap
         Public MapRenderer As TiledMapRenderer
+        Private new_lvl As Boolean
+        Private StartMessagesTriggered As Boolean
         Public Shared SFX As SoundBank
-        Public Shared Current As Integer
+        Public Shared Current As Integer = -1
 
         Public Sub New(lvl_ID As Integer)
             Map = Content.LoadTiledMap("levels\Blali_1\" & lvl_ID.ToString & ".tmx")
+            new_lvl = lvl_ID <> Current
+            StartMessagesTriggered = False
             Current = lvl_ID
 
             'Load map renderer
@@ -83,6 +87,19 @@ Namespace Games.Blali_1
             MyBase.Initialize()
 
             AddRenderer(New DefaultRenderer)
+        End Sub
+
+        Public Overrides Sub Update()
+            MyBase.Update()
+
+
+            'Start MsgBoxes
+            If Not StartMessagesTriggered And new_lvl AndAlso Core.Instance.SceneTransition Is Nothing AndAlso Map.Properties.ContainsKey("start_msg") Then
+                StartMessagesTriggered = True
+                For Each txt In Map.Properties("start_msg").Split("|"c)
+                    MsgBoxer.EnqueueMsgbox(txt)
+                Next
+            End If
         End Sub
     End Class
 End Namespace

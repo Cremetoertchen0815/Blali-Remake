@@ -4,6 +4,7 @@
   <property name="camX" type="int" value="0"/>
   <property name="camY" type="int" value="89"/>
   <property name="death_plain" type="int" value="2400"/>
+  <property name="start_msg" value="Willkommen!|Du hast eine besondere Fähigkeit, die &quot;Blähfähigkeit&quot;. Drücke &quot;LSHIFT&quot; um mit ihr bestimmte Distanzen zu erreichen."/>
  </properties>
  <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16" tilecount="961" columns="31">
   <image source="../../assets/game/Blali_1/tileset.png" width="500" height="500"/>

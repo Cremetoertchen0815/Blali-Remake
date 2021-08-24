@@ -25,7 +25,7 @@ Public Class GameCore
         Emitter.AddObserver(CoreEvents.GraphicsDeviceReset, Sub() ScaleMatrix = Scene.ScreenTransformMatrix)
 
         'Scene = New BFN()
-        Scene = New Games.Blali_1.GameScene(2)
+        Scene = New Games.Blali_1.GameScene(0)
 
     End Sub
 End Class
