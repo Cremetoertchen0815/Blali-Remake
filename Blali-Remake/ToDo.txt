@@ -1,5 +1,4 @@
-﻿-Fix MonoNez intro skipped fast intro
--Overhaul level 1
+﻿-Overhaul level 1
 -Add dialogue boxes(old school style)
 -Add menu(Kein Bock, soll Johannes machen)
 -Tweak existing levels

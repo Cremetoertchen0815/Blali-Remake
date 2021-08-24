@@ -37,10 +37,10 @@ Namespace Intros
 
             'Transition to new scene
             timer += Time.DeltaTime
-            If timer > 7 And Not end_trigger Then
+            If timer > 7 And Not end_trigger And Core.Instance.SceneTransition Is Nothing Then
                 end_trigger = True
                 Core.StartSceneTransition(New FadeTransition(Function() New MonoNez) With {.FadeInDuration = 1, .FadeOutDuration = 2, .FadeToColor = Color.Black, .FadeEaseType = Tweens.EaseType.QuadInOut})
-            ElseIf skipper.IsPressed And Not end_trigger Then
+            ElseIf skipper.IsPressed And Not end_trigger And Core.Instance.SceneTransition Is Nothing Then
                 end_trigger = True
                 Core.StartSceneTransition(New FadeTransition(Function() New MonoNez) With {.FadeInDuration = 1, .FadeOutDuration = 0.5, .FadeToColor = Color.Black, .FadeEaseType = Tweens.EaseType.QuadInOut})
             End If
