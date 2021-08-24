@@ -159,14 +159,15 @@ Namespace Intros
 
                 'Launch animation
                 Core.Schedule(0.5F, Sub()
-                                        Core.Schedule(0.6F, Sub() jmp.Play())
+                                        If scene Is Nothing Then Return
+                                        Core.Schedule(0.6F, Sub() PlaySound(jmp))
                                         Tween("figureY", 130.0F, 0.3F).SetEaseType(Tweens.EaseType.QuadOut).SetLoops(Tweens.LoopType.PingPong, 3).Start()
                                         Tween("figureXZ", New Vector2(-400, 0), 0.58F).SetEaseType(Tweens.EaseType.Linear).SetCompletionHandler(Sub(x)
                                                                                                                                                     x.Stop(True)
-                                                                                                                                                    Core.Schedule(0.6F, Sub() jmp.Play())
+                                                                                                                                                    Core.Schedule(0.6F, Sub() PlaySound(jmp))
                                                                                                                                                     Tween("figureXZ", New Vector2(-200, -200), 0.58F).SetEaseType(Tweens.EaseType.Linear).SetCompletionHandler(Sub(y)
                                                                                                                                                                                                                                                                    y.Stop(True)
-                                                                                                                                                                                                                                                                   Core.Schedule(0.6F, Sub() jmp.Play())
+                                                                                                                                                                                                                                                                   Core.Schedule(0.6F, Sub() PlaySound(jmp))
                                                                                                                                                                                                                                                                    Tween("figureXZ", New Vector2(0, -400), 0.58F).SetEaseType(Tweens.EaseType.Linear).Start()
                                                                                                                                                                                                                                                                End Sub).Start()
                                                                                                                                                 End Sub).Start()
@@ -179,7 +180,7 @@ Namespace Intros
                                         Tween("figureY", 400.0F, 0.5F).SetEaseType(Tweens.EaseType.QuadOut).SetLoops(Tweens.LoopType.PingPong).Start()
                                         ow.border_rnd.TweenColorTo(Color.White, 1.0F).SetEaseType(Tweens.EaseType.QuadIn).Start()
                                         ow.psy_rnd.Tween("Alpha", 1.0F, 1.0F).SetEaseType(Tweens.EaseType.QuadIn).Start()
-                                        Core.Schedule(1.0F, Sub() kill.Play())
+                                        Core.Schedule(1.0F, Sub() PlaySound(kill))
                                     End Sub)
 
                 Core.Schedule(3.5F, Sub()
@@ -189,6 +190,10 @@ Namespace Intros
                                     End Sub)
 
                 Core.Schedule(4.5F, Sub() ow.txt_rnd.TweenColorTo(Color.White, 1.0F).SetEaseType(Tweens.EaseType.QuadInOut).Start())
+            End Sub
+
+            Private Sub PlaySound(sound As SoundEffect)
+                If Not sound.IsDisposed Then sound.Play()
             End Sub
 
             Public Overrides Sub Render(scene As Scene)
