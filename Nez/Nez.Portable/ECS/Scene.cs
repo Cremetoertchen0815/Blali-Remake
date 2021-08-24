@@ -86,6 +86,8 @@ namespace Nez
 		/// </summary>
 		public Camera Camera;
 
+		public bool Enabled = true;
+
 		/// <summary>
 		/// clear color that is used in preRender to clear the screen
 		/// </summary>

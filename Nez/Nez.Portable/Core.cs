@@ -1,15 +1,14 @@
-﻿using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections;
-using Nez.Systems;
-using Nez.Console;
-using Nez.Tweens;
-using Nez.Timers;
+using Microsoft.Xna.Framework.Input;
 using Nez.BitmapFonts;
-using Nez.Analysis;
+using Nez.Console;
+using Nez.Systems;
 using Nez.Textures;
+using Nez.Timers;
+using Nez.Tweens;
+using System;
+using System.Collections;
 using System.Diagnostics;
 
 
@@ -73,7 +72,7 @@ namespace Nez
 		/// default GameServiceContainer access
 		/// </summary>
 		/// <value>The services.</value>
-		public new static GameServiceContainer Services => ((Game) _instance).Services;
+		public new static GameServiceContainer Services => ((Game)_instance).Services;
 
 		/// <summary>
 		/// provides access to the single Core/Game instance
@@ -81,9 +80,11 @@ namespace Nez
 		public static Core Instance => _instance;
 
 		/// <summary>
-		/// facilitates easy access to the global Content instance for internal classes
+		/// facilitates easy access to the global Con tent instance for internal classes
 		/// </summary>
 		internal static Core _instance;
+
+		public IDrawable FinalRenderable = null;
 
 #if DEBUG
 		internal static long drawCalls;
@@ -199,7 +200,7 @@ namespace Nez
 
 		public new static void Exit()
 		{
-			((Game) _instance).Exit();
+			((Game)_instance).Exit();
 		}
 
 		#endregion
@@ -226,11 +227,11 @@ namespace Nez
 			}
 
 			// update all our systems and global managers
-			Time.Update((float) gameTime.ElapsedGameTime.TotalSeconds);
+			Time.Update((float)gameTime.ElapsedGameTime.TotalSeconds);
 			Input.Update();
 
 			if (ExitOnEscapeKeypress &&
-			    (Input.IsKeyDown(Keys.Escape) || Input.GamePads[0].IsButtonReleased(Buttons.Back)))
+				(Input.IsKeyDown(Keys.Escape) || Input.GamePads[0].IsButtonReleased(Buttons.Back)))
 			{
 				base.Exit();
 				return;
@@ -249,10 +250,11 @@ namespace Nez
 				// 		- unless it is SceneTransition that doesn't change Scenes (no reason not to update)
 				//		- or it is a SceneTransition that has already switched to the new Scene (the new Scene needs to do its thing)
 				if (SceneTransition == null ||
-				    (SceneTransition != null &&
-				     (!SceneTransition._loadsNewScene || SceneTransition._isNewSceneLoaded)))
+					(SceneTransition != null &&
+					 (!SceneTransition._loadsNewScene || SceneTransition._isNewSceneLoaded)))
 				{
-					_scene.Update();
+					if (_scene.Enabled)
+						_scene.Update();
 				}
 
 				if (_nextScene != null)
@@ -290,7 +292,7 @@ namespace Nez
 			if (SceneTransition != null)
 			{
 				if (_scene != null && SceneTransition.WantsPreviousSceneRender &&
-				    !SceneTransition.HasPreviousSceneRender)
+					!SceneTransition.HasPreviousSceneRender)
 				{
 					_scene.Render();
 					_scene.PostRender(SceneTransition.PreviousSceneRender);
@@ -318,6 +320,8 @@ namespace Nez
 			}
 
 			EndDebugDraw();
+
+			if (FinalRenderable != null && FinalRenderable.Visible) FinalRenderable.Draw(null);
 		}
 
 		protected override void OnExiting(object sender, EventArgs args)
