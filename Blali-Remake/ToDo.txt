@@ -1,5 +1,4 @@
-﻿-Overhaul level 1
--Add dialogue boxes(old school style)
+﻿-Add dialogue boxes(old school style)
 -Add menu(Kein Bock, soll Johannes machen)
 -Tweak existing levels
 -Optimize for controller
