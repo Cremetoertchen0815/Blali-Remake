@@ -98,12 +98,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\0.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\1.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\2.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\3.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\4.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\5.tmx" />
+    <None Include="levels\Blali_1\0.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\5.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\6.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
   </ItemGroup>
