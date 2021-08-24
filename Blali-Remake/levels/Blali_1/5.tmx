@@ -678,7 +678,7 @@
   <object id="195" type="gun" x="113" y="509">
    <point/>
   </object>
-  <object id="196" x="801" y="219">
+  <object id="196" type="mob_flight" x="801" y="219">
    <point/>
   </object>
   <object id="197" type="mob_flight" x="478" y="620">
@@ -689,8 +689,8 @@
   <object id="200" type="spring" x="1424" y="1568" width="64" height="48"/>
   <object id="201" type="spring" x="1680" y="1328" width="64" height="48"/>
   <object id="202" type="spring" x="1504" y="1024" width="64" height="48"/>
-  <object id="203" type="spring" x="1232" y="496" width="48" height="48"/>
-  <object id="204" type="spring" x="640" y="192" width="48" height="48"/>
+  <object id="203" type="spring" x="1232" y="496" width="64" height="48"/>
+  <object id="204" type="spring" x="624" y="192" width="64" height="48"/>
   <object id="205" type="spring" x="368" y="752" width="64" height="48"/>
   <object id="206" type="spring" x="624" y="960" width="64" height="48"/>
   <object id="207" type="jeff" x="958.667" y="4298.67">
