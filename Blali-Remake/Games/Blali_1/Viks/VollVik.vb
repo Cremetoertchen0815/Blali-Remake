@@ -94,8 +94,8 @@ Namespace Games.Blali_1.Viks
             'Map controls
             BtnMove = New VirtualAxis(New VirtualAxis.GamePadLeftStickX, New VirtualAxis.KeyboardKeys(VirtualInput.OverlapBehavior.TakeNewer, Keys.A, Keys.D), New VirtualAxis.GamePadDpadLeftRight)
             BtnJump = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.A), New VirtualButton.KeyboardKey(Keys.Space)) With {.BufferTime = 0}
-            BtnBläh = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.B), New VirtualButton.KeyboardKey(Keys.LeftShift)) With {.BufferTime = 0}
-            BtnShüt = New VirtualButton(500, New VirtualButton.MouseLeftButton, New VirtualButton.GamePadButton(0, Buttons.X)) With {.BufferTime = 0}
+            BtnBläh = New VirtualButton(500, New VirtualButton.GamePadButton(0, Buttons.X), New VirtualButton.KeyboardKey(Keys.LeftShift)) With {.BufferTime = 0}
+            BtnShüt = New VirtualButton(500, New VirtualButton.MouseLeftButton, New VirtualButton.GamePadButton(0, Buttons.RightTrigger)) With {.BufferTime = 0}
 
             'Set up camera
             Dim camera As Camera = Entity.Scene.Camera

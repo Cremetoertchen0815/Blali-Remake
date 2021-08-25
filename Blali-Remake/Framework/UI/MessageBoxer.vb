@@ -15,6 +15,11 @@ Namespace Framework.UI
         Public Event DrawOrderChanged As EventHandler(Of EventArgs) Implements IDrawable.DrawOrderChanged
         Public Event VisibleChanged As EventHandler(Of EventArgs) Implements IDrawable.VisibleChanged
 
+        'Buttons
+        Private btnConfirm As VirtualButton
+        Private btnEscape As VirtualButton
+        Private focusBtn As Integer = 0
+
         'Rendering & assets
         Private batcher As Batcher
         Private ButtonBase As Texture2D
@@ -33,6 +38,9 @@ Namespace Framework.UI
             batcher = New Batcher(Core.GraphicsDevice)
             ButtonBase = Core.Content.LoadTexture("btn_base_blali")
             DispFont = New NezSpriteFont(Core.Content.Load(Of SpriteFont)("font/MsgText"))
+
+            btnConfirm = New VirtualButton(New VirtualButton.KeyboardKey(Keys.Space), New VirtualButton.KeyboardKey(Keys.Enter), New VirtualButton.GamePadButton(0, Buttons.A))
+            btnEscape = New VirtualButton(New VirtualButton.KeyboardKey(Keys.Escape), New VirtualButton.KeyboardKey(Keys.Back), New VirtualButton.GamePadButton(0, Buttons.B))
         End Sub
 
         Public Sub Draw(gameTime As GameTime) Implements IDrawable.Draw
@@ -100,6 +108,7 @@ Namespace Framework.UI
                 CurrentMessage = MessageStack(0)
                 If CurrentMessage.IsInputbox Then InputBoxData = CurrentMessage.DefaultResponse
                 MessageStack.RemoveAt(0)
+                focusBtn = 0
             End If
 
             If Not ShowMessageBox Then Return
@@ -110,10 +119,10 @@ Namespace Framework.UI
 
             If CurrentMessage.IsInputbox Then
 
-                If (mstate.LeftButton = ButtonState.Pressed And lastmstate.LeftButton = ButtonState.Released AndAlso New Rectangle(MsgBoxArea.Right - 100, MsgBoxArea.Top + 10, 80, 30).Contains(mpos)) Or (kstate.IsKeyDown(Keys.Enter) And lastkstate.IsKeyUp(Keys.Enter)) Then
+                If (mstate.LeftButton = ButtonState.Pressed And lastmstate.LeftButton = ButtonState.Released AndAlso New Rectangle(MsgBoxArea.Right - 100, MsgBoxArea.Top + 10, 80, 30).Contains(mpos)) Or btnConfirm.IsPressed Then
                     If CurrentMessage.FinalActionInputBox IsNot Nothing Then CurrentMessage.FinalActionInputBox(InputBoxData, 0) : CloseMsgBox() Else CloseMsgBox()
                 End If
-                If (mstate.LeftButton = ButtonState.Pressed And lastmstate.LeftButton = ButtonState.Released And New Rectangle(MsgBoxArea.Right - 100, MsgBoxArea.Top + 50, 80, 30).Contains(mpos)) Or (kstate.IsKeyDown(Keys.Escape) And lastkstate.IsKeyUp(Keys.Escape)) Then
+                If (mstate.LeftButton = ButtonState.Pressed And lastmstate.LeftButton = ButtonState.Released And New Rectangle(MsgBoxArea.Right - 100, MsgBoxArea.Top + 50, 80, 30).Contains(mpos)) Or btnEscape.IsPressed Then
                     If CurrentMessage.FinalActionInputBox IsNot Nothing Then CurrentMessage.FinalActionInputBox(CurrentMessage.DefaultResponse, 1) : CloseMsgBox() Else CloseMsgBox()
                 End If
 
@@ -169,7 +178,7 @@ Namespace Framework.UI
                 Dim x_offset As Single = 0F
                 For i As Integer = 0 To CurrentMessage.Buttons.Length - 1
                     Dim txt_width As Single = DispFont.MeasureString(CurrentMessage.Buttons(i)).X + padding
-                    If mstate.LeftButton = ButtonState.Pressed And lastmstate.LeftButton = ButtonState.Released AndAlso New Rectangle(MsgBoxArea.Center.X - tot_len / 2 + x_offset, MsgBoxArea.Y + MsgBoxArea.Height * 0.7, txt_width, 30).Contains(mpos) Then
+                    If mstate.LeftButton = ButtonState.Pressed And lastmstate.LeftButton = ButtonState.Released AndAlso New Rectangle(MsgBoxArea.Center.X - tot_len / 2 + x_offset, MsgBoxArea.Y + MsgBoxArea.Height * 0.7, txt_width, 30).Contains(mpos) Or (btnConfirm.IsPressed And i = focusBtn) Then
                         If CurrentMessage.FinalActionMsgBox IsNot Nothing Then CurrentMessage.FinalActionMsgBox(i)
                         CloseMsgBox()
                     End If
@@ -211,6 +220,7 @@ Namespace Framework.UI
                 CurrentMessage = MessageStack(0)
                 If CurrentMessage.IsInputbox Then InputBoxData = CurrentMessage.DefaultResponse
                 MessageStack.RemoveAt(0)
+                focusBtn = 0
             Else
                 Core.Scene.Enabled = WasEnabled
                 ShowMessageBox = False

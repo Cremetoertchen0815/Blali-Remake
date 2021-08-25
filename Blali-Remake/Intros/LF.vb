@@ -16,7 +16,7 @@ Namespace Intros
 
         Public Overrides Sub Initialize()
             MyBase.Initialize()
-            skipper = New VirtualButton(New VirtualButton.KeyboardKey(Keys.Enter))
+            skipper = New VirtualButton(New VirtualButton.KeyboardKey(Keys.Enter), New VirtualButton.GamePadButton(0, Buttons.Start))
 
             Dim psy = AddRenderer(New PsygroundRenderer(1) With {.Source = New Rectangle(270, 240, 520, 520), .RenderTexture = New Textures.RenderTexture, .StencilTexture = Content.LoadTexture("intro/lf/stencil")})
             Dim rnd = AddRenderer(New LfIntroRenderer(0, Me))

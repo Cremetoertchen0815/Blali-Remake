@@ -13,7 +13,7 @@ Namespace Intros
 
             AddRenderer(New DefaultRenderer)
             ClearColor = Color.Black
-            skipper = New VirtualButton(New VirtualButton.KeyboardKey(Keys.Enter))
+            skipper = New VirtualButton(New VirtualButton.KeyboardKey(Keys.Enter), New VirtualButton.GamePadButton(0, Buttons.Start))
 
             'Add renderables
             Dim bg = CreateEntity("background").SetPosition(New Vector2(1920 / 2, 1080 / 2)).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("intro/bfm/bfm_bg"))).SetColor(Color.Transparent)
