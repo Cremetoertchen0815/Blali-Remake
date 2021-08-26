@@ -25,6 +25,20 @@
 /processorParam:TextureFormat=Color
 /build:btn_base_blali.png
 
+#begin font/fnt_HKG_17_M.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/fnt_HKG_17_M.spritefont
+
+#begin font/InstructionText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/InstructionText.spritefont
+
 #begin font/MsgText.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor

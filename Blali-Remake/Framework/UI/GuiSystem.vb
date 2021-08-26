@@ -1,7 +1,4 @@
 ﻿Imports System.Collections.Generic
-Imports Microsoft.Xna.Framework
-Imports Microsoft.Xna.Framework.Graphics
-Imports Microsoft.Xna.Framework.Input
 
 Namespace Framework.UI
     Public Class GuiSystem
@@ -102,6 +99,8 @@ Namespace Framework.UI
             For Each element In Controls
                 If element.Active Then element.Update(cstate, Vector2.Zero)
             Next
+
+            __Bounds = Entity.Scene.Camera.Bounds
 
             lastmstate = mstate
         End Sub

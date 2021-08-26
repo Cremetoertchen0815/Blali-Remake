@@ -24,8 +24,8 @@ Public Class GameCore
         'Update transformation matrix if event is fired
         Emitter.AddObserver(CoreEvents.GraphicsDeviceReset, Sub() ScaleMatrix = Scene.ScreenTransformMatrix)
 
-        Scene = New BFN()
-        'Scene = New Games.Blali_1.GameScene(0)
+        'Scene = New BFN()
+        Scene = New Games.Blali_1.Remastered.GameScene(0)
 
     End Sub
 End Class

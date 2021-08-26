@@ -1,4 +1,5 @@
-﻿Imports Blali.Games.Blali_1.Remastered.Mobs
+﻿Imports Blali.Framework.UI
+Imports Blali.Games.Blali_1.Remastered.Mobs
 Imports Blali.Games.Blali_1.Remastered.Objects
 Imports Blali.Games.Blali_1.Remastered.Viks
 Imports Microsoft.Xna.Framework.Audio
@@ -18,6 +19,10 @@ Namespace Games.Blali_1.Remastered
         Public Shared SFX As SoundBank
         Public Shared Current As Integer = -1
 
+        'HUD
+        Private WithEvents HUD As GuiSystem
+        Private WithEvents HUD_ScoreLabel As Controls.Label
+
         Public Sub New(lvl_ID As Integer)
             Map = Content.LoadTiledMap("levels\Blali_1\" & lvl_ID.ToString & ".tmx")
             new_lvl = lvl_ID <> Current
@@ -26,6 +31,12 @@ Namespace Games.Blali_1.Remastered
 
             'Load map renderer
             MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
+
+            'Load HUD
+            HUD = New GuiSystem()
+            HUD_ScoreLabel = New Controls.Label(Function() "Score: " & Score.ToString, New Vector2(50, 1005)) With {.Font = New NezSpriteFont(Content.Load(Of SpriteFont)("font/InstructionText")), .Color = Color.BlanchedAlmond} : HUD.Controls.Add(HUD_ScoreLabel)
+            CreateEntity("HUD").AddComponent(HUD).SetRenderLayer(-2)
+            HUD.Color = Color.White
 
             'Load BG
             Dim bgprp = Map.GetObjectGroup("BG").Properties
