@@ -1,10 +1,10 @@
-﻿Imports Microsoft.Xna.Framework.Audio
+﻿Imports Blali.Games.Blali_1.Remastered.Mobs
+Imports Blali.Games.Blali_1.Remastered.Objects
+Imports Blali.Games.Blali_1.Remastered.Viks
+Imports Microsoft.Xna.Framework.Audio
 Imports Microsoft.Xna.Framework.Media
-Imports Blali.Games.Blali_1.Mobs
-Imports Blali.Games.Blali_1.Viks
-Imports Blali.Games.Blali_1.Objects
 
-Namespace Games.Blali_1
+Namespace Games.Blali_1.Remastered
     Public Class GameScene
         Inherits Scene
 

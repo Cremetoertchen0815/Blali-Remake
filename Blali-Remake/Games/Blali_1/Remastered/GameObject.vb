@@ -1,7 +1,7 @@
 ﻿Imports System
 Imports Nez.Tiled
 
-Namespace Games.Blali_1
+Namespace Games.Blali_1.Remastered
     Public MustInherit Class GameObject
         Inherits Component
         Implements IUpdatable

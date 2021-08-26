@@ -1,8 +1,7 @@
-﻿
-Imports Blali.Games.Blali_1.Objects
+﻿Imports System.Collections.Generic
+Imports Blali.Games.Blali_1.Vanilla.Objects
 Imports Nez.Textures
 Imports Nez.Tiled
-Imports System.Collections.Generic
 
 Namespace Games.Blali_1.Vanilla.Mobs
     Public Class MynameisJeff

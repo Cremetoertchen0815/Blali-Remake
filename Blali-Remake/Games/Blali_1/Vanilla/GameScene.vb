@@ -1,8 +1,8 @@
-﻿Imports Microsoft.Xna.Framework.Audio
+﻿Imports Blali.Games.Blali_1.Vanilla.Mobs
+Imports Blali.Games.Blali_1.Vanilla.Objects
+Imports Blali.Games.Blali_1.Vanilla.Viks
+Imports Microsoft.Xna.Framework.Audio
 Imports Microsoft.Xna.Framework.Media
-Imports Blali.Games.Blali_1.Mobs
-Imports Blali.Games.Blali_1.Viks
-Imports Blali.Games.Blali_1.Objects
 
 Namespace Games.Blali_1.Vanilla
     Public Class GameScene

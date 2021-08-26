@@ -3,7 +3,7 @@ Imports Nez.Sprites
 Imports Nez.Textures
 Imports Nez.Tiled
 
-Namespace Games.Blali_1.Objects
+Namespace Games.Blali_1.Remastered.Objects
     Public Class Canon
         Inherits GameObject
 

@@ -2,7 +2,7 @@
 Imports System.Collections.Generic
 Imports Nez.Textures
 
-Namespace Games.Blali_1.Objects
+Namespace Games.Blali_1.Remastered.Objects
     Public Class Bullet
         Inherits GameObject
 

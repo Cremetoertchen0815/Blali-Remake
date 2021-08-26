@@ -1,6 +1,6 @@
 ﻿Imports System
 Imports System.Collections.Generic
-Imports Blali.Games.Blali_1.Objects
+Imports Blali.Games.Blali_1.Vanilla.Objects
 Imports Nez.Textures
 Imports Nez.Tiled
 

@@ -1,7 +1,7 @@
 ﻿Imports Nez.Textures
 Imports Nez.Tiled
 
-Namespace Games.Blali_1.Mobs
+Namespace Games.Blali_1.Remastered.Mobs
     Public Class Fliegviech
         Inherits GameObject
 

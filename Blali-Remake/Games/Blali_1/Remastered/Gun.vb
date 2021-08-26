@@ -1,6 +1,6 @@
 ﻿Imports Nez.Textures
 
-Namespace Games.Blali_1
+Namespace Games.Blali_1.Remastered
     Public Class Gun
         Inherits GameObject
 

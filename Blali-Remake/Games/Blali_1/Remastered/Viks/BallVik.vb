@@ -1,10 +1,8 @@
-﻿Imports System
-Imports System.Collections.Generic
-Imports Blali.Games.Blali_1.Objects
+﻿Imports Blali.Games.Blali_1.Remastered.Objects
 Imports Nez.Textures
 Imports Nez.Tiled
 
-Namespace Games.Blali_1.Viks
+Namespace Games.Blali_1.Remastered.Viks
     Public Class BallVik
         Inherits IVik
 
