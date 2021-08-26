@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Xna.Framework
+﻿Imports System
+Imports Microsoft.Xna.Framework
 Imports Microsoft.Xna.Framework.Graphics
 
 Namespace Framework.UI.Controls

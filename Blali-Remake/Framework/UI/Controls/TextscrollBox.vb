@@ -1,5 +1,5 @@
-﻿Imports System.Collections.Generic
-Imports Microsoft.Xna.Framework
+﻿Imports System
+Imports System.Collections.Generic
 
 Namespace Framework.UI.Controls
     Public Class TextscrollBox

@@ -1,4 +1,4 @@
-﻿Imports Microsoft.Xna.Framework
+﻿Imports System
 
 Namespace Framework.UI.Controls
     Public Class Button

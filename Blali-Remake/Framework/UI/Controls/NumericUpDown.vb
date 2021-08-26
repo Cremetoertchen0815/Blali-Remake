@@ -1,5 +1,4 @@
-﻿Imports Microsoft.Xna.Framework
-Imports Microsoft.Xna.Framework.Graphics
+﻿Imports System
 
 Namespace Framework.UI.Controls
     Public Class NumericUpDown

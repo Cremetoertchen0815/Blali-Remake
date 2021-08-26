@@ -1,4 +1,5 @@
-﻿Imports Microsoft.Xna.Framework
+﻿Imports System
+Imports Microsoft.Xna.Framework
 
 Namespace Framework.UI.Controls
     Public Class ProgressBar
