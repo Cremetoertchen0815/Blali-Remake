@@ -1,4 +1,5 @@
-﻿-Add menu(Kein Bock, soll Johannes machen)
+﻿-Change default font to Comic Sans
+-Add menu(Kein Bock, soll Johannes machen)
 -Tweak existing levels
 -Add controls menu for custom controls
 -Start working on 2021 edition(name not final)
