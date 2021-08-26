@@ -57,6 +57,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Framework\Misc\StaticFunctions.vb" />
+    <Compile Include="Framework\UI\ControlBorder.vb" />
+    <Compile Include="Framework\UI\Controls\Button.vb" />
+    <Compile Include="Framework\UI\Controls\CustomControl.vb" />
+    <Compile Include="Framework\UI\Controls\FoldableContainer.vb" />
+    <Compile Include="Framework\UI\Controls\Label.vb" />
+    <Compile Include="Framework\UI\Controls\ListBox.vb" />
+    <Compile Include="Framework\UI\Controls\NumericUpDown.vb" />
+    <Compile Include="Framework\UI\Controls\ProgressBar.vb" />
+    <Compile Include="Framework\UI\Controls\SimpleContainer.vb" />
+    <Compile Include="Framework\UI\Controls\Textbox.vb" />
+    <Compile Include="Framework\UI\Controls\TextscrollBox.vb" />
+    <Compile Include="Framework\UI\Controls\TextureButton.vb" />
+    <Compile Include="Framework\UI\Controls\VerticalAlignContainer.vb" />
+    <Compile Include="Framework\UI\GuiControl.vb" />
+    <Compile Include="Framework\UI\GuiInput.vb" />
+    <Compile Include="Framework\UI\GuiSystem.vb" />
+    <Compile Include="Framework\UI\IParent.vb" />
     <Compile Include="Framework\UI\MessageBoxer.vb" />
     <Compile Include="GameCore.vb" />
     <Compile Include="Games\Blali_1\Mobs\MynameisJeff.vb" />
