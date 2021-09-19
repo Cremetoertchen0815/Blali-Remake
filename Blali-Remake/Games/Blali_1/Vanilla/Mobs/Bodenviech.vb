@@ -21,6 +21,7 @@ Namespace Games.Blali_1.Vanilla.Mobs
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 35, 40)))
             Mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
             Ränder = Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/enemy_c"))))
+            Ränder.RenderLayer = 2
             Ränder.LocalOffset = Collider.Bounds.Size / 2 * 1.5
             Entity.LocalScale = New Vector2(1.5F)
 
