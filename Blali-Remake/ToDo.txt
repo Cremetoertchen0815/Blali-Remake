@@ -16,7 +16,6 @@ Options for 2021 edition(discuss with team):
 -Refined controls(new moves like stomp, time freeze)
 -New dialogue boxes à la Beacon(copy and paste code???)
 -HUD(with score)
--Checkpoints
 -Parallax & multiple scrolling background layers
 -proper IE cutscene
 -new environment tiles

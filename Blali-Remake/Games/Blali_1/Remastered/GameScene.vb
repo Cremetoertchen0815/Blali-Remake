@@ -89,6 +89,9 @@ Namespace Games.Blali_1.Remastered
                 End Select
             Next
 
+            'Init ppfx
+            AddPostProcessor(New QualityBloomPostProcessor(0) With {.BloomPreset = QualityBloomPostProcessor.BloomPresets.SuperWide, .BloomStrengthMultiplier = 0.4F, .BloomThreshold = 0.15F})
+
             'Init misc things
             YellowCoin.CollectedCount = 0
             ClearColor = Color.Transparent
