@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<list>
+	<char ID="0" name="Colored MissingNo" type="debug"/>
+	<char ID="1" name="Sonic the Hedgehog" type="debug"/>
+	<char ID="2" name="Almond" type="character"/>
+	<char ID="3" name="Oscar" type="character"/>
+	<char ID="4" name="Raden" type="character"/>
+	<char ID="5" name="Green Clown" type="enemy"/>
+	<char ID="6" name="Red Clown" type="enemy"/>
+	<char ID="7" name="Blue Clown" type="enemy"/>
+	<char ID="8" name="Orange Clown" type="enemy"/>
+	<char ID="9" name="Cyan Clown" type="enemy"/>
+	<char ID="10" name="Black Clown" type="enemy"/>
+	<char ID="11" name="Grey Clown" type="enemy"/>
+	<char ID="12" name="White Clown" type="enemy"/>
+	<char ID="13" name="Rainbow Clown" type="enemy"/>
+</list>

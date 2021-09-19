@@ -1,0 +1,22 @@
+﻿-Fix restarting
+-Fix level switch cam scroll & sfx not playing
+-Switch skycrapers from bg to tiles in cty_1
+-Expand cty_0 with intro sequence inside house
+-Add cars to cty_1
+-Continue building cty_1
+
+-Implement BGs for tutorial stage(ask Johannes for tiles)
+-Implement unlocking stuff
+-Implement colliding with items
+-Implement pushing and pulling items
+-Implement Illumination map
+-Implement Lava/Quicksand
+-Add mouse support to the controller menu
+
+---FAR FUTURE--- 
+-Implement modding
+-Draw movable arm for shooting
+-Artifacts in the top left corner on the loading screen
+(-Implement particle fx into lvl file)
+-Work on music(create intros and loops for XACT)
+-Add sound room

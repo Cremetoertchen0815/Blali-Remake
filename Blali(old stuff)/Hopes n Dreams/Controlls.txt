@@ -1,0 +1,21 @@
+﻿-----Game Pad-----
+Left Stick: Movement/Aiming[while pressing RT]
+Right Stick: Camera
+Options: Menu
+A: Jump/Double jump
+B: Crouch, Sneak[while on ground]/Earthquake[while in med-air]
+X: Shoot[while not crouching]
+RB/LB: Switch items
+RT: Turn on Aiming mode
+LT: Use/Activate item
+
+-----Keyboard-----
+WASD: Movement
+Arrow Keys: Camera
+Enter: Menu
+Space: Jump/Double jump
+LShift: Crouch, Sneak[while on ground]/Earthquake[while in med-air]
+Left Mouse Button: Shoot[while not crouching]
+Scroll Wheel: Switch items
+E: Turn on Aiming mode(with mouse position according to the aiming spot)
+Right Mouse Button: Use/Activate item

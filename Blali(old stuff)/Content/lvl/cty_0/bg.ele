@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<lvldata verH="1" verB="1" type="Background" key="" alt="False" com="Built for: Version preAlpha v0.0.5.7">
+<obj type="1">
+<property name="layer" value="0,4199999"/>
+<property name="path" value="bg1"/>
+<property name="location" valueX="0" valueY="0"/>
+<property name="vectorscale" value="0,4000006"/>
+<property name="scale" valueX="2862" valueY="1300"/>
+<property name="color" valueR="255" valueG="255" valueB="255" valueA="255"/>
+</obj>
+</lvldata>

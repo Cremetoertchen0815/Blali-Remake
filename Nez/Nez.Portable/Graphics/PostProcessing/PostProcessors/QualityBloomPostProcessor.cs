@@ -201,13 +201,8 @@ namespace Nez
 		#region initialize
 		public QualityBloomPostProcessor(int executionOrder) : base(executionOrder)
 		{
-			
-		}
-
-		public override void OnAddedToScene(Scene scene)
-		{
 			//Temporaty fields
-			ContentManager content = scene.Content;
+			Systems.NezContentManager content = Core.Content;
 
 
 			_graphicsDev = Core.GraphicsDevice;
@@ -223,7 +218,7 @@ namespace Nez
 			_renderTargetFormat = SurfaceFormat.Color;
 
 			//Load the shader parameters and passes for cheap and easy access
-			_bloomEffect = scene.Content.LoadEffect<Effect>("qualityBloom", EffectResource.QualityBloom);
+			_bloomEffect = content.LoadEffect<Effect>("qualityBloom", EffectResource.QualityBloom);
 			_bloomInverseResolutionParameter = _bloomEffect.Parameters["InverseResolution"];
 			_bloomRadiusParameter = _bloomEffect.Parameters["Radius"];
 			_bloomStrengthParameter = _bloomEffect.Parameters["Strength"];

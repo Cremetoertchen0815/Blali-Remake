@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<lvldata verH="1" verB="1" type="Descriptor" key="" alt="False" com="Built for: Version preAlpha v0.0.5.7">
+<name>Tutorial Stage</name>
+<inst1>Finish the stage!</inst1>
+<inst2>Text Fia</inst2>
+<inst3>DO THE DAB SKRRRRRA!</inst3>
+<inst4>Take a shower</inst4>
+<inst5>No seriously, it really smells in here!</inst5>
+<width>1583</width>
+<height>122</height>
+<psX>20</psX>
+<psY>18</psY>
+<MapPath>map</MapPath>
+<ObjPath>obj</ObjPath>
+<FXPath>fx</FXPath>
+<BGPath>bg</BGPath>
+<TrgPath>trg</TrgPath>
+<OverlapX>0</OverlapX>
+<OverlapY>0</OverlapY>
+<AllowHorizontal>true</AllowHorizontal>
+<AllowVertical>true</AllowVertical>
+<StdHorizontal>973</StdHorizontal>
+<StdVertical>514</StdVertical>
+<TileSetPath>media\tileset</TileSetPath>
+<VeryBG>media\sky</VeryBG>
+</lvldata>

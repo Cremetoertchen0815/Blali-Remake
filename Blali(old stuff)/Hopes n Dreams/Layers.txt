@@ -1,0 +1,6 @@
+﻿Tile Layer:
+0.01: Tile Layer A(Backdrop Layer)
+0.02: Tile Layer B(Tileset Layer)
+0.02-0.79: Sprite Layer
+0.81: Tile Layer C(Shadow Layer)
+1.00: Debug Layer

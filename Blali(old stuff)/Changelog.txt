@@ -1,0 +1,12 @@
+﻿-Skip text boxes(can skip all in debug mode, only certain ones in regular)
+-Renumber invertory slots to A-H
+-Fix alignment of bumper hints in item HUD
+-Update MapRenderer to only selectively update cluster
+-Fixed glitch of not clearing the bg components after fluid switching(build up of multiple identical components)
+-Make item culling(energy particles) a little less sensitive(Added object culling rect particle constant)
+-Updated the intro with placeholder intro
+-Added keystroke DIR to open the Emmond user directory
+-Renewed the savefile system
+-Added sublevels
+-Added sublevel support to the lve
+-Added sublevel support to the lvl(inluding soft switching)

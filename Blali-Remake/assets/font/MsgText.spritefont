@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Graphics="Microsoft.Xna.Framework.Content.Pipeline.Graphics">
+  <Asset Type="Graphics:FontDescription">
+   <FontName>Comic Sans MS</FontName>
+   <Size>13</Size>
+   <Spacing>-1</Spacing>
+   <UseKerning>true</UseKerning>
+   <Style>Bold</Style>
+   <CharacterRegions>
+      <CharacterRegion>
+        <Start>&#32;</Start>
+        <End>&#256;</End>
+      </CharacterRegion>
+      <CharacterRegion>
+        <Start>→</Start>
+        <End>→</End>
+      </CharacterRegion>
+      <CharacterRegion>
+        <Start>←</Start>
+        <End>←</End>
+      </CharacterRegion>
+    </CharacterRegions>
+  </Asset>
+</XnaContent>

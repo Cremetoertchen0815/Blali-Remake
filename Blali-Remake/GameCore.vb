@@ -1,4 +1,5 @@
-﻿Imports Blali.Games.Blali_1
+﻿Imports Blali.Framework.UI
+Imports Blali.Intros
 
 Public Class GameCore
     Inherits Core
@@ -15,7 +16,17 @@ Public Class GameCore
         Window.AllowUserResizing = True
         DebugRenderEnabled = False
 
-        Scene = New GameScene(4)
+        'Create MessageBoxer
+        MsgBoxer = New MessageBoxer
+        FinalRenderable = MsgBoxer
+        RegisterGlobalManager(MsgBoxer)
+
+        'Update transformation matrix if event is fired
+        Emitter.AddObserver(CoreEvents.GraphicsDeviceReset, Sub() ScaleMatrix = Scene.ScreenTransformMatrix)
+
+        'Scene = New BFN()
+        Scene = New Menu.MainMenu
+        'Games.Blali_1.Remastered.GameScene(0)
 
     End Sub
 End Class

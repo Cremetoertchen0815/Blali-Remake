@@ -25,6 +25,7 @@
     <WarningLevel>4</WarningLevel>
     <DefineDebug>true</DefineDebug>
     <Prefer32Bit>true</Prefer32Bit>
+    <NoWarn>41999,42016</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>true</Prefer32Bit>
+    <NoWarn>41999,42016</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Icon.ico</ApplicationIcon>
@@ -54,22 +56,62 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Framework\Misc\StaticFunctions.vb" />
+    <Compile Include="Framework\UI\ControlBorder.vb" />
+    <Compile Include="Framework\UI\Controls\Button.vb" />
+    <Compile Include="Framework\UI\Controls\CustomControl.vb" />
+    <Compile Include="Framework\UI\Controls\FoldableContainer.vb" />
+    <Compile Include="Framework\UI\Controls\Label.vb" />
+    <Compile Include="Framework\UI\Controls\ListBox.vb" />
+    <Compile Include="Framework\UI\Controls\NumericUpDown.vb" />
+    <Compile Include="Framework\UI\Controls\ProgressBar.vb" />
+    <Compile Include="Framework\UI\Controls\SimpleContainer.vb" />
+    <Compile Include="Framework\UI\Controls\Textbox.vb" />
+    <Compile Include="Framework\UI\Controls\TextscrollBox.vb" />
+    <Compile Include="Framework\UI\Controls\TextureButton.vb" />
+    <Compile Include="Framework\UI\Controls\VerticalAlignContainer.vb" />
+    <Compile Include="Framework\UI\GuiControl.vb" />
+    <Compile Include="Framework\UI\GuiInput.vb" />
+    <Compile Include="Framework\UI\GuiSystem.vb" />
+    <Compile Include="Framework\UI\IParent.vb" />
+    <Compile Include="Framework\UI\MessageBoxer.vb" />
     <Compile Include="GameCore.vb" />
-    <Compile Include="Games\Blali_1\Objects\Bullet.vb" />
-    <Compile Include="Games\Blali_1\Objects\Canon.vb" />
-    <Compile Include="Games\Blali_1\Objects\RedCoin.vb" />
-    <Compile Include="Games\Blali_1\Objects\YellowCoin.vb" />
-    <Compile Include="Games\Blali_1\GameScene.vb" />
-    <Compile Include="Games\Blali_1\Gun.vb" />
-    <Compile Include="Games\Blali_1\IVik.vb" />
-    <Compile Include="Games\Blali_1\Mobs\Bodenviech.vb" />
-    <Compile Include="Games\Blali_1\Mobs\Fliegviech.vb" />
-    <Compile Include="Games\Blali_1\GameObject.vb" />
-    <Compile Include="Games\Blali_1\Mobs\Spike.vb" />
-    <Compile Include="Games\Blali_1\Viks\BallVik.vb" />
-    <Compile Include="Games\Blali_1\Viks\VollVik.vb" />
+    <Compile Include="Games\Blali_1\Remastered\GameObject.vb" />
+    <Compile Include="Games\Blali_1\Remastered\GameScene.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Gun.vb" />
+    <Compile Include="Games\Blali_1\Remastered\IVik.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Mobs\Bodenviech.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Mobs\Fliegviech.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Mobs\MynameisJeff.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Mobs\Spike.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Objects\Bullet.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Objects\Canon.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Objects\RedCoin.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Objects\YellowCoin.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Viks\BallVik.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Viks\VollVik.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Mobs\MynameisJeff.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Objects\Bullet.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Objects\Canon.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Objects\RedCoin.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Objects\YellowCoin.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\GameScene.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Gun.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\IVik.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Mobs\Bodenviech.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Mobs\Fliegviech.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\GameObject.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Mobs\Spike.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Viks\BallVik.vb" />
+    <Compile Include="Games\Blali_1\Vanilla\Viks\VollVik.vb" />
+    <Compile Include="Intros\BFN.vb" />
+    <Compile Include="Intros\LF.vb" />
+    <Compile Include="Intros\MonoNez.vb" />
+    <Compile Include="Menu\MainMenu.vb" />
+    <Compile Include="Menu\ThanksForPlaeScreen.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="RenderableLabel.vb" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework, Version=3.8.0.1641, Culture=neutral, processorArchitecture=MSIL">
@@ -87,15 +129,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\0.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\1.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\2.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\3.tmx" />
-    <None Include="bin\Windows\AnyCPU\Debug\levels\Blali_1\4.tmx" />
+    <None Include="levels\Blali_1\0.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\1.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\2.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\3.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\4.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\5.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="levels\Blali_1\6.tmx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="Blali.Framework.Misc" />
     <Import Include="Microsoft.Xna.Framework" />
     <Import Include="Microsoft.Xna.Framework.Graphics" />
     <Import Include="Microsoft.Xna.Framework.Input" />

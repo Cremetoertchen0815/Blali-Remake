@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<cutscene type="TypeA" description="None" load="FrameAfterFrame">
+<texturebuffer>
+<obj name="tst_dbg1"/>
+<obj name="ge_refpx"/>
+<obj name="0_3"/>
+<obj name="0_0"/>
+<obj name="0_1"/>
+<obj name="0_2"/>
+<obj name="1_0"/>
+<obj name="1_1"/>
+<obj name="1_2"/>
+<obj name="1_3"/>
+<obj name="1_4"/>
+<obj name="1_5"/>
+<obj name="1_6"/>
+</texturebuffer>
+<framebuffer>
+<frame description="Test Frame" duration="10000" blackout="True" fadetime="3000" trans="Deceleration">
+<cammov startx="808" starty="-459" startz="-1045" startw="0" endx="-3" endy="61" endz="-263" endw="0"/>
+<field description="New Field" depth="0" texture="2" vertices="4" indices="6">
+<vertex id="0" x="-2667" y="-1500" z="3000" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="4587" y="-1500" z="3000" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="4587" y="2580" z="3000" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-2667" y="2580" z="3000" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="New Field" depth="1" texture="3" vertices="4" indices="6">
+<vertex id="0" x="-1333" y="-750" z="1500" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="3253" y="-750" z="1500" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="3253" y="1830" z="1500" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-1333" y="1830" z="1500" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="New Field" depth="2" texture="4" vertices="4" indices="6">
+<vertex id="0" x="-711" y="-400" z="800" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="2631" y="-400" z="800" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="2631" y="1480" z="800" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-711" y="1480" z="800" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="New Field" depth="3" texture="5" vertices="4" indices="6">
+<vertex id="0" x="0" y="0" z="0" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="1920" y="0" z="0" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="1920" y="1080" z="0" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="0" y="1080" z="0" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+</frame>
+<frame description="Fwiends" duration="10000" blackout="True" fadetime="3000" trans="Deceleration">
+<cammov startx="560,455" starty="-302,456" startz="-675,8546" startw="0" endx="-26,34048" endy="-18,9522" endz="-129,0416" endw="0"/>
+<field description="New Field" depth="0" texture="6" vertices="4" indices="6">
+<vertex id="0" x="-4444,446" y="-2500,001" z="5000" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="6364,423" y="-2500,001" z="5000" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="6364,423" y="3579,987" z="5000" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-4444,447" y="3579,987" z="5000" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="New Field" depth="1" texture="7" vertices="4" indices="6">
+<vertex id="0" x="-1777,779" y="-1000,001" z="2000" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="3697,767" y="-1000,001" z="2000" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="3697,767" y="2079,994" z="2000" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-1777,779" y="2079,994" z="2000" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="ARGHH NAME" depth="2" texture="8" vertices="4" indices="6">
+<vertex id="0" x="-400,0005" y="-225,0004" z="449,9999" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="2319,995" y="-225,0004" z="450,0001" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="2319,995" y="1304,997" z="450,0001" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-400,0006" y="1304,997" z="450,0001" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="Suibian" depth="3" texture="12" vertices="4" indices="6">
+<vertex id="0" x="-355,5562" y="-200,0004" z="400,0001" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="2275,55" y="-200,0004" z="399,9999" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="2275,551" y="1279,997" z="400,0001" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-355,5562" y="1279,997" z="399,9999" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="Beta" depth="4" texture="11" vertices="4" indices="6">
+<vertex id="0" x="-311,1116" y="-175,0004" z="350,0001" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="2231,106" y="-175,0004" z="350,0001" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="2231,106" y="1254,997" z="349,9999" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-311,1117" y="1254,997" z="349,9999" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="Premo" depth="5" texture="9" vertices="4" indices="6">
+<vertex id="0" x="-222,2228" y="-125,0004" z="250,0001" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="2142,218" y="-125,0003" z="249,9999" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="2142,218" y="1204,997" z="250,0001" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-222,2228" y="1204,997" z="249,9999" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+<field description="Glace" depth="6" texture="10" vertices="4" indices="6">
+<vertex id="0" x="-0,0004272461" y="-0,0003051758" z="6,103516E-05" r="255" g="255" b="255" a="255" UVx="0" UVy="0"/>
+<vertex id="1" x="1919,996" y="-0,0002746582" z="0" r="255" g="255" b="255" a="255" UVx="1" UVy="0"/>
+<vertex id="2" x="1919,996" y="1079,998" z="-6,103516E-05" r="255" g="255" b="255" a="255" UVx="1" UVy="1"/>
+<vertex id="3" x="-0,0004882813" y="1079,998" z="0" r="255" g="255" b="255" a="255" UVx="0" UVy="1"/>
+<tri id="0" A="0" B="1" C="3"/>
+<tri id="1" A="1" B="2" C="3"/>
+</field>
+</frame>
+</framebuffer>
+</cutscene>

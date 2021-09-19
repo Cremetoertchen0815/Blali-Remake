@@ -16,13 +16,7 @@ namespace Nez
 		public ColorGradePostProcessor(int execOrder) : base(execOrder)
 		{
 
-		}
-
-		public override void OnAddedToScene(Scene scene)
-		{
-			base.OnAddedToScene(scene);
-
-			Effect = scene.Content.LoadEffect<Effect>("LUTColorGrade", EffectResource.LUTColorGrade);
+			Effect = Core.Content.LoadEffect<Effect>("LUTColorGrade", EffectResource.LUTColorGrade);
 			_LUT = Effect.Parameters["LUT"];
 			_SizeParameter = Effect.Parameters["Size"];
 			_SizeRootParameter = Effect.Parameters["SizeRoot"];
