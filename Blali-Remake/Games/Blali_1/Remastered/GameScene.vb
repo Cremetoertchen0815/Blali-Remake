@@ -91,7 +91,7 @@ Namespace Games.Blali_1.Remastered
 
             'Init ppfx
             AddPostProcessor(New ColorGradePostProcessor(0) With {.LUT = Content.LoadTexture("game/Blali_1/lut/" & lvl_ID.ToString)})
-            AddPostProcessor(New QualityBloomPostProcessor(1) With {.BloomPreset = QualityBloomPostProcessor.BloomPresets.SuperWide, .BloomStrengthMultiplier = 0.4F, .BloomThreshold = 0.15F})
+            AddPostProcessor(New QualityBloomPostProcessor(1) With {.BloomPreset = QualityBloomPostProcessor.BloomPresets.SuperWide, .BloomStrengthMultiplier = 0.5F, .BloomThreshold = 0.7F})
 
             'Init misc things
             YellowCoin.CollectedCount = 0

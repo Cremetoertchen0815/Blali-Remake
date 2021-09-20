@@ -26,7 +26,7 @@ Public Class GameCore
 
         'Scene = New BFN()
         'Scene = New Menu.MainMenu
-        Scene = New Games.Blali_1.Vanilla.GameScene(0)
+        Scene = New Games.Blali_1.Remastered.GameScene(0)
 
     End Sub
 End Class
