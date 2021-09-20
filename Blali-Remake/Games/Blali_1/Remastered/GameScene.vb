@@ -39,10 +39,6 @@ Namespace Games.Blali_1.Remastered
             CreateEntity("HUD").AddComponent(HUD).SetRenderLayer(-3)
             HUD.Color = Color.White
 
-            'Load BG
-            Dim bgprp = Map.GetObjectGroup("BG").Properties
-            CreateEntity("BG").SetScale(CSng(bgprp("scale"))).SetLocalPosition(New Vector2(CSng(bgprp("posX")), CSng(bgprp("posY")))).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("game/Blali_1/" & bgprp("tex")))).SetRenderLayer(4)
-
             'Load sound bank
             Dim xact_prj As New AudioEngine("assets\game\Blali_1\sfx\win\sfx.xgs")
             Dim wave_bank As New WaveBank(xact_prj, "assets\game\Blali_1\sfx\win\classic_1.xwb")

@@ -56,6 +56,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Framework\Graphics\BackgroundSprite.vb" />
     <Compile Include="Framework\Misc\StaticFunctions.vb" />
     <Compile Include="Framework\UI\ControlBorder.vb" />
     <Compile Include="Framework\UI\Controls\Button.vb" />
