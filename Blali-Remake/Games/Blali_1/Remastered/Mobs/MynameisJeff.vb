@@ -21,6 +21,7 @@ Namespace Games.Blali_1.Remastered.Mobs
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 100, 150)))
             Mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
             Ränder = Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/jeff"))) With {.LocalOffset = Collider.Bounds.Size})
+            Ränder.RenderLayer = 2
             Entity.LocalScale = New Vector2(2)
 
             Velocity = New Vector2(350, 0)

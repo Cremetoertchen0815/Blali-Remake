@@ -31,16 +31,17 @@ Namespace Games.Blali_1.Remastered
 
             'Load map renderer
             MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
+            MapRenderer.SetRenderLayer(3)
 
             'Load HUD
             HUD = New GuiSystem()
             HUD_ScoreLabel = New Controls.Label(Function() "Score: " & Score.ToString, New Vector2(50, 1005)) With {.Font = New NezSpriteFont(Content.Load(Of SpriteFont)("font/InstructionText")), .Color = Color.BlanchedAlmond} : HUD.Controls.Add(HUD_ScoreLabel)
-            CreateEntity("HUD").AddComponent(HUD).SetRenderLayer(-2)
+            CreateEntity("HUD").AddComponent(HUD).SetRenderLayer(-3)
             HUD.Color = Color.White
 
             'Load BG
             Dim bgprp = Map.GetObjectGroup("BG").Properties
-            CreateEntity("BG").SetScale(CSng(bgprp("scale"))).SetLocalPosition(New Vector2(CSng(bgprp("posX")), CSng(bgprp("posY")))).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("game/Blali_1/" & bgprp("tex")))).SetLayerDepth(2)
+            CreateEntity("BG").SetScale(CSng(bgprp("scale"))).SetLocalPosition(New Vector2(CSng(bgprp("posX")), CSng(bgprp("posY")))).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("game/Blali_1/" & bgprp("tex")))).SetRenderLayer(4)
 
             'Load sound bank
             Dim xact_prj As New AudioEngine("assets\game\Blali_1\sfx\win\sfx.xgs")
