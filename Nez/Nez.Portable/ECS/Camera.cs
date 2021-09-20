@@ -309,6 +309,13 @@ namespace Nez
 			Entity.Transform.Position += (_origin - oldOrigin);
 		}
 
+		public Vector2 TransformPosition
+		{
+			get
+			{
+				return -Entity.Transform.Position * _zoom + _origin;
+			}
+		}
 
 		protected virtual void UpdateMatrixes()
 		{

@@ -74,7 +74,7 @@ namespace Nez.PhysicsShapes
 			if (IsUnrotated)
 			{
 				if (other is Box && (other as Box).IsUnrotated)
-					return bounds.Intersects(ref (other as Box).bounds);
+					return bounds.IntersectsOut(ref (other as Box).bounds);
 
 				if (other is Circle)
 					return Collisions.RectToCircle(ref bounds, other.position, (other as Circle).Radius);

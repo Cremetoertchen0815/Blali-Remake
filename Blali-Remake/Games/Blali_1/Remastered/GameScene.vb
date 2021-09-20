@@ -33,6 +33,10 @@ Namespace Games.Blali_1.Remastered
             MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
             MapRenderer.SetRenderLayer(3)
 
+            'Test bg
+            Dim bgprp = Map.GetObjectGroup("BG").Properties
+            CreateEntity("BG").AddComponent(New Framework.Graphics.BackgroundSprite(Content.LoadTexture("game/Blali_1/" & bgprp("tex")), New Rectangle(50, 50, 500, 500), Vector2.One * 0.5) With {.Origin = New Vector2(0, 2400), .LoopHorizontal = Framework.Graphics.BackgroundSprite.LoopMode.Reverse, .LoopVertical = Framework.Graphics.BackgroundSprite.LoopMode.Reverse}).SetRenderLayer(4)
+
             'Load HUD
             HUD = New GuiSystem()
             HUD_ScoreLabel = New Controls.Label(Function() "Score: " & Score.ToString, New Vector2(50, 1005)) With {.Font = New NezSpriteFont(Content.Load(Of SpriteFont)("font/InstructionText")), .Color = Color.BlanchedAlmond} : HUD.Controls.Add(HUD_ScoreLabel)
