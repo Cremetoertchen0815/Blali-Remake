@@ -398,7 +398,7 @@ namespace Nez
 		/// returns true if other intersects rect
 		/// </summary>
 		/// <param name="other">other.</param>
-		public bool Intersects(ref RectangleF other)
+		public bool IntersectsOut(ref RectangleF other)
 		{
 			bool result;
 			Intersects(ref other, out result);

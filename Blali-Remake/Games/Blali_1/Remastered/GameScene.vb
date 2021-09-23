@@ -31,16 +31,23 @@ Namespace Games.Blali_1.Remastered
 
             'Load map renderer
             MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
+            MapRenderer.SetRenderLayer(3)
+
+            'Test bg
+            Dim bgprp = Map.GetObjectGroup("BG").Properties
+            CreateEntity("BG").AddComponent(New Framework.Graphics.BackgroundSprite(Content.LoadTexture("game/Blali_1/" & bgprp("tex")), New Rectangle(50, 50, 1920, 1080), Vector2.One * 0.1) With {.Origin = New Vector2(0, 2400), .LoopHorizontal = Framework.Graphics.BackgroundSprite.LoopMode.FillReverse, .LoopVertical = Framework.Graphics.BackgroundSprite.LoopMode.FillReverse}).SetRenderLayer(4)
+
+            'Generate clouds
+            Dim clouds = CreateEntity("clouds")
+            For i As Integer = 0 To 40
+                clouds.AddComponent(New Cloud(New Vector2(0, 2400)))
+            Next
 
             'Load HUD
             HUD = New GuiSystem()
             HUD_ScoreLabel = New Controls.Label(Function() "Score: " & Score.ToString, New Vector2(50, 1005)) With {.Font = New NezSpriteFont(Content.Load(Of SpriteFont)("font/InstructionText")), .Color = Color.BlanchedAlmond} : HUD.Controls.Add(HUD_ScoreLabel)
-            CreateEntity("HUD").AddComponent(HUD).SetRenderLayer(-2)
+            CreateEntity("HUD").AddComponent(HUD).SetRenderLayer(-3)
             HUD.Color = Color.White
-
-            'Load BG
-            Dim bgprp = Map.GetObjectGroup("BG").Properties
-            CreateEntity("BG").SetScale(CSng(bgprp("scale"))).SetLocalPosition(New Vector2(CSng(bgprp("posX")), CSng(bgprp("posY")))).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("game/Blali_1/" & bgprp("tex")))).SetLayerDepth(2)
 
             'Load sound bank
             Dim xact_prj As New AudioEngine("assets\game\Blali_1\sfx\win\sfx.xgs")
@@ -91,7 +98,7 @@ Namespace Games.Blali_1.Remastered
 
             'Init ppfx
             AddPostProcessor(New ColorGradePostProcessor(0) With {.LUT = Content.LoadTexture("game/Blali_1/lut/" & lvl_ID.ToString)})
-            AddPostProcessor(New QualityBloomPostProcessor(1) With {.BloomPreset = QualityBloomPostProcessor.BloomPresets.SuperWide, .BloomStrengthMultiplier = 0.4F, .BloomThreshold = 0.15F})
+            AddPostProcessor(New QualityBloomPostProcessor(1) With {.BloomPreset = QualityBloomPostProcessor.BloomPresets.SuperWide, .BloomStrengthMultiplier = 0.5F, .BloomThreshold = 0.7F})
 
             'Init misc things
             YellowCoin.CollectedCount = 0

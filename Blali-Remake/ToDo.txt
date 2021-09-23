@@ -1,4 +1,4 @@
-﻿-Change default font to Comic Sans
+﻿-Fix layer sorting to remastered(look at vanilla for reference)
 -Add menu(Kein Bock, soll Johannes machen)
 -Tweak existing levels
 -Add controls menu for custom controls

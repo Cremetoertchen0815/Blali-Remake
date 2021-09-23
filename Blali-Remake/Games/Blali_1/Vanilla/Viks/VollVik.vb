@@ -73,7 +73,7 @@ Namespace Games.Blali_1.Vanilla.Viks
             Entity.Scale = New Vector2(0.9)
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(3, 0, 54, 130)))
             _mover = Entity.AddComponent(New TiledMapMover(CType(Map.GetLayer("Collision"), TmxLayer)))
-            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(30, 66) * Entity.Scale})
+            _spriteRenderer = Entity.AddComponent(New Sprites.SpriteRenderer(texIdle) With {.LocalOffset = New Vector2(30, 66) * Entity.Scale, .RenderLayer = 0})
             _spriteRenderer.SetRenderLayer(-1)
 
 
