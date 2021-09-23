@@ -37,7 +37,11 @@ Namespace Games.Blali_1.Remastered
             Dim bgprp = Map.GetObjectGroup("BG").Properties
             CreateEntity("BG").AddComponent(New Framework.Graphics.BackgroundSprite(Content.LoadTexture("game/Blali_1/" & bgprp("tex")), New Rectangle(50, 50, 500, 500), Vector2.One * 2) With {.Origin = New Vector2(0, 2400), .LoopHorizontal = Framework.Graphics.BackgroundSprite.LoopMode.ScreenWrap, .LoopVertical = Framework.Graphics.BackgroundSprite.LoopMode.ScreenWrap}).SetRenderLayer(4)
 
-
+            'Generate clouds
+            Dim clouds = CreateEntity("clouds")
+            For i As Integer = 0 To 30
+                clouds.AddComponent(New Cloud(New Vector2(0, 2400)))
+            Next
 
             'Load HUD
             HUD = New GuiSystem()
