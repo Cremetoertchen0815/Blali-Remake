@@ -20,6 +20,7 @@
 
         'A batcher not influenced by the camera
         Private rectangleOriginal As New Rectangle(0, 0, 1, 1)
+        Protected Blend As BlendState = BlendState.AlphaBlend
         Private Shared NeutralBatcher As New Batcher(Core.GraphicsDevice)
 
         Public Overrides Sub Render(batcher As Batcher, camera As Camera)
@@ -34,7 +35,7 @@
             If LoopHorizontal = LoopMode.ScreenWrap Then rectangleOriginal.X = Mathf.Repeat(rectangleOriginal.X + Size.X, renderSize.X) - Size.X
             If LoopVertical = LoopMode.ScreenWrap Then rectangleOriginal.Y = Mathf.Repeat(rectangleOriginal.Y + Size.Y, renderSize.Y) - Size.Y
 
-            NeutralBatcher.Begin()
+            NeutralBatcher.Begin(Blend)
 
             'Draw Base
             NeutralBatcher.Draw(Texture, rectangleOriginal)
