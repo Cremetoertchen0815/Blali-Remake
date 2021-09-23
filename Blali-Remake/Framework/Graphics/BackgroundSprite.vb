@@ -23,26 +23,32 @@
         Private Shared NeutralBatcher As New Batcher(Core.GraphicsDevice)
 
         Public Overrides Sub Render(batcher As Batcher, camera As Camera)
+            Dim renderSize As Vector2 = Entity.Scene.SceneRenderTargetSize.ToVector2
             rectangleOriginal = New Rectangle(Position + ((camera.TransformPosition + Origin) * Parallax).ToPoint, Size)
             Dim minX As Integer = System.Math.Min(System.Math.Floor(-rectangleOriginal.Left / rectangleOriginal.Width), 0)
             Dim minY As Integer = System.Math.Min(System.Math.Floor(-rectangleOriginal.Top / rectangleOriginal.Height), 0)
-            Dim maxX As Integer = System.Math.Max(System.Math.Ceiling((Entity.Scene.SceneRenderTargetSize.X - rectangleOriginal.Right) / rectangleOriginal.Width), 0)
-            Dim maxY As Integer = System.Math.Max(System.Math.Ceiling((Entity.Scene.SceneRenderTargetSize.Y - rectangleOriginal.Bottom) / rectangleOriginal.Height), 0)
+            Dim maxX As Integer = System.Math.Max(System.Math.Ceiling((renderSize.X - rectangleOriginal.Right) / rectangleOriginal.Width), 0)
+            Dim maxY As Integer = System.Math.Max(System.Math.Ceiling((renderSize.Y - rectangleOriginal.Bottom) / rectangleOriginal.Height), 0)
+
+            'Calculate screen wrap
+            If LoopHorizontal = LoopMode.ScreenWrap Then rectangleOriginal.X = Mathf.Repeat(rectangleOriginal.X + Size.X, renderSize.X) - Size.X
+            If LoopVertical = LoopMode.ScreenWrap Then rectangleOriginal.Y = Mathf.Repeat(rectangleOriginal.Y + Size.Y, renderSize.Y) - Size.Y
 
             NeutralBatcher.Begin()
+
             'Draw Base
             NeutralBatcher.Draw(Texture, rectangleOriginal)
 
-            'Draw horizontal loop
-            If LoopHorizontal <> LoopMode.None Then
+            'Draw fill loops
+            If LoopHorizontal = LoopMode.FillJump Or LoopHorizontal = LoopMode.FillReverse Then
                 For x As Integer = minX To maxX
-                    Dim fxX As SpriteEffects = If(LoopHorizontal = LoopMode.Reverse And Mathf.IsOdd(x), SpriteEffects.FlipHorizontally, SpriteEffects.None)
+                    Dim fxX As SpriteEffects = If(LoopHorizontal = LoopMode.FillReverse And Mathf.IsOdd(x), SpriteEffects.FlipHorizontally, SpriteEffects.None)
 
                     'Draw vertical loop
-                    If LoopVertical <> LoopMode.None Then
+                    If LoopVertical = LoopMode.FillJump Or LoopVertical = LoopMode.FillReverse Then
                         For y As Integer = minY To maxY
                             If x = 0 And y = 0 Then Continue For
-                            Dim fxY As SpriteEffects = If(LoopVertical = LoopMode.Reverse And Mathf.IsOdd(y), SpriteEffects.FlipVertically, SpriteEffects.None)
+                            Dim fxY As SpriteEffects = If(LoopVertical = LoopMode.FillReverse And Mathf.IsOdd(y), SpriteEffects.FlipVertically, SpriteEffects.None)
                             NeutralBatcher.Draw(Texture, New Rectangle(rectangleOriginal.Location + New Point(x * rectangleOriginal.Width, y * rectangleOriginal.Height), Size), Nothing, Color.White, effects:=fxX Or fxY)
                         Next
                     Else
@@ -50,13 +56,18 @@
                         NeutralBatcher.Draw(Texture, New Rectangle(rectangleOriginal.Location + New Point(x * rectangleOriginal.Width, 0), Size), Nothing, Color.White, effects:=fxX)
                     End If
                 Next
-            ElseIf LoopVertical <> LoopMode.None Then
+            ElseIf (LoopVertical = LoopMode.FillJump Or LoopVertical = LoopMode.FillReverse) Then
                 For y As Integer = minY To maxY
                     If y = 0 Then Continue For
-                    Dim fxY As SpriteEffects = If(LoopVertical = LoopMode.Reverse And Mathf.IsOdd(y), SpriteEffects.FlipVertically, SpriteEffects.None)
+                    Dim fxY As SpriteEffects = If(LoopVertical = LoopMode.FillReverse And Mathf.IsOdd(y), SpriteEffects.FlipVertically, SpriteEffects.None)
                     NeutralBatcher.Draw(Texture, New Rectangle(rectangleOriginal.Location + New Point(0, y * rectangleOriginal.Height), Size), Nothing, Color.White, effects:=fxY)
                 Next
             End If
+
+            'Draw screen repeat
+            If LoopHorizontal = LoopMode.ScreenWrap Then NeutralBatcher.Draw(Texture, New Rectangle(rectangleOriginal.Location + New Point(renderSize.X, 0), Size))
+            If LoopVertical = LoopMode.ScreenWrap Then NeutralBatcher.Draw(Texture, New Rectangle(rectangleOriginal.Location + New Point(0, renderSize.Y), Size))
+            If LoopHorizontal = LoopMode.ScreenWrap And LoopVertical = LoopMode.ScreenWrap Then NeutralBatcher.Draw(Texture, New Rectangle(rectangleOriginal.Location + renderSize.ToPoint, Size))
 
             NeutralBatcher.End()
         End Sub
@@ -75,8 +86,9 @@
 
         Public Enum LoopMode
             None
-            Jump
-            Reverse
+            FillJump
+            FillReverse
+            ScreenWrap
         End Enum
 
     End Class

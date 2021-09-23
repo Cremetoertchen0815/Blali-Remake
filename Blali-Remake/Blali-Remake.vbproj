@@ -77,6 +77,7 @@
     <Compile Include="Framework\UI\IParent.vb" />
     <Compile Include="Framework\UI\MessageBoxer.vb" />
     <Compile Include="GameCore.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Cloud.vb" />
     <Compile Include="Games\Blali_1\Remastered\GameObject.vb" />
     <Compile Include="Games\Blali_1\Remastered\GameScene.vb" />
     <Compile Include="Games\Blali_1\Remastered\Gun.vb" />

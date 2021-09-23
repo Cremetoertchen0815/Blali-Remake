@@ -35,7 +35,7 @@ Namespace Games.Blali_1.Remastered
 
             'Test bg
             Dim bgprp = Map.GetObjectGroup("BG").Properties
-            CreateEntity("BG").AddComponent(New Framework.Graphics.BackgroundSprite(Content.LoadTexture("game/Blali_1/" & bgprp("tex")), New Rectangle(50, 50, 500, 500), Vector2.One * 0.5) With {.Origin = New Vector2(0, 2400), .LoopHorizontal = Framework.Graphics.BackgroundSprite.LoopMode.Reverse, .LoopVertical = Framework.Graphics.BackgroundSprite.LoopMode.Reverse}).SetRenderLayer(4)
+            CreateEntity("BG").AddComponent(New Framework.Graphics.BackgroundSprite(Content.LoadTexture("game/Blali_1/" & bgprp("tex")), New Rectangle(50, 50, 500, 500), Vector2.One * 2) With {.Origin = New Vector2(0, 2400), .LoopHorizontal = Framework.Graphics.BackgroundSprite.LoopMode.ScreenWrap, .LoopVertical = Framework.Graphics.BackgroundSprite.LoopMode.ScreenWrap}).SetRenderLayer(4)
 
             'Load HUD
             HUD = New GuiSystem()
