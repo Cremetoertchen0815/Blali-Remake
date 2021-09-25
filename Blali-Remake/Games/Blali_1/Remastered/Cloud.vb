@@ -15,7 +15,7 @@ Namespace Games.Blali_1.Remastered
             local_x = Position.X
 
             Me.Origin = origin
-            Blend = BlendState.NonPremultiplied
+            Blend = BlendState.Additive
             LoopVertical = LoopMode.None
             LoopHorizontal = LoopMode.ScreenWrap
             SetLayerDepth(1 - Parallax.X)
