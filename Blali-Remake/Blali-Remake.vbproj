@@ -162,10 +162,9 @@
     <Import Include="Microsoft.Xna.Framework.Input" />
     <Import Include="Nez" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Nez\Nez.Portable\Nez.csproj">
-      <Project>{85d05093-9f59-4633-b5ec-145e318d90a7}</Project>
+    <ProjectReference Include="..\..\Nez\Nez.Portable\Nez.csproj">
+      <Project>{ad763371-f6b2-46f1-bf7c-c05af6fee2b6}</Project>
       <Name>Nez</Name>
     </ProjectReference>
   </ItemGroup>
