@@ -12,6 +12,7 @@ Namespace Games.Blali_1.Vanilla.Objects
 
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(-16, -16, 32, 32)))
             Ränder = Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/coin_red"))))
+            Ränder.RenderLayer = 1
             Entity.SetPosition(Spawn - New Vector2(0, 16))
         End Sub
 

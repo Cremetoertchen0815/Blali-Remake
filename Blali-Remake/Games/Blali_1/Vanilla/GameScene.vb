@@ -25,11 +25,11 @@ Namespace Games.Blali_1.Vanilla
             Current = lvl_ID
 
             'Load map renderer
-            MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision"))
+            MapRenderer = CreateEntity("map").AddComponent(New TiledMapRenderer(Map, "Collision") With {.RenderLayer = 3})
 
             'Load BG
             Dim bgprp = Map.GetObjectGroup("BG").Properties
-            CreateEntity("BG").SetScale(CSng(bgprp("scale"))).SetLocalPosition(New Vector2(CSng(bgprp("posX")), CSng(bgprp("posY")))).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("game/Blali_1/" & bgprp("tex")))).SetLayerDepth(2)
+            CreateEntity("BG").SetScale(CSng(bgprp("scale"))).SetLocalPosition(New Vector2(CSng(bgprp("posX")), CSng(bgprp("posY")))).AddComponent(New Sprites.SpriteRenderer(Content.LoadTexture("game/Blali_1/" & bgprp("tex")))).SetRenderLayer(4)
 
             'Load sound bank
             Dim xact_prj As New AudioEngine("assets\game\Blali_1\sfx\win\sfx.xgs")

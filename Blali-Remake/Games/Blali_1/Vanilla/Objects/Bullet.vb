@@ -22,7 +22,7 @@ Namespace Games.Blali_1.Vanilla.Objects
             MyBase.OnAddedToEntity()
 
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 9, 9)))
-            Ränder = Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/bullet"))))
+            Ränder = Entity.AddComponent(New Sprites.SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/bullet"))) With {.RenderLayer = -2})
             Ränder.LocalOffset = Collider.Bounds.Size / 2
             Ränder.RenderLayer = -2
             Entity.LocalPosition = pos

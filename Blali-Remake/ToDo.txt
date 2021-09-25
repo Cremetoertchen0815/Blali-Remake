@@ -1,8 +1,12 @@
-﻿-Change default font to Comic Sans
--Add menu(Kein Bock, soll Johannes machen)
--Tweak existing levels
--Add controls menu for custom controls
--Start working on 2021 edition(name not final)
+﻿-Add mosaic transition
+-Improve level transitions
+-Add linear/anisotropic filtering for certain textures and replace turd textures
+-Add loading background sprites/sprite systems by tiled map(or external file)
+-Add fog sprite system
+-Add directional sound(3D sound???)
+-Add proper IG text boxes
+-Implement new bullet design, that's more distinctive and higher contrast, maybe angled(Johannes)
+-Add menu(Kein Bock, soll Johannes machen): {Option to turn off dialogue boxes, custom controls}
 -Implement DirectInput as control option(copy over from Beacon)
 -Publish demo on GitHub with download & YouTube with link
 -Add translation to english

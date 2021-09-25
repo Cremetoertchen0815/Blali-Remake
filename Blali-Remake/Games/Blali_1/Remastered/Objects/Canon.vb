@@ -23,7 +23,7 @@ Namespace Games.Blali_1.Remastered.Objects
             MyBase.OnAddedToEntity()
 
             Collider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 67, 65)) With {.LocalOffset = Spawn})
-            Ränder = Entity.AddComponent(New SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/portal"))) With {.LocalOffset = Spawn})
+            Ränder = Entity.AddComponent(New SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/portal"))) With {.LocalOffset = Spawn, .RenderLayer = -1})
             BulletCollider = Entity.AddComponent(New BoxCollider(New Rectangle(0, 0, 9, 9)) With {.Enabled = False, .LocalOffset = Spawn})
             BulletRenderer = Entity.AddComponent(New SpriteRenderer(New Sprite(Entity.Scene.Content.LoadTexture("game/Blali_1/bullet"))) With {.LocalOffset = BulletCollider.Bounds.Size / 2 + Spawn, .RenderLayer = -2, .Enabled = False})
             Entity.LocalPosition = Vector2.Zero
