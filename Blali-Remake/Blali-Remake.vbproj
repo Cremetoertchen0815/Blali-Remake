@@ -160,7 +160,6 @@
     <Import Include="Microsoft.Xna.Framework.Input" />
     <Import Include="Nez" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Nez\Nez.Portable\Nez.csproj">
       <Project>{85d05093-9f59-4633-b5ec-145e318d90a7}</Project>
