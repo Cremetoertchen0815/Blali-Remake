@@ -58,8 +58,7 @@ Namespace Games.Blali_1.Remastered
 
         Private Sub FinishStageFinal()
             If NextID < 0 Then Core.Schedule(0.5, Sub() Core.StartSceneTransition(New FadeTransition(Function() New Menu.ThanksForPlaeScreen) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeEaseType = Tweens.EaseType.QuadInOut, .FadeInDuration = 2, .FadeOutDuration = 4})) : Return
-            If UseCrossFade Then Core.Schedule(0.5, Sub() Core.StartSceneTransition(New CrossFadeTransition(Function() New GameScene(NextID)) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeEaseType = Tweens.EaseType.Linear, .FadeDuration = 2, .WantsPreviousSceneRender = True})) : Return
-            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New TransformTransition(Function() New GameScene(NextID), TransformTransition.TransformTransitionType.SlideRight) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .TransitionEaseType = Tweens.EaseType.Linear, .Duration = 2}))
+            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New FadeTransition(Function() New GameScene(NextID)) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeEaseType = Tweens.EaseType.Linear, .FadeInDuration = 0.5, .FadeOutDuration = 0.5, .WantsPreviousSceneRender = True}))
         End Sub
     End Class
 End Namespace
