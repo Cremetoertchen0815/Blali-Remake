@@ -110,18 +110,5 @@ Namespace Games.Blali_1.Remastered
 
             AddRenderer(New DefaultRenderer)
         End Sub
-
-        Public Overrides Sub Update()
-            MyBase.Update()
-
-
-            'Start MsgBoxes
-            If Not StartMessagesTriggered And new_lvl AndAlso Core.Instance.SceneTransition Is Nothing AndAlso Map.Properties.ContainsKey("start_msg") Then
-                StartMessagesTriggered = True
-                For Each txt In Map.Properties("start_msg").Split("|"c)
-                    MsgBoxer.EnqueueMsgbox(txt)
-                Next
-            End If
-        End Sub
     End Class
 End Namespace
