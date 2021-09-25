@@ -1,4 +1,9 @@
-﻿-Fix layer sorting to remastered(look at vanilla for reference)
+﻿-Improve level transitions
+-Add linear/anisotropic filtering for certain textures and replace turd textures
+-Add loading background sprites/sprite systems by tiled map(or external file)
+-Add fog sprite system
+-Add directional sound(3D sound???)
+-Implement new bullet design, that's more distinctive and higher contrast, maybe angled(Johannes)
 -Add menu(Kein Bock, soll Johannes machen)
 -Tweak existing levels
 -Add controls menu for custom controls
