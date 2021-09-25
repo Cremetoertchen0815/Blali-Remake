@@ -99,8 +99,7 @@ Namespace Games.Blali_1.Remastered.Viks
 
             'Set up camera
             Dim camera As Camera = Entity.Scene.Camera
-            Dim saas = camera.AddComponent(New FollowCamera(Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 1, .MapLockEnabled = True, .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
-            saas.FocusOffset = New Vector2(270, 100)
+            camera.AddComponent(New FollowCamera(Entity, FollowCamera.CameraStyle.CameraWindow) With {.FollowLerp = 0.15, .MapLockEnabled = True, .FocusOffset = New Vector2(270, 100), .MapSize = New Vector2(Map.Width * 16, Map.Height * 16)})
             camera.Position = New Vector2(CInt(Map.Properties("camX")) * Map.TileWidth, CInt(Map.Properties("camY")) * Map.TileHeight)
             camera.Zoom = 0.2
         End Sub

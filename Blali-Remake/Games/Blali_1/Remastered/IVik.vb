@@ -42,10 +42,7 @@ Namespace Games.Blali_1.Remastered
             GameScene.SFX.PlayCue("death")
 
             Core.Schedule(0.5, Sub() Core.StartSceneTransition(New CrossFadeTransition(Function() New GameScene(GameScene.Current)) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeDuration = 0}))
-            'Core.Schedule(0.5, Sub()
-            '                       Core.Scene = newsc
-            '                       Time.TimeScale = 1
-            '                   End Sub)
+
         End Sub
 
         Public Sub FinishStage()
@@ -56,25 +53,12 @@ Namespace Games.Blali_1.Remastered
             Enabled = False
             GameScene.SFX.PlayCue("finish")
 
-
-            If Map.Properties.ContainsKey("end_msg") Then
-                Dim lst = Map.Properties("end_msg").Split("|"c)
-                Core.Schedule(1, Sub()
-                                     For i As Integer = 0 To lst.Length - 1
-                                         If i < lst.Length - 1 Then MsgBoxer.EnqueueMsgbox(lst(i), Nothing, {"Ok"}) Else MsgBoxer.EnqueueMsgbox(lst(i), AddressOf FinishStageFinal, {"Ok"})
-                                     Next
-                                 End Sub)
-            Else
-                FinishStageFinal()
-            End If
-
-
+            FinishStageFinal()
         End Sub
 
         Private Sub FinishStageFinal()
             If NextID < 0 Then Core.Schedule(0.5, Sub() Core.StartSceneTransition(New FadeTransition(Function() New Menu.ThanksForPlaeScreen) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeEaseType = Tweens.EaseType.QuadInOut, .FadeInDuration = 2, .FadeOutDuration = 4})) : Return
-            If UseCrossFade Then Core.Schedule(0.5, Sub() Core.StartSceneTransition(New CrossFadeTransition(Function() New GameScene(NextID)) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeEaseType = Tweens.EaseType.Linear, .FadeDuration = 2, .WantsPreviousSceneRender = True})) : Return
-            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New TransformTransition(Function() New GameScene(NextID), TransformTransition.TransformTransitionType.SlideRight) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .TransitionEaseType = Tweens.EaseType.Linear, .Duration = 2}))
+            Core.Schedule(0.5, Sub() Core.StartSceneTransition(New FadeTransition(Function() New GameScene(NextID)) With {.OnScreenObscured = Sub() Time.TimeScale = 1, .FadeEaseType = Tweens.EaseType.Linear, .FadeInDuration = 0.5, .FadeOutDuration = 0.5, .WantsPreviousSceneRender = True}))
         End Sub
     End Class
 End Namespace
