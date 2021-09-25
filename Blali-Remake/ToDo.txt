@@ -1,4 +1,4 @@
-﻿-Remove MsgBoxes for now
+﻿-Add mosaic transition
 -Improve level transitions
 -Add linear/anisotropic filtering for certain textures and replace turd textures
 -Add loading background sprites/sprite systems by tiled map(or external file)
