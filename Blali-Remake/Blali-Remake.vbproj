@@ -56,6 +56,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Framework\Graphics\BackgroundSprite.vb" />
     <Compile Include="Framework\Misc\StaticFunctions.vb" />
     <Compile Include="Framework\UI\ControlBorder.vb" />
     <Compile Include="Framework\UI\Controls\Button.vb" />
@@ -76,6 +77,7 @@
     <Compile Include="Framework\UI\IParent.vb" />
     <Compile Include="Framework\UI\MessageBoxer.vb" />
     <Compile Include="GameCore.vb" />
+    <Compile Include="Games\Blali_1\Remastered\Cloud.vb" />
     <Compile Include="Games\Blali_1\Remastered\GameObject.vb" />
     <Compile Include="Games\Blali_1\Remastered\GameScene.vb" />
     <Compile Include="Games\Blali_1\Remastered\Gun.vb" />
@@ -160,10 +162,9 @@
     <Import Include="Microsoft.Xna.Framework.Input" />
     <Import Include="Nez" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Nez\Nez.Portable\Nez.csproj">
-      <Project>{85d05093-9f59-4633-b5ec-145e318d90a7}</Project>
+    <ProjectReference Include="..\..\Nez\Nez.Portable\Nez.csproj">
+      <Project>{ad763371-f6b2-46f1-bf7c-c05af6fee2b6}</Project>
       <Name>Nez</Name>
     </ProjectReference>
   </ItemGroup>
