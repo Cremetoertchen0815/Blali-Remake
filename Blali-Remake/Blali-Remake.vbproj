@@ -163,7 +163,7 @@
     <Import Include="Nez" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Nez\Nez.Portable\Nez.csproj">
+    <ProjectReference Include="..\..\Nez-LF\Nez.Portable\Nez.csproj">
       <Project>{ad763371-f6b2-46f1-bf7c-c05af6fee2b6}</Project>
       <Name>Nez</Name>
     </ProjectReference>
