@@ -116,9 +116,9 @@
  <objectgroup id="2" name="BG">
   <properties>
    <property name="posX" type="int" value="0"/>
-   <property name="posY" type="int" value="0"/>
+   <property name="posY" type="int" value="300"/>
    <property name="scale" type="int" value="2"/>
-   <property name="tex" value="sky"/>
+   <property name="tex" value="city_burn"/>
   </properties>
  </objectgroup>
  <objectgroup id="3" name="Objects">

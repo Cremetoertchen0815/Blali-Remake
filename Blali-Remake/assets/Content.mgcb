@@ -25,6 +25,13 @@
 /processorParam:TextureFormat=Color
 /build:btn_base_blali.png
 
+#begin font/button_mainmenu.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/button_mainmenu.spritefont
+
 #begin font/fnt_HKG_17_M.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -165,6 +172,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:game/Blali_1/bullet.png
+
+#begin game/Blali_1/city_burn.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/city_burn.png
 
 #begin game/Blali_1/coin_red.png
 /importer:TextureImporter
