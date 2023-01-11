@@ -5,9 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez", "..\BVCS\Nez.Portable\Nez.csproj", "{DC59174E-DCCB-4E75-85CC-3972851C8986}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Blali", "Blali\Blali.vbproj", "{D4705DA6-01E5-4283-92F1-3886506A315B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlaliCSTest", "BlaliCSTest\BlaliCSTest.csproj", "{9334C529-549A-406B-A189-055093EC0818}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Blali", "Blali\Blali.vbproj", "{D4705DA6-01E5-4283-92F1-3886506A315B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,18 +41,6 @@ Global
 		{D4705DA6-01E5-4283-92F1-3886506A315B}.VM|Any CPU.Build.0 = Debug|Any CPU
 		{D4705DA6-01E5-4283-92F1-3886506A315B}.VM|x64.ActiveCfg = Debug|x64
 		{D4705DA6-01E5-4283-92F1-3886506A315B}.VM|x64.Build.0 = Debug|x64
-		{9334C529-549A-406B-A189-055093EC0818}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Debug|x64.Build.0 = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Release|x64.ActiveCfg = Release|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.Release|x64.Build.0 = Release|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.VM|Any CPU.ActiveCfg = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.VM|Any CPU.Build.0 = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.VM|x64.ActiveCfg = Debug|Any CPU
-		{9334C529-549A-406B-A189-055093EC0818}.VM|x64.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
