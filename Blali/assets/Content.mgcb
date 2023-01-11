@@ -1,0 +1,2522 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:DesktopGL
+/config:
+/profile:HiDef
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:..\..\..\BVCS\Nez.ExtendedContent\bin\Debug\net6.0\Nez.ExtendedContent.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin btn_base_blali.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:btn_base_blali.png
+
+#begin engine/fx/geon/gbuff_clear.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/geon/gbuff_clear.fx
+
+#begin engine/fx/geon/lit_normal.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/geon/lit_normal.fx
+
+#begin engine/fx/geon/lit_regular.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/geon/lit_regular.fx
+
+#begin engine/fx/geon/shadow_plane.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/geon/shadow_plane.fx
+
+#begin engine/fx/light/deferred_sprite.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/light/deferred_sprite.fx
+
+#begin engine/fx/light/deferred.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/light/deferred.fx
+
+#begin engine/fx/light/forward.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/light/forward.fx
+
+#begin engine/fx/light/polygon.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/light/polygon.fx
+
+#begin engine/fx/ppfx/bevels.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/bevels.fx
+
+#begin engine/fx/ppfx/bloom_combine.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/bloom_combine.fx
+
+#begin engine/fx/ppfx/bloom_extract.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/bloom_extract.fx
+
+#begin engine/fx/ppfx/bloom_hq.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/bloom_hq.fx
+
+#begin engine/fx/ppfx/color_grade.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/color_grade.fx
+
+#begin engine/fx/ppfx/crt.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/crt.fx
+
+#begin engine/fx/ppfx/gauss_blur.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/gauss_blur.fx
+
+#begin engine/fx/ppfx/grayscale.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/grayscale.fx
+
+#begin engine/fx/ppfx/heat_distortion.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/heat_distortion.fx
+
+#begin engine/fx/ppfx/invert.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/invert.fx
+
+#begin engine/fx/ppfx/letterbox.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/letterbox.fx
+
+#begin engine/fx/ppfx/mosaic.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/mosaic.fx
+
+#begin engine/fx/ppfx/multi_tex_overlay.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/multi_tex_overlay.fx
+
+#begin engine/fx/ppfx/multi_tex.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/multi_tex.fx
+
+#begin engine/fx/ppfx/palette_cycle.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/palette_cycle.fx
+
+#begin engine/fx/ppfx/pixel_glitch.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/pixel_glitch.fx
+
+#begin engine/fx/ppfx/reflection.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/reflection.fx
+
+#begin engine/fx/ppfx/scanline.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/scanline.fx
+
+#begin engine/fx/ppfx/sepia.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/sepia.fx
+
+#begin engine/fx/ppfx/sprite_fx.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/sprite_fx.fx
+
+#begin engine/fx/ppfx/sprite_light_multiply.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/sprite_light_multiply.fx
+
+#begin engine/fx/ppfx/stencil_light.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/stencil_light.fx
+
+#begin engine/fx/ppfx/vignette.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/ppfx/vignette.fx
+
+#begin engine/fx/sprite/alpha_test.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/alpha_test.fx
+
+#begin engine/fx/sprite/blink.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/blink.fx
+
+#begin engine/fx/sprite/crosshatch.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/crosshatch.fx
+
+#begin engine/fx/sprite/dissolve.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/dissolve.fx
+
+#begin engine/fx/sprite/dots.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/dots.fx
+
+#begin engine/fx/sprite/lines.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/lines.fx
+
+#begin engine/fx/sprite/noise.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/noise.fx
+
+#begin engine/fx/sprite/twist.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/sprite/twist.fx
+
+#begin engine/fx/transition/square.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/transition/square.fx
+
+#begin engine/fx/transition/tex_wipe.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/transition/tex_wipe.fx
+
+#begin engine/fx/transition/wind.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/fx/transition/wind.fx
+
+#begin engine/mesh/cone.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/cone.fbx
+
+#begin engine/mesh/cube.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/cube.fbx
+
+#begin engine/mesh/cylinder.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/cylinder.fbx
+
+#begin engine/mesh/plane.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/plane.fbx
+
+#begin engine/mesh/skybox.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/skybox.fbx
+
+#begin engine/mesh/sphere_hq.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/sphere_hq.fbx
+
+#begin engine/mesh/sphere_lq.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/sphere_lq.fbx
+
+#begin engine/mesh/sphere.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:engine/mesh/sphere.fbx
+
+#begin engine/tex/circle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/circle.png
+
+#begin engine/tex/debug_font.xnb
+/copy:engine/tex/debug_font.xnb
+
+#begin engine/tex/gamepad/xbox/a.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/a.png
+
+#begin engine/tex/gamepad/xbox/b.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/b.png
+
+#begin engine/tex/gamepad/xbox/bumper_right.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/bumper_right.png
+
+#begin engine/tex/gamepad/xbox/dpad.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/dpad.png
+
+#begin engine/tex/gamepad/xbox/start.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/start.png
+
+#begin engine/tex/gamepad/xbox/stick_idle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/stick_idle.png
+
+#begin engine/tex/gamepad/xbox/stick_tilt.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/stick_tilt.png
+
+#begin engine/tex/gamepad/xbox/trigger_left.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/trigger_left.png
+
+#begin engine/tex/gamepad/xbox/trigger_right.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/trigger_right.png
+
+#begin engine/tex/gamepad/xbox/x.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/x.png
+
+#begin engine/tex/gamepad/xbox/y.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/gamepad/xbox/y.png
+
+#begin engine/tex/geonbit_full.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/geonbit_full.png
+
+#begin engine/tex/geonbit_icon.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/geonbit_icon.png
+
+#begin engine/tex/heat_noise.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/heat_noise.png
+
+#begin engine/tex/lf/border.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/lf/border.png
+
+#begin engine/tex/lf/overlay_text.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/lf/overlay_text.png
+
+#begin engine/tex/lf/stencil_effect.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/tex/lf/stencil_effect.fx
+
+#begin engine/tex/lf/stencil.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/lf/stencil.png
+
+#begin engine/tex/lut_base_16.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/lut_base_16.png
+
+#begin engine/tex/lut_base_32_.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/lut_base_32_.png
+
+#begin engine/tex/lut_base_64.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/lut_base_64.png
+
+#begin engine/tex/monogame.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/monogame.png
+
+#begin engine/tex/nez.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/nez.png
+
+#begin engine/tex/placeholder.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/placeholder.png
+
+#begin engine/tex/skybox.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/skybox.png
+
+#begin engine/tex/wipe_angular.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_angular.png
+
+#begin engine/tex/wipe_criss_cross.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_criss_cross.png
+
+#begin engine/tex/wipe_diagonal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_diagonal.png
+
+#begin engine/tex/wipe_horizontal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_horizontal.png
+
+#begin engine/tex/wipe_noise.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_noise.png
+
+#begin engine/tex/wipe_pokemon.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_pokemon.png
+
+#begin engine/tex/wipe_saw.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_saw.png
+
+#begin engine/tex/wipe_spiral.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_spiral.png
+
+#begin engine/tex/wipe_wink.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/tex/wipe_wink.png
+
+#begin engine/ui/hd/effects/disabled.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/ui/hd/effects/disabled.fx
+
+#begin engine/ui/hd/effects/silhouette.fx
+/importer:EffectImporter
+/processor:EffectProcessor
+/processorParam:DebugMode=Auto
+/build:engine/ui/hd/effects/silhouette.fx
+
+#begin engine/ui/hd/fonts/Bold.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:engine/ui/hd/fonts/Bold.spritefont
+
+#begin engine/ui/hd/fonts/Italic.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:engine/ui/hd/fonts/Italic.spritefont
+
+#begin engine/ui/hd/fonts/Regular.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:engine/ui/hd/fonts/Regular.spritefont
+
+#begin engine/ui/hd/styles/Button-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Button-Default.xml
+
+#begin engine/ui/hd/styles/Button-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Button-MouseDown.xml
+
+#begin engine/ui/hd/styles/Button-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Button-MouseHover.xml
+
+#begin engine/ui/hd/styles/ButtonParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ButtonParagraph-Default.xml
+
+#begin engine/ui/hd/styles/ButtonParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ButtonParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/ButtonParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ButtonParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/CheckBox-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/CheckBox-Default.xml
+
+#begin engine/ui/hd/styles/CheckBox-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/CheckBox-MouseDown.xml
+
+#begin engine/ui/hd/styles/CheckBox-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/CheckBox-MouseHover.xml
+
+#begin engine/ui/hd/styles/CheckBoxParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/CheckBoxParagraph-Default.xml
+
+#begin engine/ui/hd/styles/CheckBoxParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/CheckBoxParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/CheckBoxParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/CheckBoxParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/ColoredRectangle-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ColoredRectangle-Default.xml
+
+#begin engine/ui/hd/styles/ColoredRectangle-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ColoredRectangle-MouseDown.xml
+
+#begin engine/ui/hd/styles/ColoredRectangle-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ColoredRectangle-MouseHover.xml
+
+#begin engine/ui/hd/styles/DropDown-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDown-Default.xml
+
+#begin engine/ui/hd/styles/DropDown-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDown-MouseDown.xml
+
+#begin engine/ui/hd/styles/DropDown-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDown-MouseHover.xml
+
+#begin engine/ui/hd/styles/DropDownParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDownParagraph-Default.xml
+
+#begin engine/ui/hd/styles/DropDownParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDownParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/DropDownParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDownParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/DropDownSelectedParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDownSelectedParagraph-Default.xml
+
+#begin engine/ui/hd/styles/DropDownSelectedParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDownSelectedParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/DropDownSelectedParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/DropDownSelectedParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/Entity-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Entity-Default.xml
+
+#begin engine/ui/hd/styles/Entity-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Entity-MouseDown.xml
+
+#begin engine/ui/hd/styles/Entity-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Entity-MouseHover.xml
+
+#begin engine/ui/hd/styles/example.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/example.xml
+
+#begin engine/ui/hd/styles/Header-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Header-Default.xml
+
+#begin engine/ui/hd/styles/Header-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Header-MouseDown.xml
+
+#begin engine/ui/hd/styles/Header-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Header-MouseHover.xml
+
+#begin engine/ui/hd/styles/HorizontalLine-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/HorizontalLine-Default.xml
+
+#begin engine/ui/hd/styles/HorizontalLine-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/HorizontalLine-MouseDown.xml
+
+#begin engine/ui/hd/styles/HorizontalLine-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/HorizontalLine-MouseHover.xml
+
+#begin engine/ui/hd/styles/Icon-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Icon-Default.xml
+
+#begin engine/ui/hd/styles/Icon-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Icon-MouseDown.xml
+
+#begin engine/ui/hd/styles/Icon-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Icon-MouseHover.xml
+
+#begin engine/ui/hd/styles/Image-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Image-Default.xml
+
+#begin engine/ui/hd/styles/Image-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Image-MouseDown.xml
+
+#begin engine/ui/hd/styles/Image-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Image-MouseHover.xml
+
+#begin engine/ui/hd/styles/Label-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Label-Default.xml
+
+#begin engine/ui/hd/styles/Label-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Label-MouseDown.xml
+
+#begin engine/ui/hd/styles/Label-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Label-MouseHover.xml
+
+#begin engine/ui/hd/styles/Panel-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Panel-Default.xml
+
+#begin engine/ui/hd/styles/Panel-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Panel-MouseDown.xml
+
+#begin engine/ui/hd/styles/Panel-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Panel-MouseHover.xml
+
+#begin engine/ui/hd/styles/PanelTabsButton-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/PanelTabsButton-Default.xml
+
+#begin engine/ui/hd/styles/PanelTabsButton-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/PanelTabsButton-MouseDown.xml
+
+#begin engine/ui/hd/styles/PanelTabsButton-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/PanelTabsButton-MouseHover.xml
+
+#begin engine/ui/hd/styles/PanelTabsButtonParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/PanelTabsButtonParagraph-Default.xml
+
+#begin engine/ui/hd/styles/PanelTabsButtonParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/PanelTabsButtonParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/PanelTabsButtonParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/PanelTabsButtonParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/Paragraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Paragraph-Default.xml
+
+#begin engine/ui/hd/styles/Paragraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Paragraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/Paragraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Paragraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/ProgressBar-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ProgressBar-Default.xml
+
+#begin engine/ui/hd/styles/ProgressBar-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ProgressBar-MouseDown.xml
+
+#begin engine/ui/hd/styles/ProgressBar-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ProgressBar-MouseHover.xml
+
+#begin engine/ui/hd/styles/ProgressBarFill-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ProgressBarFill-Default.xml
+
+#begin engine/ui/hd/styles/ProgressBarFill-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ProgressBarFill-MouseDown.xml
+
+#begin engine/ui/hd/styles/ProgressBarFill-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/ProgressBarFill-MouseHover.xml
+
+#begin engine/ui/hd/styles/RadioButton-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/RadioButton-Default.xml
+
+#begin engine/ui/hd/styles/RadioButton-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/RadioButton-MouseDown.xml
+
+#begin engine/ui/hd/styles/RadioButton-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/RadioButton-MouseHover.xml
+
+#begin engine/ui/hd/styles/RadioButtonParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/RadioButtonParagraph-Default.xml
+
+#begin engine/ui/hd/styles/RadioButtonParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/RadioButtonParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/RadioButtonParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/RadioButtonParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/SelectList-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/SelectList-Default.xml
+
+#begin engine/ui/hd/styles/SelectList-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/SelectList-MouseDown.xml
+
+#begin engine/ui/hd/styles/SelectList-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/SelectList-MouseHover.xml
+
+#begin engine/ui/hd/styles/SelectListParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/SelectListParagraph-Default.xml
+
+#begin engine/ui/hd/styles/SelectListParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/SelectListParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/SelectListParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/SelectListParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/Slider-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Slider-Default.xml
+
+#begin engine/ui/hd/styles/Slider-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Slider-MouseDown.xml
+
+#begin engine/ui/hd/styles/Slider-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/Slider-MouseHover.xml
+
+#begin engine/ui/hd/styles/TextInput-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInput-Default.xml
+
+#begin engine/ui/hd/styles/TextInput-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInput-MouseDown.xml
+
+#begin engine/ui/hd/styles/TextInput-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInput-MouseHover.xml
+
+#begin engine/ui/hd/styles/TextInputParagraph-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInputParagraph-Default.xml
+
+#begin engine/ui/hd/styles/TextInputParagraph-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInputParagraph-MouseDown.xml
+
+#begin engine/ui/hd/styles/TextInputParagraph-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInputParagraph-MouseHover.xml
+
+#begin engine/ui/hd/styles/TextInputPlaceholder-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInputPlaceholder-Default.xml
+
+#begin engine/ui/hd/styles/TextInputPlaceholder-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInputPlaceholder-MouseDown.xml
+
+#begin engine/ui/hd/styles/TextInputPlaceholder-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/TextInputPlaceholder-MouseHover.xml
+
+#begin engine/ui/hd/styles/VerticalScrollbar-Default.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/VerticalScrollbar-Default.xml
+
+#begin engine/ui/hd/styles/VerticalScrollbar-MouseDown.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/VerticalScrollbar-MouseDown.xml
+
+#begin engine/ui/hd/styles/VerticalScrollbar-MouseHover.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/styles/VerticalScrollbar-MouseHover.xml
+
+#begin engine/ui/hd/textures/arrow_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/arrow_down.png
+
+#begin engine/ui/hd/textures/arrow_left.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/arrow_left.png
+
+#begin engine/ui/hd/textures/arrow_right.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/arrow_right.png
+
+#begin engine/ui/hd/textures/arrow_up.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/arrow_up.png
+
+#begin engine/ui/hd/textures/button_alternative_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_alternative_down.png
+
+#begin engine/ui/hd/textures/button_alternative_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_alternative_hover.png
+
+#begin engine/ui/hd/textures/button_alternative_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/button_alternative_md.xml
+
+#begin engine/ui/hd/textures/button_alternative.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_alternative.png
+
+#begin engine/ui/hd/textures/button_default_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_default_down.png
+
+#begin engine/ui/hd/textures/button_default_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_default_hover.png
+
+#begin engine/ui/hd/textures/button_default_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/button_default_md.xml
+
+#begin engine/ui/hd/textures/button_default.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_default.png
+
+#begin engine/ui/hd/textures/button_fancy_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_fancy_down.png
+
+#begin engine/ui/hd/textures/button_fancy_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_fancy_hover.png
+
+#begin engine/ui/hd/textures/button_fancy_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/button_fancy_md.xml
+
+#begin engine/ui/hd/textures/button_fancy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/button_fancy.png
+
+#begin engine/ui/hd/textures/checkbox_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/checkbox_down.png
+
+#begin engine/ui/hd/textures/checkbox_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/checkbox_hover.png
+
+#begin engine/ui/hd/textures/checkbox.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/checkbox.png
+
+#begin engine/ui/hd/textures/cursor_default_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/cursor_default_md.xml
+
+#begin engine/ui/hd/textures/cursor_default.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/cursor_default.png
+
+#begin engine/ui/hd/textures/cursor_ibeam_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/cursor_ibeam_md.xml
+
+#begin engine/ui/hd/textures/cursor_ibeam.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/cursor_ibeam.png
+
+#begin engine/ui/hd/textures/cursor_pointer_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/cursor_pointer_md.xml
+
+#begin engine/ui/hd/textures/cursor_pointer.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/cursor_pointer.png
+
+#begin engine/ui/hd/textures/horizontal_line.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/horizontal_line.png
+
+#begin engine/ui/hd/textures/icons/background.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/icons/background.png
+
+#begin engine/ui/hd/textures/icons/ZoomIn.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/icons/ZoomIn.png
+
+#begin engine/ui/hd/textures/icons/ZoomOut.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/icons/ZoomOut.png
+
+#begin engine/ui/hd/textures/panel_default_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/panel_default_md.xml
+
+#begin engine/ui/hd/textures/panel_default.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/panel_default.png
+
+#begin engine/ui/hd/textures/panel_fancy_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/panel_fancy_md.xml
+
+#begin engine/ui/hd/textures/panel_fancy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/panel_fancy.png
+
+#begin engine/ui/hd/textures/panel_golden_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/panel_golden_md.xml
+
+#begin engine/ui/hd/textures/panel_golden.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/panel_golden.png
+
+#begin engine/ui/hd/textures/panel_listbackground_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/panel_listbackground_md.xml
+
+#begin engine/ui/hd/textures/panel_listbackground.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/panel_listbackground.png
+
+#begin engine/ui/hd/textures/panel_simple_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/panel_simple_md.xml
+
+#begin engine/ui/hd/textures/panel_simple.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/panel_simple.png
+
+#begin engine/ui/hd/textures/progressbar_fill.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/progressbar_fill.png
+
+#begin engine/ui/hd/textures/progressbar_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/progressbar_md.xml
+
+#begin engine/ui/hd/textures/progressbar.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/progressbar.png
+
+#begin engine/ui/hd/textures/radio_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/radio_down.png
+
+#begin engine/ui/hd/textures/radio_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/radio_hover.png
+
+#begin engine/ui/hd/textures/radio.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/radio.png
+
+#begin engine/ui/hd/textures/scrollbar_mark.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/scrollbar_mark.png
+
+#begin engine/ui/hd/textures/scrollbar_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/scrollbar_md.xml
+
+#begin engine/ui/hd/textures/scrollbar.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/scrollbar.png
+
+#begin engine/ui/hd/textures/slider_default_mark.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/slider_default_mark.png
+
+#begin engine/ui/hd/textures/slider_default_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/slider_default_md.xml
+
+#begin engine/ui/hd/textures/slider_default.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/slider_default.png
+
+#begin engine/ui/hd/textures/slider_fancy_mark.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/slider_fancy_mark.png
+
+#begin engine/ui/hd/textures/slider_fancy_md.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/textures/slider_fancy_md.xml
+
+#begin engine/ui/hd/textures/slider_fancy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/slider_fancy.png
+
+#begin engine/ui/hd/textures/white_texture.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:engine/ui/hd/textures/white_texture.png
+
+#begin engine/ui/hd/ThemeData.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:engine/ui/hd/ThemeData.xml
+
+#begin font/button_mainmenu.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/button_mainmenu.spritefont
+
+#begin font/fnt_HKG_17_M.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/fnt_HKG_17_M.spritefont
+
+#begin font/InstructionText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/InstructionText.spritefont
+
+#begin font/MsgText.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font/MsgText.spritefont
+
+#begin game/Blali_1/ball.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/ball.png
+
+#begin game/Blali_1/bg/bg_cloud_A.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/bg/bg_cloud_A.png
+
+#begin game/Blali_1/bg/bg_cloud_B.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/bg/bg_cloud_B.png
+
+#begin game/Blali_1/bg/bg_cloud_C.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/bg/bg_cloud_C.png
+
+#begin game/Blali_1/bg/bg_cloud_D.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/bg/bg_cloud_D.png
+
+#begin game/Blali_1/bg/bg_cloud_E.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/bg/bg_cloud_E.png
+
+#begin game/Blali_1/bgm/0.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/0.wav
+
+#begin game/Blali_1/bgm/1.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/1.wav
+
+#begin game/Blali_1/bgm/3.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/3.wav
+
+#begin game/Blali_1/bgm/4.WAV
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/4.WAV
+
+#begin game/Blali_1/bgm/5.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/5.mp3
+
+#begin game/Blali_1/bgm/6.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/6.mp3
+
+#begin game/Blali_1/bullet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/bullet.png
+
+#begin game/Blali_1/city_burn.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/city_burn.png
+
+#begin game/Blali_1/coin_red.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/coin_red.png
+
+#begin game/Blali_1/coin_yellow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/coin_yellow.png
+
+#begin game/Blali_1/enemy_a.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/enemy_a.png
+
+#begin game/Blali_1/enemy_b.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/enemy_b.png
+
+#begin game/Blali_1/enemy_c.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/enemy_c.png
+
+#begin game/Blali_1/enemy_d.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/enemy_d.png
+
+#begin game/Blali_1/fire.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/fire.png
+
+#begin game/Blali_1/gun.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/gun.png
+
+#begin game/Blali_1/hud/msgbox_down.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/hud/msgbox_down.png
+
+#begin game/Blali_1/hud/msgbox_hover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/hud/msgbox_hover.png
+
+#begin game/Blali_1/hud/msgbox_idle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/hud/msgbox_idle.png
+
+#begin game/Blali_1/jeff.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/jeff.png
+
+#begin game/Blali_1/lut/0.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/0.png
+
+#begin game/Blali_1/lut/1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/1.png
+
+#begin game/Blali_1/lut/2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/2.png
+
+#begin game/Blali_1/lut/3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/3.png
+
+#begin game/Blali_1/lut/4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/4.png
+
+#begin game/Blali_1/lut/5.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/5.png
+
+#begin game/Blali_1/lut/6.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/lut/6.png
+
+#begin game/Blali_1/portal.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/portal.png
+
+#begin game/Blali_1/sfx/win/classic_1.xsb
+/copy:game/Blali_1/sfx/win/classic_1.xsb
+
+#begin game/Blali_1/sfx/win/classic_1.xwb
+/copy:game/Blali_1/sfx/win/classic_1.xwb
+
+#begin game/Blali_1/sfx/win/sfx.xgs
+/copy:game/Blali_1/sfx/win/sfx.xgs
+
+#begin game/Blali_1/sky.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/sky.jpg
+
+#begin game/Blali_1/spr_1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/spr_1.png
+
+#begin game/Blali_1/spr_2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/spr_2.png
+
+#begin game/Blali_1/spr_3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:game/Blali_1/spr_3.png
+
+#begin game/Blali_1/tileset.png
+/importer:
+/processor:
+/build:game/Blali_1/tileset.png
+
+#begin intro/bfm/bfm_bg.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/bfm/bfm_bg.png
+
+#begin intro/bfm/bfm_fnt.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/bfm/bfm_fnt.png
+
+#begin intro/bfm/bfm.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:intro/bfm/bfm.wav
+
+#begin intro/bfm/fnt_HKG_17_M.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:intro/bfm/fnt_HKG_17_M.spritefont
+
+#begin intro/lf/border.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/lf/border.png
+
+#begin intro/lf/jump.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:intro/lf/jump.wav
+
+#begin intro/lf/land.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:intro/lf/land.wav
+
+#begin intro/lf/overlay_text.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/lf/overlay_text.png
+
+#begin intro/lf/piece_std.fbx
+/importer:FbxImporter
+/processor:ModelProcessor
+/processorParam:ColorKeyColor=0,0,0,0
+/processorParam:ColorKeyEnabled=True
+/processorParam:DefaultEffect=BasicEffect
+/processorParam:GenerateMipmaps=True
+/processorParam:GenerateTangentFrames=False
+/processorParam:PremultiplyTextureAlpha=True
+/processorParam:PremultiplyVertexColors=True
+/processorParam:ResizeTexturesToPowerOfTwo=False
+/processorParam:RotationX=0
+/processorParam:RotationY=0
+/processorParam:RotationZ=0
+/processorParam:Scale=1
+/processorParam:SwapWindingOrder=False
+/processorParam:TextureFormat=Compressed
+/build:intro/lf/piece_std.fbx
+
+#begin intro/lf/stencil_fx.mgfxo
+/copy:intro/lf/stencil_fx.mgfxo
+
+#begin intro/lf/stencil.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/lf/stencil.png
+
+#begin intro/mononez/monogame.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/mononez/monogame.png
+
+#begin intro/mononez/nez.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:intro/mononez/nez.png
+
+#begin levels/Blali_1/0.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/0.tmx
+
+#begin levels/Blali_1/1.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/1.tmx
+
+#begin levels/Blali_1/2.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/2.tmx
+
+#begin levels/Blali_1/3.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/3.tmx
+
+#begin levels/Blali_1/4.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/4.tmx
+
+#begin levels/Blali_1/5.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/5.tmx
+
+#begin levels/Blali_1/6.tmx
+/importer:TiledImporter
+/processor:BinaryUncompressedProcessor
+/build:levels/Blali_1/6.tmx
+
+#begin toadallybestbackgwoundpnguwillevewsee.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:toadallybestbackgwoundpnguwillevewsee.png
+
