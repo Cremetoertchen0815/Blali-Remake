@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BVCS\Nez.Portable\Nez.csproj" />
+    <ProjectReference Include="..\..\Geonez\Nez.Portable\Nez.csproj" />
   </ItemGroup>
 
   <ItemGroup>

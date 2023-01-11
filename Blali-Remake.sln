@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez", "..\BVCS\Nez.Portable\Nez.csproj", "{DC59174E-DCCB-4E75-85CC-3972851C8986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez", "..\Geonez\Nez.Portable\Nez.csproj", "{DC59174E-DCCB-4E75-85CC-3972851C8986}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Blali", "Blali\Blali.vbproj", "{D4705DA6-01E5-4283-92F1-3886506A315B}"
 EndProject

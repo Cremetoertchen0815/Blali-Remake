@@ -10,7 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\..\BVCS\Nez.ExtendedContent\bin\Debug\net6.0\Nez.ExtendedContent.dll
+/reference:..\..\..\Geonez\Nez.ExtendedContent\bin\Debug\net6.0\Nez.ExtendedContent.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -2338,8 +2338,15 @@
 /build:game/Blali_1/spr_3.png
 
 #begin game/Blali_1/tileset.png
-/importer:
-/processor:
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
 /build:game/Blali_1/tileset.png
 
 #begin intro/bfm/bfm_bg.png
