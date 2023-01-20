@@ -5,6 +5,7 @@
   <Asset Type="Nez.ExtendedContent.DataTypes.TextureData">
     <FrameWidth>0.2</FrameWidth>
     <FrameHeight>0</FrameHeight>
+	<StainedCanvasID>-1</StainedCanvasID>
   </Asset>
 
 </XnaContent>

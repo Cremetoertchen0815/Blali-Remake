@@ -1992,6 +1992,12 @@
 /processorParam:Quality=Best
 /build:game/Blali_1/bgm/1.wav
 
+#begin game/Blali_1/bgm/2.wav
+/importer:WavImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:game/Blali_1/bgm/2.wav
+
 #begin game/Blali_1/bgm/3.wav
 /importer:WavImporter
 /processor:SongProcessor

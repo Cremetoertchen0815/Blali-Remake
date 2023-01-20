@@ -18,7 +18,6 @@ Public Class GameCore
 
         'Create MessageBoxer
         MsgBoxer = New MessageBoxer
-        'FinalRenderable = MsgBoxer
         RegisterGlobalManager(MsgBoxer)
 
         'Update transformation matrix if event is fired
